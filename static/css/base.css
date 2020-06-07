@@ -3,7 +3,7 @@ html {
 }
 
 body {
-    background: url('/media/gin-home1.jpg') no-repeat center center fixed;
+    background: url('/media/gin-home1.jpg') no-repeat bottom center fixed;
     background-size: cover;
     height: calc(100vh - 164px);
     color: black;
@@ -29,6 +29,12 @@ body {
     color: green;
 }
 
+.main-logo-link:hover,
+.main-logo-link:active,
+.main-logo-link:focus {
+    color: #4a632a;
+}
+
 #main-nav {
     font-size: 18px;
 }
@@ -44,9 +50,9 @@ body {
     color: white;
 }
 
-.shop-now-button:hover,
-.shop-now-button:active,
-.shop-now-button:focus,
+.subscribe-now-btn:hover,
+.subscribe-now-btn:active,
+.subscribe-now-btn:focus,
 .btn-black:hover,
 .btn-black:active,
 .btn-black:focus {
