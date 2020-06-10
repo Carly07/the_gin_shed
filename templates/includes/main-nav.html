@@ -17,10 +17,10 @@
                 Gin Drop
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="gindrop-link">
-                <a href="" class="dropdown-item">Monthly Drop</a>
-                <a href="" class="dropdown-item">Bi-monthly Drop</a>
-                <a href="" class="dropdown-item">Quarterly Drop</a>
-                <a href="" class="dropdown-item">All Drops</a>
+                <a href="{% url 'products' %}?category=monthly" class="dropdown-item">Monthly Drop</a>
+                <a href="{% url 'products' %}?category=bi_monthly" class="dropdown-item">Bi-monthly Drop</a>
+                <a href="{% url 'products' %}?category=quarterly" class="dropdown-item">Quarterly Drop</a>
+                <a href="{% url 'products' %}?category=monthly,bi_monthly,quarterly" class="dropdown-item">All Drops</a>
             </div>
         </li>
 
@@ -29,10 +29,10 @@
                 Gin Shop
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="ginshop-link">
-                <a href="" class="dropdown-item">Gin</a>
-                <a href="" class="dropdown-item">Mixers</a>
-                <a href="" class="dropdown-item">Accessories</a>
-                <a href="" class="dropdown-item">All Products</a>
+                <a href="{% url 'products' %}?category=gin" class="dropdown-item">Gin</a>
+                <a href="{% url 'products' %}?category=mixers" class="dropdown-item">Mixers</a>
+                <a href="{% url 'products' %}?category=accessories" class="dropdown-item">Accessories</a>
+                <a href="{% url 'products' %}?category=gin,mixers,accessories" class="dropdown-item">All Products</a>
             </div>
         </li>
 
