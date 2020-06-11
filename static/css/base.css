@@ -51,6 +51,19 @@ body {
     color: white;
 }
 
+.btn-outline-black {
+    background: white;
+    color: black !important;
+    border: 1px solid black;
+}
+
+.btn-outline-black:hover,
+.btn-outline-black:active,
+.btn-outline-black:focus {
+    background: black;
+    color: white;
+}
+
 .subscribe-now-btn:hover,
 .subscribe-now-btn:active,
 .subscribe-now-btn:focus,
