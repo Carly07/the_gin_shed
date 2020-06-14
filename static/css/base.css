@@ -7,7 +7,7 @@ body {
     background-size: cover;
     height: calc(100vh - 164px);
     color: #414e2f;
-    font-family: 'Amatic SC', 'Open Sans Condensed', cursive, sans-serif;
+    font-family: 'Open Sans Condensed', sans-serif;
 }
 
 /* from Bulma */
@@ -21,12 +21,14 @@ body {
 
 .logo-font {
     text-transform: uppercase;
+    font-family: 'Amatic SC';
     
 }
 
 .main-logo-link {
     width: fit-content;
     color: #788e5c;
+    font-family: 'Amatic SC';
 }
 
 .main-logo-link:hover,
