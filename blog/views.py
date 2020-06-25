@@ -2,8 +2,8 @@ from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.utils import timezone
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
-from .models import Post
-from .forms import BlogPostForm
+from .models import Post, PostComment
+from .forms import BlogPostForm, AddComment
 
 
 def get_posts(request):
@@ -30,7 +30,27 @@ def post_detail(request, pk):
     post = get_object_or_404(Post, pk=pk)
     post.views += 1
     post.save()
-    return render(request, "blog/postdetail.html", {'post': post})
+
+    comments = PostComment.objects.filter(pk=pk).order_by(
+        '-date_commented')
+
+    if request.method == 'POST':
+        create_comment_form = PostComment(
+            comment=request.POST.get('comment'),
+            commenter=request.user,
+            post=post
+        )
+        create_comment_form.save()
+        messages.success(request, 'Comment added to Post')
+        return redirect('post_detail', pk)
+
+    context = {
+        'post': post,
+        'form': AddComment,
+        'comments': comments
+    }
+
+    return render(request, "blog/postdetail.html", context)
 
 
 @login_required

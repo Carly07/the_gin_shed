@@ -12,32 +12,89 @@
 {% block content %}
 <div class="overlay"></div>
 <div class="container-fluid">
-    <div class="row">
-        <div class="col-md-2 col-sm-3 text-center">
-            <p><span class="boldtext">Author:</span> The Gin Shed</p>
-        </div>
-        <div class="col-sm-10 col-md-9">
-            {% if post.image %}
-                <img class="img-blogpost" src="/media/{{ post.image }}">
-            {% endif %}
-            <h3>{{ post.title }}</h3>
-            <div class="row">
-                <div class="col-xs-9">
-                    <p>{{ post.content }}</p>
-                    <p><span class="boldtext">Published on:</span> {{ post.published_date }} </p>
-                    <p><span class="boldtext">Views:</span> {{post.views}}</p>
-                    <p><span class="boldtext">Tag:</span> {{ post.tag }}</p>
-                    <a href="{% url 'get_posts' %}" class="btn btn-default">Back to Blog</a>
-                    {% if request.user.is_superuser %}
-                        <small class="ml-3">
-                            <a href="{% url 'edit_post' post.id %}">Edit</a> | 
-                            <a class="text-danger" href="{% url 'delete_post' post.id %}">Delete</a>
-                        </small>
-                    {% endif %}
-                    <hr>
+    <!-- Render Post -->
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-10 col-md-8">
+                {% if post.image %}
+                    <img class="img-blogpost" src="/media/{{ post.image }}">
+                {% endif %}
+                <h2>{{ post.title }}</h2>
+                <div class="row">
+                    <div class="col-xs-9">
+                        <p>{{ post.content }}</p>
+                        <p><span class="boldtext">Author:</span> The Gin Shed</p>
+                        <p><span class="boldtext">Published on:</span> {{ post.published_date }} </p>
+                        <p><span class="boldtext">Views:</span> {{post.views}}</p>
+                        <p><span class="boldtext">Tag:</span> {{ post.tag }}</p>
+                        <a href="{% url 'get_posts' %}" class="btn btn-default">Back to Blog</a>
+                        {% if request.user.is_superuser %}
+                            <small class="ml-3">
+                                <a href="{% url 'edit_post' post.id %}">Edit</a> | 
+                                <a class="text-danger" href="{% url 'delete_post' post.id %}">Delete</a>
+                            </small>
+                        {% endif %}
+                        <hr>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
+    <!-- Render Comments -->
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-10 col-md-8">
+                <h4 class="">Post Comments:</h4>
+            </div>
+            <!-- Display Post Comments if any available otherwise display "no comments" text to user. -->
+            {% if comments %}
+                {% for comment in comments %}
+                    <div class="col-sm-10 col-md-8">
+                        <div class="card comment-card">
+                            <div class="card-body comment-card-body">
+                                <p class="comment-text">{{ comment.comment }}</p>
+                                <small class="comment-details text-muted"><span class="span-text">Commented by:</span> {{ comment.commenter }} /
+                                    {{ comment.date_commented }}</small>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+            {% else %}
+                <div class="col-sm-10 col-md-8">
+                    <p class="">No Comments</p>
+                </div>
+            {% endif %}
+        </div>
+    </div>
+
+    
+    <!-- Comment Form -->
+    {% if user.is_authenticated %}
+        <div class="container mb-5">
+            <div class="row">
+                <div class="col-10 col-md-8">
+                    <div class="card">
+                        <div class="card-header">
+                            <h4><i class="fas fa-comment-dots"></i> Add Comment</h4>
+                        </div>
+                        <div class="card-body">
+                            <!-- Form fields are without labels to be consistent with modern app design UX themes. -->
+                            <form action="#" method="POST" class="form mb-2">
+                                {% csrf_token %}
+                                <div class="form-group">
+                                    {{ form }}
+                                </div> 
+                                <div class="text-right">
+                                    <input type="submit" value="Post" class="btn btn-black rounded-0">
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    {% endif %}
 </div>
+
+
 {% endblock %}
