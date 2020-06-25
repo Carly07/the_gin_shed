@@ -15,7 +15,7 @@ def get_posts(request):
 
     posts = Post.objects.filter(published_date__lte=timezone.now()
             ).order_by('-published_date')
-    return render(request, "blogposts.html", {'posts': posts})
+    return render(request, "blog/blogposts.html", {'posts': posts})
 
 
 def post_detail(request, pk):
@@ -30,7 +30,7 @@ def post_detail(request, pk):
     post = get_object_or_404(Post, pk=pk)
     post.views += 1
     post.save()
-    return render(request, "postdetail.html", {'post': post})
+    return render(request, "blog/postdetail.html", {'post': post})
 
 
 @login_required
@@ -55,7 +55,7 @@ def create_or_edit_post(request, pk=None):
             messages.error(request, 'Oops! Failed to post blog. Please ensure the form is valid.')
     else:
         form = BlogPostForm(instance=post)
-    return render(request, 'blogpostform.html', {'form': form})
+    return render(request, 'blog/blogpostform.html', {'form': form})
 
 
 @login_required
@@ -68,4 +68,4 @@ def delete_post(request, pk):
     post = get_object_or_404(Post, pk=pk)
     post.delete()
     messages.success(request, 'Post deleted!')
-    return redirect(reverse('posts'))
+    return redirect(reverse('get_posts'))
