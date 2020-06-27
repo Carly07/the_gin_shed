@@ -2,6 +2,8 @@ from django.contrib import admin
 from .models import Post, PostComment
 
 # Registered Models for Admin dashboard
+
+
 class PostAdmin(admin.ModelAdmin):
     list_display = (
         'title',
@@ -12,12 +14,14 @@ class PostAdmin(admin.ModelAdmin):
 
     ordering = ('published_date',)
 
+
 class PostCommentAdmin(admin.ModelAdmin):
     list_display = (
         'post',
         'user',
         'date_commented',
     )
+
 
 admin.site.register(Post, PostAdmin)
 admin.site.register(PostComment, PostCommentAdmin)
