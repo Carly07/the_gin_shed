@@ -31,13 +31,13 @@ def post_detail(request, pk):
     post.views += 1
     post.save()
 
-    comments = PostComment.objects.filter(pk=pk).order_by(
+    post_comments = PostComment.objects.filter(pk=pk).order_by(
         '-date_commented')
 
     if request.method == 'POST':
         create_comment_form = PostComment(
-            comment=request.POST.get('comment'),
-            commenter=request.user,
+            comment_detail=request.POST.get('comment_detail'),
+            user=request.user,
             post=post
         )
         create_comment_form.save()
@@ -47,9 +47,8 @@ def post_detail(request, pk):
     context = {
         'post': post,
         'form': AddComment,
-        'comments': comments
+        'comments': post_comments
     }
-
     return render(request, "blog/postdetail.html", context)
 
 

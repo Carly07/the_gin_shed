@@ -22,10 +22,10 @@ class Post(models.Model):
 class PostComment(models.Model):
     """Model to define the fields required to create the Comments under a
     blog post"""
-    comment = models.TextField()
+    comment_detail = models.TextField()
     date_commented = models.DateTimeField(default=timezone.now)
-    commenter = models.ForeignKey(User, on_delete=models.CASCADE)
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
     post = models.ForeignKey(Post, on_delete=models.CASCADE)
 
     def __str__(self):
-        return self.comment
+        return self.comment_detail

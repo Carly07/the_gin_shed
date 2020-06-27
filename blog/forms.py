@@ -15,10 +15,10 @@ class AddComment(forms.ModelForm):
     class Meta:
         model = PostComment
         fields = [
-            'comment'
+            'comment_detail'
         ]
 
-    comment = forms.CharField(
+    comment_detail = forms.CharField(
         required=True,
         label='',
         widget=forms.Textarea(attrs={

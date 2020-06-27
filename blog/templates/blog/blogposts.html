@@ -1,6 +1,10 @@
 {% extends "base.html" %}
 {% load static %}
 
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'blog/css/blog.css' %}">
+{% endblock %}
+
 {% block page_header %}
     <div class="container header-container">
         <div class="row">
@@ -21,17 +25,31 @@
     {% for post in posts %}
     <div class="row">
         <div class="col-md-2 col-sm-3 text-center">
-            <p><span class="boldtext">Author:</span> The Gin Shed</p>
+            {% if post.image %}
+                <img class="img-fluid img-blogpost" src="/media/{{ post.image }}">
+            {% endif %}
         </div>
         <div class="col-md-10 col-sm-9">
-            <h3>{{ post.title }}</h3>
             <div class="row">
-                <div class="col-xs-9">
-                    <p>{{ post.content|truncatewords:30 }}</p>
-                    <p><a href="{% url 'post_detail' post.id %}"  class="btn btn-default">Read more</a></p>
-                    <p><span class="boldtext">Published on:</span> {{ post.published_date }} </p>
-                    <p><span class="boldtext">Views:</span> {{post.views}}</p>
-                    <p><span class="boldtext">Tag:</span> {{ post.tag }}</p>
+                <div class="post-title col-10">
+                    <h3>{{ post.title }}</h3>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-10">
+                    <p>{{ post.content|truncatewords:100 }}</p>
+                    <a href="{% url 'post_detail' post.id %}"  class="btn btn-black rounded-0 text-uppercase mb-3">Read more</a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-10">
+                    <small class="mr-3"><strong class="mr-1">Published:</strong> {{ post.published_date }} </small>
+                    <small class="mr-3"><strong class="mr-1">Views:</strong> {{post.views}}</small>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-10">
+                    <small class="mr-3"><strong class="mr-1">Tags:</strong> {{ post.tag }}</small>
                 </div>
             </div>
         </div>
