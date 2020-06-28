@@ -63,7 +63,7 @@ body {
 .btn-outline-black:active,
 .btn-outline-black:focus {
     background: black;
-    color: white;
+    color: white !important;
 }
 
 .subscribe-now-btn:hover,

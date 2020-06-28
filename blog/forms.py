@@ -24,6 +24,6 @@ class AddComment(forms.ModelForm):
         widget=forms.Textarea(attrs={
             'rows': 2,
             'class': 'form-control',
-            'placeholder': 'Add a comment'
+            'placeholder': 'Write your comment here...'
         })
     )

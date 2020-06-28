@@ -31,8 +31,8 @@ def post_detail(request, pk):
     post.views += 1
     post.save()
 
-    post_comments = PostComment.objects.filter(pk=pk).order_by(
-        '-date_commented')
+    post_comments = PostComment.objects.filter(
+        post_id=post.id).order_by('-date_commented')
 
     if request.method == 'POST':
         create_comment_form = PostComment(
@@ -88,3 +88,16 @@ def delete_post(request, pk):
     post.delete()
     messages.success(request, 'Post deleted!')
     return redirect(reverse('get_posts'))
+
+
+def delete_comment(request, comment_id):
+    """ Delete a post comment """
+
+    comment = get_object_or_404(PostComment, pk=comment_id)
+
+    if request.user == comment.user or request.user.is_superuser:
+        comment.delete()
+        messages.success(request, 'Comment Deleted!')
+        return redirect('get_posts')
+    messages.error(request, 'You are not authorised to delete this comment.')
+    return redirect('home')
