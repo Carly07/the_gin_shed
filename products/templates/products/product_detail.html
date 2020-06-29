@@ -1,6 +1,10 @@
 {% extends "base.html" %}
 {% load static %}
 
+{% block extra_js %}
+<script src="{% static 'products/js/reviews.js' %}"></script>
+{% endblock %}
+
 {% block page_header %}
     <div class="container header-container">
         <div class="row">
@@ -31,22 +35,31 @@
                     <p class="mb-0">{{ product.name }}</p>
                     <p class="lead mb-0 text-left font-weight-bold">£{{ product.price }}</p>
                     {% if product.category %}
-                        <p class="small mt-1 mb-0">
+                        <small class="small mt-1 mb-0">
                             <a class="text-muted" href="{% url 'products' %}?category={{ product.category.name }}">
                                 <i class="fas fa-tag mr-1"></i>{{ product.category.friendly_name }}
                             </a>
-                        </p>
-                    {% endif %}
-                    {% if product.rating %}
-                        <small class="text-muted"><i class="fas fa-star mr-1"></i>{{ product.rating }} / 5</small>
-                    {% else %}
-                        <small class="text-muted">No Rating</small>
+                        </small>
                     {% endif %}
                     {% if request.user.is_superuser %}
-                        <small class="ml-3">
+                        <small class="ml-5">
                             <a href="{% url 'edit_product' product.id %}">Edit</a> | 
                             <a class="text-danger" href="{% url 'delete_product' product.id %}">Delete</a>
                         </small>
+                    {% endif %}
+                        <br>
+                        <br>
+                    {% if product.avg_rating %}
+                        <small class="mr-1">{{ product.avg_rating }} / 5</small>
+                        <small class="ml-1">{{ product.no_of_ratings }} Reviews</small>
+                        <br>
+                        <small><i class="fas fa-star"></i></small>
+                        <small><i class="fas fa-star"></i></small>
+                        <small><i class="fas fa-star"></i></small>
+                        <small><i class="fas fa-star"></i></small>
+                        <small><i class="fas fa-star"></i></small>
+                    {% else %}
+                        <small class="text-muted mr-5">No Rating</small>
                     {% endif %}
                     <p class="mt-3">{{ product.description }}</p>
                     <form class="form" action="{% url 'add_to_basket' product.id %}" method="POST">
@@ -56,26 +69,30 @@
                                 <p class="mt-3"><strong>Quantity:</strong></p>
                                 <div class="form-group w-50">
                                     <div class="input-group">
-                                        <div class="input-group-prepend">
-                                            <button class="decrement-qty btn btn-black rounded-0" 
-                                                data-item_id="{{ product.id }}" id="decrement-qty_{{ product.id }}">
-                                                <span class="icon">
-                                                    <i class="fas fa-minus"></i>
-                                                </span>
-                                            </button>
-                                        </div>
-                                        <input class="form-control qty_input" type="number"
-                                            name="quantity" value="1" min="1" max="99"
-                                            data-item_id="{{ product.id }}"
-                                            id="id_qty_{{ product.id }}">
-                                        <div class="input-group-append">
-                                            <button class="increment-qty btn btn-black rounded-0"
-                                                data-item_id="{{ product.id }}" id="increment-qty_{{ product.id }}">
-                                                <span class="icon">
-                                                    <i class="fas fa-plus"></i>
-                                                </span>
-                                            </button>
-                                        </div>
+                                        {% if product.num_in_stock != 0 %}
+                                            <div class="input-group-prepend">
+                                                <button class="decrement-qty btn btn-black rounded-0" 
+                                                    data-item_id="{{ product.id }}" id="decrement-qty_{{ product.id }}">
+                                                    <span class="icon">
+                                                        <i class="fas fa-minus"></i>
+                                                    </span>
+                                                </button>
+                                            </div>
+                                            <input class="form-control qty_input" type="number"
+                                                name="quantity" value="1" min="1" max="99"
+                                                data-item_id="{{ product.id }}"
+                                                id="id_qty_{{ product.id }}">
+                                            <div class="input-group-append">
+                                                <button class="increment-qty btn btn-black rounded-0"
+                                                    data-item_id="{{ product.id }}" id="increment-qty_{{ product.id }}">
+                                                    <span class="icon">
+                                                        <i class="fas fa-plus"></i>
+                                                    </span>
+                                                </button>
+                                            </div>
+                                        {% else %}
+                                            <p class="text-danger">Out of Stock!</p>
+                                        {% endif %} 
                                     </div>
                                 </div>
                             </div>
@@ -92,6 +109,83 @@
                             <input type="hidden" name="redirect_url" value="{{ request.path }}">
                         </div>
                     </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-12 col-md-6 col-lg-4 offset-lg-2">
+                <!-- Render Reviews -->
+                <div class="row">
+                    <div class="col-12">
+                        <h4 class="mb-4 text-left">Reviews</h4>
+                    </div>
+                    <!-- Display reviews if available otherwise display "no reviews" to user. -->
+                    {% if reviews %}
+                        {% for review in reviews %}
+                            <div class="col-12">
+                                <small class="mr-2">{{ review.stars }} / 5</small> 
+                                <small class=""><i class="fas fa-star"></i></small>
+                                <small class=""><i class="fas fa-star"></i></small>
+                                <small class=""><i class="fas fa-star"></i></small>
+                                <small class=""><i class="fas fa-star"></i></small>
+                                <small class=""><i class="fas fa-star"></i></small>
+                                <br>
+                                <strong class="mb-1">{{ review.title }}</strong>
+                                <p class="mb-1">{{ review.review_text }}</p> 
+                                <small class="text-muted">{{ review.user }}</small> 
+                                <small class="ml-3 text-muted">{{ review.date_commented }}</small> 
+                                {% if user == review.user or user.is_superuser %}
+                                    <small class="my-2 ml-3"> 
+                                        <a class="text-danger" href="#">Delete</a>
+                                    </small>
+                                {% endif %}
+                                <hr>
+                            </div>
+                        {% endfor %}
+                    {% else %}
+                        <div class="col-12 text-left">
+                            <p>No Reviews.</p>
+                        </div>
+                    {% endif %}
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-6">
+                <!-- Review Form -->
+                <div class="row">
+                    <div class="col-12">
+                        {% if user.is_authenticated %}
+                            <button class="btn btn-outline-black rounded-0 btn-lg text-left" type="button" data-toggle="collapse" data-target="#addreview" aria-expanded="false" aria-controls="addrevie">
+                                <i class="far fa-comment-alt fa-xs mr-2"></i>Write Review</button>
+                            <div class="collapse" id="addreview">
+                                <form action="#" method="POST" class="form my-3">
+                                    {% csrf_token %}
+                                        <div class="form-group rating">
+                                            <div class="input-rating">
+                                                <strong class="mr-2">* Your rating: </strong>
+                                                <br>
+                                                <fieldset class="stars mb-5">
+                                                    <input type="radio" id="star5" name="stars" value="5" /><label class="full" for="star5"></label>
+                                                    <input type="radio" id="star4" name="stars" value="4" /><label class="full" for="star4"></label>
+                                                    <input type="radio" id="star3" name="stars" value="3" /><label class="full" for="star3"></label>
+                                                    <input type="radio" id="star2" name="stars" value="2" /><label class="full" for="star2"></label>
+                                                    <input type="radio" id="star1" name="stars" value="1" /><label class="full" for="star1"></label>
+                                                </fieldset>
+                                            </div>
+                                        </div>
+                                        <br>
+                                        <div class="col-12 my-5 p-0">
+                                            {{ form|crispy }}
+                                        </div>
+                                        <div class="col text-right">
+                                            <input type="submit" value="Post" class="btn btn-black rounded-0 mt-2">
+                                        </div>
+                                </form>
+                            </div>
+                        {% else %}
+                            <p>Please <a href="{% url 'account_signup' %}">Register</a> or <a href="{% url 'account_login' %}">login</a> to leave a review.</p>
+                        {% endif %}
+                    </div>
                 </div>
             </div>
         </div>

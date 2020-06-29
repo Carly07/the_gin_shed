@@ -4,8 +4,8 @@ from django.contrib.auth.decorators import login_required
 from django.db.models import Q
 from django.db.models.functions import Lower
 
-from .models import Product, Category
-from .forms import ProductForm
+from .models import Product, Category, Review
+from .forms import ProductForm, ReviewForm
 
 
 def all_products(request):
@@ -63,12 +63,27 @@ def product_detail(request, product_id):
 
     product = get_object_or_404(Product, pk=product_id)
 
+    reviews = Review.objects.filter(
+        product_id=product.id).order_by('-date_reviewed')
+
+    if request.method == 'POST':
+        review_form = Review(
+            stars=request.POST.get('stars'),
+            title=request.POST.get('title'),
+            review_text=request.POST.get('review_text'),
+            user=request.user,
+            product=product
+        )
+        review_form.save()
+        messages.success(request, 'Thank you for your review.')
+        return redirect('product_detail', product_id)
+
     context = {
         'product': product,
+        'form': ReviewForm,
+        'reviews': reviews
     }
-
     return render(request, 'products/product_detail.html', context)
-
 
 
 @login_required
