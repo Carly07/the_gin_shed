@@ -32,7 +32,7 @@ class ReviewForm(forms.ModelForm):
 
     title = forms.CharField(
         required=True,
-        label='* Title',
+        label='Title',
         widget=forms.Textarea(attrs={
             'rows': 1,
             'class': 'form-control',
@@ -41,7 +41,7 @@ class ReviewForm(forms.ModelForm):
 
     review_text = forms.CharField(
         required=True,
-        label='* Review',
+        label='Review',
         widget=forms.Textarea(attrs={
             'rows': 2,
             'class': 'form-control',

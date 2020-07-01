@@ -113,13 +113,54 @@
             </div>
         </div>
 
+        <hr>
+    
         <div class="row">
+            <div class="col-12 offset-lg-2">
+                <h4 class="mb-4 text-left">Reviews</h4>
+            </div>
             <div class="col-12 col-md-6 col-lg-4 offset-lg-2">
-                <!-- Render Reviews -->
-                <div class="row">
-                    <div class="col-12">
-                        <h4 class="mb-4 text-left">Reviews</h4>
+                <div class="product-details-container mb-5">
+                    <!-- Review Form -->
+                    <div class="row">
+                        <div class="col-12">
+                            {% if user.is_authenticated %}
+                                <button class="btn btn-outline-black rounded-0 btn-lg text-left d-block d-md-none" type="button" data-toggle="collapse" data-target="#addreview" aria-expanded="false" aria-controls="addrevie">
+                                    <i class="far fa-comment-alt fa-xs mr-2"></i>Write Review</button>
+                                <div class="collapse pr-5 d-md-block" id="addreview">
+                                    <form action="#" method="POST" class="form my-3">
+                                        {% csrf_token %}
+                                            <div class="form-group rating">
+                                                <p class="mb-0">Your rating* </p>
+                                                <div class="input-rating">
+                                                    <fieldset class="stars w-100">
+                                                        <input type="radio" id="star5" name="stars" value="5" /><label class="" for="star5"></label>
+                                                        <input type="radio" id="star4" name="stars" value="4" /><label class="" for="star4"></label>
+                                                        <input type="radio" id="star3" name="stars" value="3" /><label class="" for="star3"></label>
+                                                        <input type="radio" id="star2" name="stars" value="2" /><label class="" for="star2"></label>
+                                                        <input type="radio" id="star1" name="stars" value="1" /><label class="" for="star1"></label>
+                                                    </fieldset>
+                                                </div>
+                                            </div>
+                                            <br>
+                                            <div class="col-12 mt-2 p-0">
+                                                {{ form|crispy }}
+                                            </div>
+                                            <div class="col text-right">
+                                                <input type="submit" value="Post" class="btn btn-black rounded-0 mt-2">
+                                            </div>
+                                    </form>
+                                </div>
+                            {% else %}
+                                <p>Please <a href="{% url 'account_signup' %}">Register</a> or <a href="{% url 'account_login' %}">login</a> to leave a review.</p>
+                            {% endif %}
+                        </div>
                     </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-6 col-lg-4">
+                <!-- Render Reviews -->
                     <!-- Display reviews if available otherwise display "no reviews" to user. -->
                     {% if reviews %}
                         {% for review in reviews %}
@@ -137,7 +178,7 @@
                                 <small class="ml-3 text-muted">{{ review.date_commented }}</small> 
                                 {% if user == review.user or user.is_superuser %}
                                     <small class="my-2 ml-3"> 
-                                        <a class="text-danger" href="#">Delete</a>
+                                        <a class="text-danger" href="{% url 'delete_review' review.id %}">Delete</a>
                                     </small>
                                 {% endif %}
                                 <hr>
@@ -150,46 +191,7 @@
                     {% endif %}
                 </div>
             </div>
-            <div class="col-sm-12 col-md-6">
-                <!-- Review Form -->
-                <div class="row">
-                    <div class="col-12">
-                        {% if user.is_authenticated %}
-                            <button class="btn btn-outline-black rounded-0 btn-lg text-left" type="button" data-toggle="collapse" data-target="#addreview" aria-expanded="false" aria-controls="addrevie">
-                                <i class="far fa-comment-alt fa-xs mr-2"></i>Write Review</button>
-                            <div class="collapse" id="addreview">
-                                <form action="#" method="POST" class="form my-3">
-                                    {% csrf_token %}
-                                        <div class="form-group rating">
-                                            <div class="input-rating">
-                                                <strong class="mr-2">* Your rating: </strong>
-                                                <br>
-                                                <fieldset class="stars mb-5">
-                                                    <input type="radio" id="star5" name="stars" value="5" /><label class="full" for="star5"></label>
-                                                    <input type="radio" id="star4" name="stars" value="4" /><label class="full" for="star4"></label>
-                                                    <input type="radio" id="star3" name="stars" value="3" /><label class="full" for="star3"></label>
-                                                    <input type="radio" id="star2" name="stars" value="2" /><label class="full" for="star2"></label>
-                                                    <input type="radio" id="star1" name="stars" value="1" /><label class="full" for="star1"></label>
-                                                </fieldset>
-                                            </div>
-                                        </div>
-                                        <br>
-                                        <div class="col-12 my-5 p-0">
-                                            {{ form|crispy }}
-                                        </div>
-                                        <div class="col text-right">
-                                            <input type="submit" value="Post" class="btn btn-black rounded-0 mt-2">
-                                        </div>
-                                </form>
-                            </div>
-                        {% else %}
-                            <p>Please <a href="{% url 'account_signup' %}">Register</a> or <a href="{% url 'account_login' %}">login</a> to leave a review.</p>
-                        {% endif %}
-                    </div>
-                </div>
-            </div>
         </div>
-    </div>
 {% endblock %}
 
 {% block postloadjs %}

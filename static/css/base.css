@@ -255,6 +255,7 @@ input[name='q']::placeholder {
 
 /* Reviews */
 
+
 .stars {
     float: left;
     margin: 0;
@@ -292,7 +293,7 @@ input[name='q']::placeholder {
 }
 
 .star > input:checked + label:hover,
-.star > input:hover ~ input:checked ~ label,
+.star > label:hover ~ input:checked ~ label,
 .star > input:checked ~ label:hover ~ label {
     background: #788e5c !important;
     cursor: pointer;

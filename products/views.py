@@ -152,3 +152,17 @@ def delete_product(request, product_id):
     product.delete()
     messages.success(request, 'Product deleted!')
     return redirect(reverse('products'))
+
+
+@login_required
+def delete_review(request, product_id, review_id):
+    """ Delete a review """
+    product = get_object_or_404(Product, pk=product_id)
+    review = get_object_or_404(Review, pk=review_id)
+
+    if request.user == review.user or request.user.is_superuser:
+        review.delete()
+        messages.success(request, 'Review Deleted!')
+        return redirect(reverse('product_detail', args=[product.id]))
+    messages.error(request, 'You are not authorised to delete this comment.')
+    return redirect('home')
