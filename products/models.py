@@ -26,7 +26,6 @@ class Product(models.Model):
     name = models.CharField(max_length=254)
     description = models.TextField()
     price = models.DecimalField(max_digits=6, decimal_places=2)
-    avg_rating = models.DecimalField(max_digits=3, decimal_places=1, null=True, blank=True)
     image_url = models.URLField(max_length=1024, null=True, blank=True)
     image = models.ImageField(null=True, blank=True)
     num_in_stock = models.PositiveSmallIntegerField(validators=[MaxValueValidator(100)])
@@ -42,7 +41,8 @@ class Product(models.Model):
             sum += rating.stars
 
         if len(ratings) > 0:
-            return sum / len(ratings)
+            avg = sum / len(ratings)
+            return round(avg, 1)
         else:
             return 0
 

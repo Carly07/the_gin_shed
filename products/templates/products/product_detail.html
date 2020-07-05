@@ -2,7 +2,7 @@
 {% load static %}
 
 {% block extra_js %}
-<script src="{% static 'products/js/reviews.js' %}"></script>
+
 {% endblock %}
 
 {% block page_header %}
@@ -50,8 +50,8 @@
                         <br>
                         <br>
                     {% if product.avg_rating %}
-                        <small class="mr-1">{{ product.avg_rating }} / 5</small>
-                        <small class="ml-1">{{ product.no_of_ratings }} Reviews</small>
+                        <small class="mr-2">{{ product.avg_rating }}</small>
+                        <small class="ml-2">{{ product.no_of_ratings }} Reviews</small>
                         <br>
                         <small><i class="fas fa-star"></i></small>
                         <small><i class="fas fa-star"></i></small>
@@ -128,20 +128,20 @@
                                 <button class="btn btn-outline-black rounded-0 btn-lg text-left d-block d-md-none" type="button" data-toggle="collapse" data-target="#addreview" aria-expanded="false" aria-controls="addrevie">
                                     <i class="far fa-comment-alt fa-xs mr-2"></i>Write Review</button>
                                 <div class="collapse pr-5 d-md-block" id="addreview">
-                                    <form action="#" method="POST" class="form my-3">
+                                    <form action="#" method="POST" class="form mt-1 mb-5">
                                         {% csrf_token %}
-                                            <div class="form-group rating">
-                                                <p class="mb-0">Your rating* </p>
-                                                <div class="input-rating">
-                                                    <fieldset class="stars w-100">
-                                                        <input type="radio" id="star5" name="stars" value="5" /><label class="" for="star5"></label>
-                                                        <input type="radio" id="star4" name="stars" value="4" /><label class="" for="star4"></label>
-                                                        <input type="radio" id="star3" name="stars" value="3" /><label class="" for="star3"></label>
-                                                        <input type="radio" id="star2" name="stars" value="2" /><label class="" for="star2"></label>
-                                                        <input type="radio" id="star1" name="stars" value="1" /><label class="" for="star1"></label>
-                                                    </fieldset>
+                                            <div class="rating-box">
+                                                <p class="mb-2">Your rating*</p>
+                                                <div class="stars">
+                                                    <span class="far fa-star"></span>
+                                                    <span class="far fa-star"></span>
+                                                    <span class="far fa-star"></span>
+                                                    <span class="far fa-star"></span>
+                                                    <span class="far fa-star"></span>
                                                 </div>
+                                                <input class="ml-2" type="text" id="rating-value" name="stars">
                                             </div>
+
                                             <br>
                                             <div class="col-12 mt-2 p-0">
                                                 {{ form|crispy }}
@@ -197,4 +197,5 @@
 {% block postloadjs %}
 {{ block.super }}
 {% include 'products/includes/quantity_input_script.html' %}
+<script src="{% static 'products/js/reviews.js' %}"></script>
 {% endblock %}
