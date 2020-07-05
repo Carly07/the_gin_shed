@@ -3,11 +3,24 @@ html {
 }
 
 body {
-    background: url('/media/gin-home1.jpg') no-repeat bottom center fixed;
-    background-size: cover;
-    height: calc(100vh - 164px);
+    width: 100%;
     color: #000000;
     font-family: 'Open Sans Condensed', sans-serif;
+}
+
+.jumbotron {
+    margin-bottom: 0px;
+    background-attachment: fixed;
+    background-position: top;
+    height: calc(100vh - 164px);
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+}
+
+#home-jumbotron {
+    background-image: url('/media/gin-home1.jpg');
 }
 
 /* from Bulma */
@@ -120,6 +133,14 @@ a.category-badge > span.badge:hover {
 input[name='q']::placeholder {
     color: #6c757d;
 }
+
+/* -------------------------------- pages */
+
+.pages-container {
+    background-color: #86a95b29;
+
+}
+
 
 /* -------------------------------- bootstrap toasts */
 
@@ -253,50 +274,23 @@ input[name='q']::placeholder {
 	color: #17a2b8; /* text-info */
 }
 
-/* Reviews */
+/* Star ratings */
 
-
-.stars {
-    float: left;
-    margin: 0;
-}
-
-.stars > input {
-    display: none;
-}
-
-.stars > label:before {
-    content: '';
-    background: black;
-    width: 20px;
-    height: 20px;
-    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
-    align-self: center;
-}
-
-.stars > label {
-    border: 2px solid white;
+.rating-box {
     display: flex;
-    justify-content: center;
-    width: 40px;
-    height: 40px;
-    float: right;
-    margin: 5px;
-    background-color: white;
-    border-radius: 50%;
+    flex-direction: column;
 }
 
-.stars:not(:checked) > label:hover,
-.stars:not(:checked) > label:hover ~ label {
-    background-color: #788e5c !important;
+.rating-box .stars .far {
+    font-size: 20px;
+    color: black;
+    float: left;
     cursor: pointer;
 }
 
-.star > input:checked + label:hover,
-.star > label:hover ~ input:checked ~ label,
-.star > input:checked ~ label:hover ~ label {
-    background: #788e5c !important;
-    cursor: pointer;
+
+.rating-box input {
+    margin-top: 20px;
 }
 
 
@@ -351,4 +345,83 @@ input[name='q']::placeholder {
     body {
         height: calc(100vh - 156px);
     }
+}
+
+
+/*------------Footer------------*/
+
+footer {
+    margin-left: 0px;
+    padding: 30px 15px 0px 15px;
+}
+
+.footer-row {
+    text-align: center;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+@media (min-width: 768px) {
+    .footer-row-cols {
+        width: auto;
+        margin-top: auto;
+        text-align: justify;
+    }
+}
+
+.footer-row-cols h6 {
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.footer-row-cols ul {
+    list-style-type: none;
+    padding-left: 0px;
+}
+
+.footer-row-cols li a {
+    font-size: small;
+    color: rgba(0, 0, 0, .5);
+}
+
+footer ul li a:hover {
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -webkit-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+}
+
+.footer-col {
+    padding-left: 35px;
+    padding-right: 35px;
+}
+
+.social-links li a i {
+    color: #788e5c;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 25px;
+    margin-right: 5px;
+    display: block;
+}
+
+.social-links li a i:hover {
+    color: #414e2f;
+    font-weight: bold;
+    transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+}
+
+.copyright-col {
+    text-align: center;
+}
+
+.copyright-col p {
+    font-size: smaller;
 }
