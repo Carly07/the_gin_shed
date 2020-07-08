@@ -52,6 +52,11 @@ INSTALLED_APPS = [
     'crispy_forms',
 ]
 
+ACCOUNT_FORMS = { 
+'signup': 'gin_shed.forms.CustomSignupForm', 
+} 
+
+
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -177,3 +182,5 @@ STRIPE_PUBLIC_KEY = os.getenv('STRIPE_PUBLIC_KEY', '')
 STRIPE_SECRET_KEY = os.getenv('STRIPE_SECRET_KEY', '')
 STRIPE_WH_SECRET = os.getenv('STRIPE_WH_SECRET', '')
 DEFAULT_FROM_EMAIL = 'info@theginshed.com'
+
+EMAILJS_USER_ID = os.getenv('EMAILJS_USER_ID')
