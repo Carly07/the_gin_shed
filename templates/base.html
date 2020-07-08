@@ -38,7 +38,9 @@
 
   </head>
   <body>
+  <!--******** HEADER ********-->
     <header class="container-fluid fixed-top">
+    <!--******** TOP NAV ********-->
         <div id="topnav" class="row bg-white pt-lg-0 d-none d-lg-flex">
             <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-center text-lg-left">
                 <a href="{% url 'home' %}" class="nav-link main-logo-link">
@@ -107,6 +109,7 @@
                 </ul>
             </div>
         </div>
+        <!--******** MAIN NAV ********-->
         <div class="row bg-white">
             <div class="col-6 py-1 py-lg-0 d-flex d-lg-none">
                 <a href="{% url 'home' %}" class="nav-link main-logo-link text-center"><h2 class="logo-font my-0 mx-auto">The Gin Shed</h2></a>
@@ -123,13 +126,16 @@
         <div class="row bg-white justify-content-center">
                 {% include 'includes/mobile-top-header.html' %}
         </div>
+        <!--******** DELIVERY BANNER ********-->
         <div id="delivery-banner" class="row text-center">
             <div class="col delivery-banner text-white">
                 <h4 class="logo-font my-1">Free delivery on orders over £{{ free_delivery_threshold }}!</h4>                
             </div>            
         </div>
     </header>
+<!--******** /.HEADER ********-->
 
+<!--******** MESSAGES ********-->
     {% if messages %}
         <div class="message-container">
             {% for message in messages %}
@@ -147,15 +153,15 @@
             {% endfor %}
         </div>
     {% endif %}
+<!--******** /.MESSAGES ********-->
 
-    {% block page_header %}
-    {% endblock %}
-
+<!--******** PAGE CONTENT ********-->
     {% block content %}
     {% endblock %}
+<!--******** /.PAGE CONTENT ********-->
 
-   <!--********FOOTER********-->
-    <footer class="container-fluid my-5">
+<!--******** FOOTER ********-->
+    <footer class="container-fluid my-3">
         <div class="row footer-row footer-row-cols">
             <div class="col-md-4 footer-col">
                 <h6 class="logo-font">The Gin Shed</h6>
@@ -164,7 +170,7 @@
                         <a href="{% url 'about' %}">About Us</a>
                     </li>
                     <li>
-                        <a href="#">Contact Us</a>
+                        <a href="{% url 'contact' %}">Contact Us</a>
                     </li>
                 </ul>
             </div>
@@ -221,7 +227,7 @@
             </div>
         </div>
     </footer>
-    <!--********/.FOOTER********-->
+<!--******** /.FOOTER ********-->
 
     {% block postloadjs %}
     <script type="text/javascript">

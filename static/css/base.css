@@ -6,6 +6,8 @@ body {
     width: 100%;
     color: #000000;
     font-family: 'Open Sans Condensed', sans-serif;
+    line-height: 1.6;
+    
 }
 
 .jumbotron {
@@ -99,6 +101,7 @@ body {
 
 .delivery-banner {
     background: #000 !important;
+    
 }
 
 .overlay {
@@ -134,12 +137,6 @@ input[name='q']::placeholder {
     color: #6c757d;
 }
 
-/* -------------------------------- pages */
-
-.pages-container {
-    background-color: #86a95b29;
-
-}
 
 
 /* -------------------------------- bootstrap toasts */
@@ -331,14 +328,14 @@ input[name='q']::placeholder {
         z-index: 1030;
     }
 
-    .header-container {
+    .content-container {
         padding-top: 164px;
     }
 }
 
 /* add padding to  the top when navbar is collapsed on mobile */
 @media (max-width: 991px) {
-    .header-container {
+    .content-container {
         padding-top: 156px;
     }
 
