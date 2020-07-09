@@ -305,20 +305,50 @@ input[name='q']::placeholder {
 }
 
 /*------------Star ratings------------*/
-.rating-box {
-    display: flex;
-    flex-direction: column;
+.stars {
+    position: absolute;
+    transform: translate(0%, 0%) rotateY(180deg);
 }
 
-.rating-box .stars .far {
-    font-size: 20px;
-    color: black;
-    float: left;
+.stars input {
+    display: none;
+}
+
+.stars label {
+    display: inline-block;
     cursor: pointer;
+    width: 20px;
+    padding-left: 0px;
 }
 
-.rating-box input {
-    margin-top: 20px;
+.stars label:before {
+    content: '\f005';
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    position: relative;
+    display: block;
+    font-size: 20px;
+    color: #cfcfce;
+}
+
+.stars label:after {
+    content: '\f005';
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    font-size: 20px;
+    position: absolute;
+    top: 0;
+    opacity: 0;
+    display: block;
+    color: #788e5c;
+    transition: 0.5;
+    text-shadow: 0 2px 2px rgba(0, 0, 0, .5)
+}
+
+.stars label:hover:after,
+.stars label:hover ~ label:after,
+.stars input:checked ~label:after {
+    opacity: 1;
 }
 
 /* fixed top navbar only on medium and up */
