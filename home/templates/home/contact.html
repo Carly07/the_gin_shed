@@ -1,38 +1,23 @@
 {% extends 'base.html' %}
 {% load static %}
 
- {% block extra_css %}
-<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2.3.2/dist/email.min.js"></script>
-<script type="text/javascript">
-   (function(){
-      emailjs.init("user_cAhgSczcxi8hSCfeCwkQf");
-   })();
-</script>
-{% endblock %}
 
 {% block extra_title %}| Contact {% endblock %}
 
 {% block content %}
-<div class="overlay"></div>
-<div class="container content-container">
-    <div class="row">
-        <div class="col-12 col-md-6 my-3">
-            <h2 class="logo-font mb-4">Contact Us</h2>
-            <h5 class="text-muted">Submit your questions, comments or queries using the form below</h5>
-            <hr>
-        </div>
-    </div>
 
-    <div class="row justify-content-center">
-        <div class="col-12 col-md-6">
+<div class="container-fluid content-container gin-background">
+    <div class="row h-100 justify-content-center">
+        <div class="col-10 col-md-6 col-lg-4 my-auto">
             <div class="contact-form-wrapper mx-auto my-3">
-                <form id="contact-form" method="POST" class="mb-3">
+                <h2 class="logo-font text-center my-3">Contact Us</h2>
+                <form id="contact-form" method="POST" class="mb-2">
                     {% csrf_token %}
                     <div class="row form-group">
-                        <div class="col-10 mb-2">
+                        <div class="col-10 offset-1 mb-1">
                             {{ form }}
                         </div>
-                        <div class="col-10 text-right my-2">
+                        <div class="col-11 text-right mb-1">
                             <button class="btn btn-black rounded-0" type="submit">Send</button>
                         </div>
                     </div>
