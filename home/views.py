@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.conf import settings
 from .forms import ContactForm
+from home.mail import send_contact_form
 
 # Create your views here.
 
@@ -26,8 +27,7 @@ def contact(request, *args, **kwargs):
 
     if request.user.is_authenticated:
         initial_data = {
-            'first_name': request.user.first_name,
-            'last_name': request.user.last_name,
+            'name': request.user.first_name,
             'email': request.user.email
         }
 
@@ -36,13 +36,14 @@ def contact(request, *args, **kwargs):
     else:
         contact_form = ContactForm()
 
-    emailjs_user_id = settings.EMAILJS_USER_ID
-
     context = {
         "page": "contact",
         "form": contact_form,
-        "emailjs_user_id": emailjs_user_id
     }
+
+    if request.method == "POST":
+        send_contact_mail(request)
+        messages.success(request, "Thank You For Contatcting Us!")
 
     return render(request, 'home/contact.html', context)
 

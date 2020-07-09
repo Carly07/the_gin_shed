@@ -4,17 +4,9 @@ from django import forms
 class ContactForm(forms.Form):
     """ Create form for contact page """
 
-    first_name = forms.CharField(
+    name = forms.CharField(
         required=True,
-        label='First Name',
-        widget=forms.Textarea(attrs={
-            'rows': 1,
-            'class': 'form-control border-black rounded-0 mb-3',
-        })
-    )
-    last_name = forms.CharField(
-        required=True,
-        label='Last Name',
+        label='Name',
         widget=forms.Textarea(attrs={
             'rows': 1,
             'class': 'form-control border-black rounded-0 mb-3',
@@ -32,7 +24,7 @@ class ContactForm(forms.Form):
         required=True,
         label='Message',
         widget=forms.Textarea(attrs={
-            'rows': 8,
+            'rows': 5,
             'class': 'form-control border-black rounded-0 mb-3',
         })
     )
