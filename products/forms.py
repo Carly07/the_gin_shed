@@ -35,7 +35,7 @@ class ReviewForm(forms.ModelForm):
         label='Title',
         widget=forms.Textarea(attrs={
             'rows': 1,
-            'class': 'form-control',
+            'class': 'form-control border-black rounded-0',
         })
     )
 
@@ -44,6 +44,6 @@ class ReviewForm(forms.ModelForm):
         label='Review',
         widget=forms.Textarea(attrs={
             'rows': 2,
-            'class': 'form-control',
+            'class': 'form-control border-black rounded-0',
         })
     )
