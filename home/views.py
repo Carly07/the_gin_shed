@@ -43,7 +43,7 @@ def contact(request, *args, **kwargs):
 
     if request.method == "POST":
         send_contact_mail(request)
-        messages.success(request, "Thank You For Contatcting Us!")
+        messages.success(request, "Thank You For Contacting Us!")
 
     return render(request, 'home/contact.html', context)
 
