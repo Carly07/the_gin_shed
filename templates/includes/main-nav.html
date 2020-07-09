@@ -11,16 +11,10 @@
                 <a href="{% url 'products' %}?category=gin,mixers,accessories" class="dropdown-item">All Products</a>
             </div>
         </li>
-        <li class="nav-item dropdown">
-            <a class="logo-font font-weight-bold nav-link text-black mr-4" href="#" id="gindrop-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Gin Drop
+        <li class="nav-item">
+            <a class="logo-font font-weight-bold nav-link text-black mr-4" href="#">
+                Gin Cocktails
             </a>
-            <div class="dropdown-menu border-0 logo-font" aria-labelledby="gindrop-link">
-                <a href="{% url 'products' %}?category=monthly" class="dropdown-item">Monthly Drop</a>
-                <a href="{% url 'products' %}?category=bi_monthly" class="dropdown-item">Bi-monthly Drop</a>
-                <a href="{% url 'products' %}?category=quarterly" class="dropdown-item">Quarterly Drop</a>
-                <a href="{% url 'products' %}?category=monthly,bi_monthly,quarterly" class="dropdown-item">All Drops</a>
-            </div>
         </li>
         <li class="nav-item">
             <a class="logo-font font-weight-bold nav-link text-black mr-4" href="{% url 'get_posts' %}">
