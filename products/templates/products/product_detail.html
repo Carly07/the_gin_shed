@@ -150,39 +150,39 @@
                 </div>
             </div>
 
+            <!-- Display reviews if available otherwise display "no reviews" to user. -->
             <div class="col-12 col-md-6 col-lg-4">
-                <!-- Render Reviews -->
-                    <!-- Display reviews if available otherwise display "no reviews" to user. -->
-                    {% if reviews %}
-                        {% for review in reviews %}
-                            <div class="col-12">
-                                <small class="mr-2">{{ review.stars }} / 5</small> 
-                                <small class=""><i class="fas fa-star"></i></small>
-                                <small class=""><i class="fas fa-star"></i></small>
-                                <small class=""><i class="fas fa-star"></i></small>
-                                <small class=""><i class="fas fa-star"></i></small>
-                                <small class=""><i class="fas fa-star"></i></small>
-                                <br>
-                                <strong class="mb-1">{{ review.title }}</strong>
-                                <p class="mb-1">{{ review.review_text }}</p> 
-                                <small class="text-muted">{{ review.user }}</small> 
-                                <small class="ml-3 text-muted">{{ review.date_commented }}</small> 
-                                {% if user == review.user or user.is_superuser %}
-                                    <small class="my-2 ml-3"> 
-                                        <a class="text-danger" href="{% url 'delete_review' review.id %}">Delete</a>
-                                    </small>
-                                {% endif %}
-                                <hr>
-                            </div>
-                        {% endfor %}
-                    {% else %}
-                        <div class="col-12 text-left">
-                            <p>No Reviews.</p>
+                {% if reviews %}
+                    {% for review in reviews %}
+                        <div class="col-12">
+                            <small class="mr-2">{{ review.stars }} / 5</small> 
+                            <small class=""><i class="fas fa-star"></i></small>
+                            <small class=""><i class="fas fa-star"></i></small>
+                            <small class=""><i class="fas fa-star"></i></small>
+                            <small class=""><i class="fas fa-star"></i></small>
+                            <small class=""><i class="fas fa-star"></i></small>
+                            <br>
+                            <strong class="mb-1">{{ review.title }}</strong>
+                            <p class="mb-1">{{ review.review_text }}</p> 
+                            <small class="text-muted">{{ review.user }}</small> 
+                            <small class="ml-3 text-muted">{{ review.date_commented }}</small> 
+                            {% if user == review.user or user.is_superuser %}
+                                <small class="my-2 ml-3"> 
+                                    <a class="text-danger" href="{% url 'delete_review' review.id %}">Delete</a>
+                                </small>
+                            {% endif %}
+                            <hr>
                         </div>
-                    {% endif %}
-                </div>
+                    {% endfor %}
+                {% else %}
+                    <div class="col-12 text-left">
+                        <p>No Reviews.</p>
+                    </div>
+                {% endif %}
             </div>
         </div>
+    </div>
+
 {% endblock %}
 
 {% block postloadjs %}

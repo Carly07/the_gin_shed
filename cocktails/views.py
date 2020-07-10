@@ -58,21 +58,23 @@ def edit_recipe(request, recipe_id):
     """ Edit a recipe in the database """
     recipe = get_object_or_404(CocktailRecipe, pk=recipe_id)
 
-    if request.user != recipe.user or request.user.is_superuser:
+    if request.user == recipe.user or request.user.is_superuser:
+
+        if request.method == 'POST':
+            form = RecipeForm(request.POST, request.FILES, instance=recipe)
+            if form.is_valid():
+                form.save()
+                messages.success(request, 'Successfully updated recipe!')
+                return redirect(reverse('cocktail_recipe', args=[recipe.id]))
+            else:
+                messages.error(request, 'There was a problem updating the recipe. Please ensure the form is valid.')
+        else:
+            form = RecipeForm(instance=recipe)
+            messages.info(request, f'You are editing {recipe.name}')
+    
+    else:
         messages.error(request, 'Sorry you do are not authorised to perform this action')
         return redirect(reverse('home'))
-
-    if request.method == 'POST':
-        form = RecipeForm(request.POST, request.FILES, instance=recipe)
-        if form.is_valid():
-            form.save()
-            messages.success(request, 'Successfully updated recipe!')
-            return redirect(reverse('cocktail_recipe', args=[recipe.id]))
-        else:
-            messages.error(request, 'There was a problem updating the recipe. Please ensure the form is valid.')
-    else:
-        form = RecipeForm(instance=recipe)
-        messages.info(request, f'You are editing {recipe.name}')
 
     template = 'cocktails/edit_recipe.html'
     context = {
