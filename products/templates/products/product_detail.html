@@ -108,16 +108,16 @@
         <hr>
     
         <div class="row">
-            <div class="col-12 offset-lg-2">
+            <div class="col-10 offset-1 col-sm-8 offset-sm-2 col-md-10 offset-md-1 col-lg-8 offset-lg-2">
                 <h4 class="mb-4 text-left">Reviews</h4>
             </div>
-            <div class="col-12 col-md-6 col-lg-4 offset-lg-2">
+            <div class="col-10 offset-1 col-sm-8 offset-sm-2 col-md-5 offset-md-1 col-lg-4 offset-lg-2">
                 <div class="product-details-container mb-5">
                     <!-- Review Form -->
                     <div class="row">
                         <div class="col-12">
                             {% if user.is_authenticated %}
-                                <button class="btn btn-outline-black rounded-0 btn-lg text-left d-block d-md-none" type="button" data-toggle="collapse" data-target="#addreview" aria-expanded="false" aria-controls="addrevie">
+                                <button class="btn btn-outline-black rounded-0 btn-lg d-block d-md-none" type="button" data-toggle="collapse" data-target="#addreview" aria-expanded="false" aria-controls="addrevie">
                                     <i class="far fa-comment-alt fa-xs mr-2"></i>Write Review</button>
                                 <div class="collapse pr-5 d-md-block" id="addreview">
                                     <form action="#" method="POST" class="form mt-1 mb-5">
@@ -151,10 +151,10 @@
             </div>
 
             <!-- Display reviews if available otherwise display "no reviews" to user. -->
-            <div class="col-12 col-md-6 col-lg-4">
+            <div class="col-10 offset-1 col-sm-8 offset-sm-2 col-md-5 offset-md-0 col-lg-4">
                 {% if reviews %}
                     {% for review in reviews %}
-                        <div class="col-12">
+                        <div class="col-12 pl-0">
                             <small class="mr-2">{{ review.stars }} / 5</small> 
                             <small class=""><i class="fas fa-star"></i></small>
                             <small class=""><i class="fas fa-star"></i></small>

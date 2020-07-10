@@ -6,7 +6,7 @@
     <div class="overlay"></div>
     <div class="container-fluid content-container">
         <div class="row mt-5">
-            <div class="col-12 col-md-6 col-lg-4 offset-lg-2">
+            <div class="col-12 col-sm-10 offset-sm-1 col-md-4 offset-md-1">
                 <div class="image-container my-5">
                     {% if recipe.image %}
                         <img class="card-img-top img-fluid" src="/media/{{ recipe.image }}" alt="{{ recipe.name }}">
@@ -17,7 +17,7 @@
                     {% endif %}
                 </div>
             </div>
-            <div class="col-12 col-md-6 col-lg-4">
+            <div class="col-12 col-sm-10 offset-sm-1 col-md-6 offset-md-0">
                 <div class="product-details-container mb-5 mt-md-5">
                     <h1 class="logo-font mb-2 text-left font-weight-bold">{{ recipe.name }}</h1>
                     <p class="mb-0"><strong>Serves {{ recipe.serves }}</strong></p>
@@ -33,13 +33,13 @@
                         <br>
                         <br>
                     <div class="row">
-                        <div class="col-6">
+                        <div class="col-12 col-md-4">
                             <h4>Ingredients</h4>
-                            <p class="mt-3">{{ recipe.ingredients }}</p>
+                            <p class="mt-3">{{ recipe.ingredients|linebreaks }}</p>
                         </div>
-                        <div class="col-6">
+                        <div class="col-12 col-md-8">
                             <h4>Method</h4>
-                            <p class="mt-3">{{ recipe.method }}</p>
+                            <p class="mt-3">{{ recipe.method|linebreaks }}</p>
                         </div>
                     </div>
                 </div>

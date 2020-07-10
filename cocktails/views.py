@@ -71,7 +71,7 @@ def edit_recipe(request, recipe_id):
         else:
             form = RecipeForm(instance=recipe)
             messages.info(request, f'You are editing {recipe.name}')
-    
+
     else:
         messages.error(request, 'Sorry you do are not authorised to perform this action')
         return redirect(reverse('home'))

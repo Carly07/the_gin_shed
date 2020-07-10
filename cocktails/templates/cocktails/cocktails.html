@@ -31,13 +31,17 @@
                                 </div>
                                 <div class="card-footer bg-white pt-0 border-0">
                                     <div class="row">
-                                        <div class="col">
+                                        <div class="col-4">
                                             <small class="mb-0">Serves: {{ recipe.serves }}</small>
+                                        </div>
+                                        <div class="col-4">
                                             {% if recipe.tag %}
-                                                <small class="text-muted ml-5"><i class="fas fa-tag mr-2"></i>{{ recipe.tag}}</small>
+                                                <small class="text-muted"><i class="fas fa-tag mr-2"></i>{{ recipe.tag}}</small>
                                             {% endif %}
+                                        </div>
+                                        <div class="col-4">
                                             {% if user == recipe.user or user.is_superuser %}
-                                                <small class="ml-5">
+                                                <small class="">
                                                     <a href="{% url 'edit_recipe' recipe.id %}">Edit</a> | 
                                                     <a class="text-danger" href="{% url 'delete_recipe' recipe.id %}">Delete</a>
                                                 </small>
