@@ -1,0 +1,1 @@
+web: gunicorn gin_shed.wsgi:application
