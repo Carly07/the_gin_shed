@@ -90,6 +90,8 @@ def delete_post(request, pk):
     return redirect(reverse('get_posts'))
 
 
+
+@login_required
 def delete_comment(request, comment_id):
     """ Delete a post comment """
 

@@ -9,7 +9,7 @@ class RecipeForm(forms.ModelForm):
         model = CocktailRecipe
         fields = ('name', 'serves', 'ingredients', 'method', 'tag', 'image')
 
-    image = forms.ImageField(label='Image', required=True, widget=CustomClearableFileInput)
+    image = forms.ImageField(label='Image', required=False, widget=CustomClearableFileInput)
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
