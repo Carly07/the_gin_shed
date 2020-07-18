@@ -45,11 +45,11 @@
 
     <!-- Post Comments -->
     <div class="row">
-        <div class="col-10 offset-1 col-md-8 offset-md-2 col-lg-8 offset-lg-2">
+        <div class="col-12 col-sm-12 col-md-10 offset-md-1 col-lg-8 offset-lg-2">
             <h4 class="mb-4 text-left">Post Comments</h4>
         </div>
         <!-- Render Comments -->
-        <div class="col-10 offset-1 col-md-4 offset-md-2 col-lg-4 offset-lg-2">
+        <div class="col-10 offset-1 col-sm-8 offset-sm-2 col-md-5 offset-md-1 col-lg-4 offset-lg-2">
             <!-- Display Post Comments if any available otherwise display "no comments" text to user. -->
             {% if comments %}
                 {% for comment in comments %}
@@ -67,11 +67,11 @@
                 {% endfor %}
             {% else %}
                 <div class="col-12 text-left pl-0">
-                    <p>No Comments</p>
+                    <p>No Comments.</p>
                 </div>
             {% endif %}
         </div>
-        <div class="col-10 offset-1 col-md-4 offset-md-0 col-lg-4 offset-lg-0">
+        <div class="col-10 offset-1 col-sm-8 offset-sm-2 col-md-5 offset-md-0 col-lg-4">
             <div class="product-details-container mb-3">
                 <!-- Comment Form -->
                 <div class="row">
