@@ -29,10 +29,11 @@ class AddComment(forms.ModelForm):
 
     comment_detail = forms.CharField(
         required=True,
-        label='Write your comments here',
+        label='',
         widget=forms.Textarea(attrs={
             'rows': 2,
             'class': 'form-control border-black rounded-0',
+            'placeholder': 'Comments...',
         })
     )
 
