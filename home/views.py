@@ -29,16 +29,14 @@ def contact(request, *args, **kwargs):
     else:
         form = ContactForm(request.POST)
         if form.is_valid():
-            name = form.cleaned_data.get['name']
-            email = form.cleaned_data.get['email']
-            message = form.cleaned_data.get['message']
-
+            name = form.cleaned_data['name']
+            email = form.cleaned_data['email']
+            message = form.cleaned_data['message']
             try:
                 send_mail(name, message, email, ['carlyclark07@gmail.com'])
             except BadHeaderError:
                 return HttpResponse('Invalid header found.')
-
-            messages.success(request, "Thank you for your message. We'll be in touch shortly.")
+            messages.success(request, 'Thank you for your message.')
             return redirect('home')
     return render(request, "home/contact.html", {'form': form})
 
