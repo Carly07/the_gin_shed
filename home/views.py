@@ -34,13 +34,18 @@ def contact(request, *args, **kwargs):
             message = form.cleaned_data.get['message']
 
             try:
-                send_mail(name, message, ['carlyclark07@gmail.com'], email)
+                send_mail(
+                    f'Message for The Gin Shed'
+                    f'New message from ['name'], ['email']:
+                    \n{data['message']}",
+                    settings.DEFAULT_FROM_EMAIL,
+                    ["carlyclark07@gmail.com"])
             except BadHeaderError:
                 return HttpResponse('Invalid header found.')
 
             messages.success(request, "Thank you for your message. We'll be in touch shortly.")
             return redirect('home')
-            
+
     return render(request, "home/contact.html", {'form': form})
 
 
