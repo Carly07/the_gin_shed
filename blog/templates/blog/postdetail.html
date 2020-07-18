@@ -77,21 +77,18 @@
                 <div class="row">
                     <div class="col-12">
                         {% if user.is_authenticated %}
-                            <button class="btn btn-outline-black rounded-0 btn-lg text-left d-block d-md-none" type="button" data-toggle="collapse" data-target="#addcomment" aria-expanded="false" aria-controls="addcomment">
-                                <i class="far fa-comment-alt fa-xs mr-2"></i> Add a comment</button>
-                            <div class="collapse pr-3 d-md-block" id="addcomment">
-                                <form action="#" method="POST" class="form mt-1 mb-5">
-                                    {% csrf_token %}
-                                    <div class="row">
-                                        <div class="col-12 mt-2 p-0">
-                                            {{ form }}
-                                        </div>
-                                        <div class="col text-right pr-0">
-                                            <input type="submit" value="Post" class="btn btn-black rounded-0 mt-2">
-                                        </div>
-                                    </div> 
-                                </form>
-                            </div>
+                            <h5 class="text-left mb-3">Add a comment...</h5>
+                            <form action="#" method="POST" class="form mt-1 mb-5">
+                                {% csrf_token %}
+                                <div class="row">
+                                    <div class="col-12 mt-2 p-0">
+                                        {{ form }}
+                                    </div>
+                                    <div class="col text-right pr-0">
+                                        <input type="submit" value="Post" class="btn btn-black rounded-0 mt-2">
+                                    </div>
+                                </div> 
+                            </form>
                         {% else %}
                             <p>Please <a href="{% url 'account_signup' %}">Register</a> or <a href="{% url 'account_login' %}">login</a> to leave a comment</p>
                         {% endif %}
