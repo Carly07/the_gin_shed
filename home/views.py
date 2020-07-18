@@ -33,21 +33,14 @@ def contact(request, *args, **kwargs):
             email = form.cleaned_data.get['email']
             message = form.cleaned_data.get['message']
 
-            if request.user.is_authenticated():
-                subject = str(request.user) + "'s Message"
-            else:
-                subject = "A Visitor's Message"
-
-            comment = name + " with the email, " + email + ", sent the following message:\n\n" + message
-
             try:
-                send_mail(subject, comment, 'carlyclark07@gmail.com', [email])
+                send_mail(name, message, ['carlyclark07@gmail.com'], email)
             except BadHeaderError:
                 return HttpResponse('Invalid header found.')
 
             messages.success(request, "Thank you for your message. We'll be in touch shortly.")
             return redirect('home')
-
+            
     return render(request, "home/contact.html", {'form': form})
 
 
