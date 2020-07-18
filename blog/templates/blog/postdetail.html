@@ -12,7 +12,7 @@
             <h2 class="mt-5">{{ post.title }}</h2>
             <div class="image-container my-4">
                 {% if post.image %}
-                    <img class="img-fluid img-blogpost" src="/media/{{ post.image }}">
+                    <img class="img-fluid img-blogpost" src="{{ post.image.url }}">
                 {% endif %}
             </div>
             <small class="my-5 mr-3 text-center"><strong>Published:</strong> {{ post.published_date }} </small>
