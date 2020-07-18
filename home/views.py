@@ -33,10 +33,10 @@ def contact(request, *args, **kwargs):
             email = form.cleaned_data['email']
             message = form.cleaned_data['message']
             try:
-                send_mail(name, message, email, ['carlyclark07@gmail.com'])
+                send_mail(name, message, email,)
             except BadHeaderError:
                 return HttpResponse('Invalid header found.')
-            messages.success(request, 'Thank you for your message.')
+            messages.success(request, "Thank you for your message. We'll be in touch shortly.")
             return redirect('home')
     return render(request, "home/contact.html", {'form': form})
 
