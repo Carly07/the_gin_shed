@@ -50,28 +50,6 @@
         </div>
         <!-- Render Comments -->
         <div class="col-10 offset-1 col-sm-8 offset-sm-2 col-md-5 offset-md-1 col-lg-4 offset-lg-2">
-            <!-- Display Post Comments if any available otherwise display "no comments" text to user. -->
-            {% if comments %}
-                {% for comment in comments %}
-                    <div class="col-12 p-0">
-                        <strong class="">{{ comment.user }}</strong> 
-                        <p class="mb-1">{{ comment.comment_detail }}</p>
-                        <small class="text-muted">{{ comment.date_commented }}</small> 
-                        {% if user == comment.user or user.is_superuser %}
-                            <small class="my-2 ml-3"> 
-                                <a class="text-danger" href="{% url 'delete_comment' comment.id %}">Delete</a>
-                            </small>
-                        {% endif %}
-                        <hr>
-                    </div>
-                {% endfor %}
-            {% else %}
-                <div class="col-12 text-left pl-0">
-                    <p>No Comments.</p>
-                </div>
-            {% endif %}
-        </div>
-        <div class="col-10 offset-1 col-sm-8 offset-sm-2 col-md-5 offset-md-0 col-lg-4">
             <div class="product-details-container mb-3">
                 <!-- Comment Form -->
                 <div class="row">
@@ -95,6 +73,28 @@
                     </div>
                 </div>
             </div>
+        </div>
+        <div class="col-10 offset-1 col-sm-8 offset-sm-2 col-md-5 offset-md-0 col-lg-4">
+            <!-- Display Post Comments if any available otherwise display "no comments" text to user. -->
+            {% if comments %}
+                {% for comment in comments %}
+                    <div class="col-12 p-0">
+                        <strong class="">{{ comment.user }}</strong> 
+                        <p class="mb-1">{{ comment.comment_detail }}</p>
+                        <small class="text-muted">{{ comment.date_commented }}</small> 
+                        {% if user == comment.user or user.is_superuser %}
+                            <small class="my-2 ml-3"> 
+                                <a class="text-danger" href="{% url 'delete_comment' comment.id %}">Delete</a>
+                            </small>
+                        {% endif %}
+                        <hr>
+                    </div>
+                {% endfor %}
+            {% else %}
+                <div class="col-12 text-left pl-0">
+                    <p>No Comments.</p>
+                </div>
+            {% endif %}
         </div>
     </div>
 </div>
