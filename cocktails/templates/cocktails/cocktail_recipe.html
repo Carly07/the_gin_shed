@@ -9,7 +9,7 @@
             <div class="col-12 col-sm-10 offset-sm-1 col-md-4 offset-md-1">
                 <div class="image-container my-5">
                     {% if recipe.image %}
-                        <img class="card-img-top img-fluid" src="/media/{{ recipe.image }}" alt="{{ recipe.name }}">
+                        <img class="card-img-top img-fluid" src="{{ recipe.image.url }}" alt="{{ recipe.name }}">
                     {% else %}
                         <a href="">
                             <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ recipe.name }}">
