@@ -1,4 +1,4 @@
-from django.core.mail import EmailMessage, BadHeaderError
+from django.core.mail import send_mail, BadHeaderError
 from django.http import HttpResponse
 from django.shortcuts import render, redirect
 from django.contrib import messages
@@ -29,24 +29,14 @@ def contact(request, *args, **kwargs):
     else:
         form = ContactForm(request.POST)
         if form.is_valid():
-            subject = 'The Gin Shed enquiry: ' + form.cleaned_data['subject']
-            sender = form.cleaned_data['email']
+            subject = '[The Gin Shed]: New enquiry from '+ form.cleaned_data['email']
             message = form.cleaned_data['message']
-            email = EmailMessage(
-                subject,
-                message,
-                'carlyclark07@gmail.com',
-                ['carlyclark07@gmail.com'],
-                reply_to=sender,
-                )
             try:
-                email.send()
-                messages.success(request, 'Thank you for your message.')
-                form = ContactForm
+                send_mail(subject, message, ['carlyclark07@gmail.com'])
             except BadHeaderError:
                 return HttpResponse('Invalid header found.')
-
-        return redirect('home')
+            messages.success(request, 'Thank you for your message.')
+            return redirect('home')
     return render(request, "home/contact.html", {'form': form})
 
 
