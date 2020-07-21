@@ -36,6 +36,7 @@ def contact(request, *args, **kwargs):
                 subject,
                 message,
                 'carlyclark07@gmail.com',
+                ['carlyclark07@gmail.com'],
                 reply_to=sender,
                 )
             try:
