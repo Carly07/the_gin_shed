@@ -12,7 +12,7 @@ class ContactForm(forms.Form):
             'class': 'form-control border-black rounded-0 mb-3',
         })
     )
-    sender = forms.EmailField(
+    email = forms.EmailField(
         required=True,
         label='Email',
         widget=forms.EmailInput(attrs={

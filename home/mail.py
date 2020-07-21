@@ -12,11 +12,10 @@ def send_contact_form(request):
     data = request.POST
     try:
         send_mail(
-            f'The Gin Shed enquiry',
-            f"You have new message from {data['name']} {data['email']}: \n{data['message']}",
-            settings.FROM_EMAIL,
+            f'The Gin Shed enquiry:' {data['subject']},
+            f'You have new message from {data['sender']}: \n{data['message']}'',
             ["carlyclark07@gmail.com"],
             fail_silently=False,
-        )
+            )
     except SMTPAuthenticationError:
         messages.error(request, "There was a problem submitting your form")
