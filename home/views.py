@@ -29,11 +29,15 @@ def contact(request, *args, **kwargs):
     else:
         form = ContactForm(request.POST)
         if form.is_valid():
-            subject = '[The Gin Shed] '+ form.cleaned_data['subject']
+            subject = 'The Gin Shed enquiry: ' + form.cleaned_data['subject']
             sender = form.cleaned_data['email']
             message = form.cleaned_data['message']
-            recipients = ['carlyclark07@gmail.com']
-            email = EmailMessage(subject, message, 'carlyclark07@gmail.com', recipients, headers={'Reply_To': sender})
+            email = EmailMessage(
+                subject,
+                message,
+                'carlyclark07@gmail.com',
+                reply_to=sender,
+                )
             try:
                 email.send()
                 messages.success(request, 'Thank you for your message.')
