@@ -132,6 +132,13 @@ def checkout_success(request, order_number):
     save_info = request.session.get('save_info')
     order = get_object_or_404(Order, order_number=order_number)
 
+    # Update number in stock
+    order_items = OrderLineItem.objects.filter(order=order)
+    for item in order_items:
+        product = Product.objects.filter(id=item.product.id).first()
+        product.num_in_stock = product.num_in_stock - item.quantity
+        product.save()
+
     if request.user.is_authenticated:
         profile = UserProfile.objects.get(user=request.user)
         # Attach the user's profile to the order

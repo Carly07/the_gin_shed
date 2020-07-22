@@ -34,7 +34,7 @@ def contact(request, *args, **kwargs):
             message = form.cleaned_data['message']
             try:
                 send_mail(
-                    f"New message from {email}",
+                    f"The Gin Shed: New message from {email}",
                     message,
                     settings.DEFAULT_FROM_EMAIL,
                     ['carlyclark07@gmail.com']
