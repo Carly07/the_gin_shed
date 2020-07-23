@@ -21,8 +21,13 @@ def add_to_basket(request, item_id):
     basket = request.session.get('basket', {})
 
     if item_id in list(basket.keys()):
+        num_in_stock = product.num_in_stock
         basket[item_id] += quantity
-        messages.success(request, f'Updated {product.name} quantity to {basket[item_id]}')
+        if basket[item_id] > num_in_stock:
+            basket[item_id] = int(num_in_stock)
+            messages.error(request, f'Sorry, there are only {product.num_in_stock} of {product.name} left in stock!')
+        else:
+            messages.success(request, f'Updated {product.name} quantity to {basket[item_id]}')
     else:
         basket[item_id] = quantity
         messages.success(request, f'Added {product.name} to your basket')
@@ -39,8 +44,13 @@ def adjust_basket(request, item_id):
     basket = request.session.get('basket', {})
 
     if quantity > 0:
+        num_in_stock = product.num_in_stock
         basket[item_id] = quantity
-        messages.success(request, f'Updated {product.name} quantity to {basket[item_id]}')
+        if basket[item_id] > num_in_stock:
+            basket[item_id] = int(num_in_stock)
+            messages.error(request, f'Sorry, there are only {product.num_in_stock} of {product.name} left in stock!')
+        else:
+            messages.success(request, f'Updated {product.name} quantity to {basket[item_id]}')
     else:
         basket.pop(item_id)
         messages.success(request, f'Removed {product.name} from your basket')
