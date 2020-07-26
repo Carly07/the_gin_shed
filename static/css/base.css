@@ -279,11 +279,11 @@ input[name='q']::placeholder {
 }
 
 .allauth-form-inner-content a {
-	color: #788e5c; /* text-info */
+	color: #788e5c !important; /* text-info */
 }
 
 /*------------Product Results------------*/
-.card-img-top {
+.product-img {
     height: 290px;
 }
 
