@@ -279,9 +279,13 @@ input[name='q']::placeholder {
 }
 
 .allauth-form-inner-content a {
-	color: #17a2b8; /* text-info */
+	color: #788e5c; /* text-info */
 }
 
+/*------------Product Results------------*/
+.card-img-top {
+    height: 290px;
+}
 
 /*------------Product Form------------*/
 .btn-file {
