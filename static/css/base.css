@@ -332,6 +332,10 @@ input[name='q']::placeholder {
 * Browsers: last 4 version
 */
 
+.rating-box {
+    perspective: 1000px;
+}
+
 .stars {
     position: absolute;
     -ms-transform: translate(0%, 0%) rotateY(180deg);
