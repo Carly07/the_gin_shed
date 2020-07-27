@@ -334,8 +334,7 @@ input[name='q']::placeholder {
 
 .stars {
     position: absolute;
-    -webkit-transform: translate(0%, 0%) rotateY(180deg);
-            transform: translate(0%, 0%) rotateY(180deg);
+    
 }
 
 .stars input {
