@@ -35,6 +35,12 @@ body {
     background-image: url('/media/gin-home1.jpg');
 }
 
+@media (max-width: 1199.98px) {
+    .jumbotron {
+        background-attachment: scroll;
+    }
+} 
+
 /* from Bulma */
 .icon {
     align-items: center;
