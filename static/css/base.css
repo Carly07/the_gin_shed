@@ -111,7 +111,7 @@ body {
 }
 
 .delivery-banner {
-    background: #000 !important;
+    background: #788e5c !important;
     
 }
 
@@ -148,6 +148,9 @@ input[name='q']::placeholder {
     color: #6c757d;
 }
 
+.text-highlight {
+    color: #788e5c;
+}
 
 
 /* -------------------------------- bootstrap toasts */
