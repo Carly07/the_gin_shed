@@ -20,6 +20,7 @@ body {
     justify-content: center;
 }
 
+/*------------Index Page------------*/
 .jumbotron {
     margin-bottom: 0px;
     background-attachment: fixed;
@@ -291,12 +292,12 @@ input[name='q']::placeholder {
 	color: #788e5c !important; /* text-info */
 }
 
-/*------------Product Results------------*/
+/*------------Product Results Page ------------*/
 .product-img {
     height: 290px;
 }
 
-/*------------Product Form------------*/
+/*------------Add Product Form------------*/
 .btn-file {
     position: relative;
     overflow: hidden;
@@ -324,9 +325,17 @@ input[name='q']::placeholder {
 }
 
 /*------------Star ratings------------*/
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 4 version
+*/
+
 .stars {
     position: absolute;
-    transform: translate(0%, 0%) rotateY(180deg);
+    -webkit-transform: translate(0%, 0%) rotateY(180deg);
+            transform: translate(0%, 0%) rotateY(180deg);
 }
 
 .stars input {
@@ -360,6 +369,8 @@ input[name='q']::placeholder {
     opacity: 0;
     display: block;
     color: #788e5c;
+    -webkit-transition: 0.5;
+    -o-transition: 0.5;
     transition: 0.5;
     text-shadow: 0 2px 2px rgba(0, 0, 0, .5)
 }
@@ -438,7 +449,7 @@ input[name='q']::placeholder {
     }
 }
 
-
+/*------------About Page------------*/
 .about-background {
     background-image: url('/media/GTs-istock.jpg');
     background-attachment: fixed;
@@ -453,6 +464,12 @@ input[name='q']::placeholder {
     opacity: .9;
     padding: .75rem;
 }
+
+@media (max-width: 1199.98px) {
+    .about-background, .gin-background {
+        background-attachment: scroll;
+    }
+} 
 
 /*------------Contact Us------------*/
 .gin-background {
