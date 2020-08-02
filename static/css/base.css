@@ -418,11 +418,11 @@ input[name='q']::placeholder {
     }
 
     body {
-        height: calc(100vh - 126px);
+        height: calc(100vh - 60px);
     }
 
     .jumbotron {
-        height: calc(100vh - 126px);
+        height: calc(100vh - 60px);
     }
 
     .display-4.main-logo-link.logo-font{
