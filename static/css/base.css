@@ -74,11 +74,6 @@ body {
     line-height: 20px;
 }
 
-.nav-link:hover,
-.nav-link:active,
-.nav-link:focus {
-    color: #788e5c;
-}
 
 .shop-now-btn {
     background: #788e5c;
@@ -125,7 +120,7 @@ body {
 
 .delivery-container {
     background: #788e5c !important;
-    height: 200px;
+    height: 250px;
     width: 100%;
 }
 
@@ -410,7 +405,7 @@ input[name='q']::placeholder {
     }
 
     .content-container {
-        padding-top: 120px;
+        padding-top: 126px;
         min-height: 100vh;
     }
 }
@@ -419,15 +414,15 @@ input[name='q']::placeholder {
 @media (max-width: 991px) {
     .content-container {
         min-height: 100vh;
-        padding-top: 131px;
+        padding-top: 60px;
     }
 
     body {
-        height: calc(100vh - 131px);
+        height: calc(100vh - 126px);
     }
 
     .jumbotron {
-        height: calc(100vh - 131px);
+        height: calc(100vh - 126px);
     }
 
     .display-4.main-logo-link.logo-font{
@@ -445,10 +440,6 @@ input[name='q']::placeholder {
     .navbar-toggler {
         padding: .4rem .4rem;
         font-size: .75rem;
-    }
-
-    #delivery-banner h4 {
-        font-size: .9rem;
     }
 
     .btn.btn-outline-black.rounded-0,
