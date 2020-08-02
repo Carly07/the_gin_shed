@@ -74,6 +74,12 @@ body {
     line-height: 20px;
 }
 
+.nav-link:hover,
+.nav-link:active,
+.nav-link:focus {
+    color: #788e5c;
+}
+
 .subscribe-now-btn {
     background: #788e5c;
     color: white;
@@ -99,9 +105,9 @@ body {
     color: white !important;
 }
 
-.subscribe-now-btn:hover,
-.subscribe-now-btn:active,
-.subscribe-now-btn:focus,
+.shop-now-btn:hover,
+.shop-now-btn:active,
+.shop-now-btn:focus,
 .btn-black:hover,
 .btn-black:active,
 .btn-black:focus {
@@ -117,7 +123,7 @@ body {
     border: 1px solid #000 !important;
 }
 
-.delivery-banner {
+.delivery-container {
     background: #788e5c !important;
     
 }
@@ -157,6 +163,10 @@ input[name='q']::placeholder {
 
 .text-highlight {
     color: #788e5c;
+}
+
+.text-highlight:hover {
+    color: #414e2f;
 }
 
 
