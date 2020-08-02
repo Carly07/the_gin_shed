@@ -42,6 +42,12 @@ body {
     }
 } 
 
+.delivery-container {
+    background: #788e5c !important;
+    height: 250px;
+    width: 100%;
+}
+
 /* from Bulma */
 .icon {
     align-items: center;
@@ -74,12 +80,32 @@ body {
     line-height: 20px;
 }
 
+.navbar-link:hover, 
+.navbar-link:active, 
+.navbar-link:focus {
+    color: #788e5c;
+}
+
 
 .shop-now-btn {
     background: #788e5c;
     color: white;
     min-width: 260px;
     font-size: 22px;
+}
+
+.white-shop-btn {
+    background: #fff;
+    color: #788e5c;
+    min-width: 260px;
+    font-size: 22px;
+}
+
+.white-shop-btn:hover,
+.white-shop-btn:active,
+.white-shop-btn:focus {
+    background: rgb(241, 240, 240);
+    color: #414e2f;
 }
 
 .btn-black {
@@ -116,12 +142,6 @@ body {
 
 .border-black {
     border: 1px solid #000 !important;
-}
-
-.delivery-container {
-    background: #788e5c !important;
-    height: 250px;
-    width: 100%;
 }
 
 .overlay {
@@ -410,7 +430,7 @@ input[name='q']::placeholder {
     }
 }
 
-/* add padding to  the top when navbar is collapsed on mobile */
+/* adjust padding to the top when navbar is collapsed on mobile */
 @media (max-width: 991px) {
     .content-container {
         min-height: 100vh;

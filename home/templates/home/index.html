@@ -32,6 +32,11 @@
             <div class="col-12 my-5 text-white">
                 <h1 class="logo-font text-center my-3">Free Delivery!</h1>
                 <h3 class="text-center mb-3">Enjoy free delivery on all orders over £{{ free_delivery_threshold }}</h3>
+                <div class="my-5 text-right">
+                    <h4 class="d-block d-lg-none">
+                        <a href="{% url 'products' %}?category=gin,mixers,accessories" class="white-shop-btn btn btn-large rounded-10 text-uppercase mx-auto py-3">Shop Now</a>
+                    </h4>
+                </div>
             </div>
         </div>
     </div>
