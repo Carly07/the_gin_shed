@@ -25,7 +25,7 @@ body {
     margin-bottom: 0px;
     background-attachment: fixed;
     background-position: bottom;
-    height: calc(100vh - 136px);
+    height: calc(100vh - 120px);
     background-size: cover;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -80,7 +80,7 @@ body {
     color: #788e5c;
 }
 
-.subscribe-now-btn {
+.shop-now-btn {
     background: #788e5c;
     color: white;
     min-width: 260px;
@@ -125,7 +125,8 @@ body {
 
 .delivery-container {
     background: #788e5c !important;
-    
+    height: 200px;
+    width: 100%;
 }
 
 .overlay {
@@ -409,7 +410,7 @@ input[name='q']::placeholder {
     }
 
     .content-container {
-        padding-top: 136px;
+        padding-top: 120px;
         min-height: 100vh;
     }
 }
