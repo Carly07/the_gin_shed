@@ -20,6 +20,36 @@ body {
     justify-content: center;
 }
 
+/*------------Header------------*/
+.logo-font {
+    text-transform: uppercase;
+    font-family: 'Amatic SC';
+    
+}
+
+.main-logo-link {
+    width: fit-content;
+    color: #788e5c;
+    font-family: 'Amatic SC';
+}
+
+.main-logo-link:hover,
+.main-logo-link:active,
+.main-logo-link:focus {
+    color: #414e2f;
+}
+
+#main-nav {
+    font-size: 20px;
+    line-height: 20px;
+}
+
+.navbar-link:hover, 
+.navbar-link:active, 
+.navbar-link:focus {
+    color: #788e5c;
+}
+
 /*------------Index Page------------*/
 .jumbotron {
     margin-bottom: 0px;
@@ -57,36 +87,6 @@ body {
     width: 1.5rem;
 }
 
-.logo-font {
-    text-transform: uppercase;
-    font-family: 'Amatic SC';
-    
-}
-
-.main-logo-link {
-    width: fit-content;
-    color: #788e5c;
-    font-family: 'Amatic SC';
-}
-
-.main-logo-link:hover,
-.main-logo-link:active,
-.main-logo-link:focus {
-    color: #414e2f;
-}
-
-#main-nav {
-    font-size: 20px;
-    line-height: 20px;
-}
-
-.navbar-link:hover, 
-.navbar-link:active, 
-.navbar-link:focus {
-    color: #788e5c;
-}
-
-
 .shop-now-btn {
     background: #788e5c;
     color: white;
@@ -97,8 +97,8 @@ body {
 .white-shop-btn {
     background: #fff;
     color: #788e5c;
-    min-width: 260px;
-    font-size: 22px;
+    min-width: 150px;
+    font-size: 18px;
 }
 
 .white-shop-btn:hover,
