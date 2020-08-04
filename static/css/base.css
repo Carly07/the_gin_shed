@@ -83,7 +83,7 @@ body {
 }
 
 .cocktail-container {
-    padding-top: 0px;
+    padding-top: 0 !important;
 }
 
 .blog-container {
