@@ -40,45 +40,45 @@
             </div>
         </div>
     </div>
-    <div class="container-fluid  pl-0 pr-0">
-        <div class="row h-100">
-            <div class="col-12 my-2 my-md-3 my-lg-5 text-white">
-                <h1 class="logo-font text-center my-3">Gin-credible Cocktails!</h1>
-                <div id="cocktailcarousel" class="carousel" data-ride="carousel">
-                    <div class="carousel-inner">
-                        <a class="carousel-item"
-                            href="#"><img src="{{ MEDIA_URL }}gimlet.jpg"></a>
-                        <a class="carousel-item"
-                            href="#"><img src="{{ MEDIA_URL }}gin-fizz.jpg"></a>
-                        <a class="carousel-item"
-                            href="#"><img src="{{ MEDIA_URL }}pink_lady.jpg"></a>
+    <div class="container-fluid content-container pl-0 pr-0">
+        <div class="jumbotron jumbotron-fluid" id="cocktail-jumbotron">
+            <div class="container h-100">
+                <div class="row">
+                    <div class="col-12 d-lg-none align-top">
+                        <h2 class="d-block d-lg-none display-4 logo-font text-center">
+                            Gin-Credible Cocktails!
+                        </h2>
                     </div>
-                    <a class="carousel-control-prev" href="#cocktailcarousel" role="button" data-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="sr-only">Previous</span>
-                    </a>
-                    <a class="carousel-control-next" href="#cocktailcarousel" role="button" data-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="sr-only">Next</span>
-                    </a>
                 </div>
-                <div class="my-3 text-center">
-                    <h4 class="">
-                        <a href="{% url 'get_cocktails' %}" class="shop-now-btn btn rounded-10 text-uppercase mx-auto py-2">View Cocktails</a>
-                    </h4>
+                <div class="row h-100">
+                    <div class="d-none d-lg-block col-lg-3 offset-lg-9 my-auto pt-5">
+                        <div class="my-5 text-right">
+                            <h4 class="d-none d-lg-block">
+                                <a href="{% url 'get_cocktails' %}" class="shop-now-btn btn btn-large rounded-10 text-uppercase mx-auto py-3">Shop Now</a>
+                            </h4>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-    <div class="container-fluid delivery-container pl-0 pr-0">
+    <div class="container-fluid blog-container pl-0 pr-0">
         <div class="row h-100">
-            <div class="col-12 my-2 my-md-3 my-lg-5 text-white">
-                <h1 class="logo-font text-center my-3">Check out the latest Blog!</h1>
-                <div class="card" style="width: 18rem;">
-                    <img class="card-img-top" src="{{ MEDIA_URL }}gin-lane.jpg" alt="Card image cap">
-                    <div class="card-body">
-                        <h5 class="card-title">A brief history of Gin</h5>
-                        <p class="card-text">The gin we know today tells a story that spans many centuries. From its most humble beginnings as a drink of the poor and destitute to its association as the drink of privilege and royalty, gin has quite a colourful tale to tell.</p>
+            <div class="col-12 my-2 my-md-3 my-lg-5 text-black">
+                <h1 class="logo-font text-center my-3">Get the latest from our Blog!</h1>
+                <div class="container card-container">
+                    <div class="card mx-auto">
+                        <div class="row">
+                            <div class="col-5">
+                                <img class="card-img-top" src="{{ MEDIA_URL }}gin-lane.jpg" alt="Card image cap">
+                            </div>
+                            <div class="col-7">
+                                <div class="card-body">
+                                    <h5 class="card-title">A brief history of Gin</h5>
+                                    <p class="card-text">The gin we know today tells a story that spans many centuries. From its most humble beginnings as a drink of the poor and destitute to its association as the drink of privilege and royalty, gin has quite a colourful tale to tell.</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="my-3 text-center">

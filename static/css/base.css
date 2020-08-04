@@ -66,6 +66,10 @@ body {
     background-image: url('/media/gin-home1.jpg');
 }
 
+#cocktail-jumbotron {
+    background-image: url('/media/gin-fizz.jpg');
+}
+
 @media (max-width: 1199.98px) {
     .jumbotron {
         background-attachment: scroll;
@@ -75,6 +79,11 @@ body {
 .delivery-container {
     background: #788e5c !important;
     height: 250px;
+    width: 100%;
+}
+
+.blog-container {
+    background: #788e5c !important;
     width: 100%;
 }
 
