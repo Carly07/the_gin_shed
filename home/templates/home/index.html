@@ -29,12 +29,61 @@
     </div>
     <div class="container-fluid delivery-container pl-0 pr-0">
         <div class="row h-100">
-            <div class="col-12 my-4 text-white">
+            <div class="col-12 my-2 my-md-3 my-lg-5 text-white">
                 <h1 class="logo-font text-center my-3">Free Delivery!</h1>
-                <h3 class="text-center my-3">Enjoy free delivery on all orders over £{{ free_delivery_threshold }}</h3>
+                <h3 class="text-center mx-3 my-3">Enjoy free delivery on all orders over £{{ free_delivery_threshold }}</h3>
                 <div class="my-3 text-center">
                     <h4 class="d-block d-lg-none">
                         <a href="{% url 'products' %}?category=gin,mixers,accessories" class="white-shop-btn btn rounded-10 text-uppercase mx-auto py-2">Shop Now</a>
+                    </h4>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid  pl-0 pr-0">
+        <div class="row h-100">
+            <div class="col-12 my-2 my-md-3 my-lg-5 text-white">
+                <h1 class="logo-font text-center my-3">Gin-credible Cocktails!</h1>
+                <div id="cocktailcarousel" class="carousel" data-ride="carousel">
+                    <div class="carousel-inner">
+                        <a class="carousel-item"
+                            href="#"><img src="{{ MEDIA_URL }}gimlet.jpg"></a>
+                        <a class="carousel-item"
+                            href="#"><img src="{{ MEDIA_URL }}gin-fizz.jpg"></a>
+                        <a class="carousel-item"
+                            href="#"><img src="{{ MEDIA_URL }}pink_lady.jpg"></a>
+                    </div>
+                    <a class="carousel-control-prev" href="#cocktailcarousel" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#cocktailcarousel" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+                <div class="my-3 text-center">
+                    <h4 class="">
+                        <a href="{% url 'get_cocktails' %}" class="shop-now-btn btn rounded-10 text-uppercase mx-auto py-2">View Cocktails</a>
+                    </h4>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid delivery-container pl-0 pr-0">
+        <div class="row h-100">
+            <div class="col-12 my-2 my-md-3 my-lg-5 text-white">
+                <h1 class="logo-font text-center my-3">Check out the latest Blog!</h1>
+                <div class="card" style="width: 18rem;">
+                    <img class="card-img-top" src="{{ MEDIA_URL }}gin-lane.jpg" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">A brief history of Gin</h5>
+                        <p class="card-text">The gin we know today tells a story that spans many centuries. From its most humble beginnings as a drink of the poor and destitute to its association as the drink of privilege and royalty, gin has quite a colourful tale to tell.</p>
+                    </div>
+                </div>
+                <div class="my-3 text-center">
+                    <h4 class="">
+                        <a href="{% url 'get_posts' %}" class="white-shop-btn btn rounded-10 text-uppercase mx-auto py-2">View Blog</a>
                     </h4>
                 </div>
             </div>
