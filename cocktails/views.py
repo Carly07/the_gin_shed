@@ -14,7 +14,7 @@ def get_cocktails(request):
     """
 
     recipes = CocktailRecipe.objects.filter(published_date__lte=timezone.now()
-            ).order_by('-published_date')
+                                            ).order_by('-published_date')
     return render(request, "cocktails/cocktails.html", {'recipes': recipes})
 
 
@@ -23,7 +23,8 @@ def cocktail_recipe(request, recipe_id):
 
     recipe = get_object_or_404(CocktailRecipe, pk=recipe_id)
 
-    return render(request, 'cocktails/cocktail_recipe.html', {'recipe': recipe})
+    return render(
+        request, 'cocktails/cocktail_recipe.html', {'recipe': recipe})
 
 
 @login_required
@@ -42,7 +43,9 @@ def add_recipe(request):
             messages.success(request, 'Your recipe has been saved!')
             return redirect(reverse('cocktail_recipe', args=[recipe.id]))
         else:
-            messages.error(request, 'There was a problem saving your recipe. Please ensure the form is valid.')
+            messages.error(
+                request, 'There was a problem saving your recipe. '
+                'Please ensure the form is valid.')
     else:
         form = RecipeForm()
 
@@ -67,13 +70,16 @@ def edit_recipe(request, recipe_id):
                 messages.success(request, 'Successfully updated recipe!')
                 return redirect(reverse('cocktail_recipe', args=[recipe.id]))
             else:
-                messages.error(request, 'There was a problem updating the recipe. Please ensure the form is valid.')
+                messages.error(
+                    request, 'There was a problem updating the recipe.'
+                    ' Please ensure the form is valid.')
         else:
             form = RecipeForm(instance=recipe)
             messages.info(request, f'You are editing {recipe.name}')
 
     else:
-        messages.error(request, 'Sorry you do are not authorised to perform this action')
+        messages.error(
+            request, 'Sorry you do are not authorised to perform this action')
         return redirect(reverse('home'))
 
     template = 'cocktails/edit_recipe.html'

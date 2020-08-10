@@ -27,12 +27,12 @@
                                     </a>
                                 {% endif %}
                                 <div class="card-body text-left pb-0">
-                                    <h4 class="mb-0 font-weight-bold">{{ recipe.name }}</h4>
+                                    <h4 class="mb-0">{{ recipe.name }}</h4>
                                 </div>
                                 <div class="card-footer bg-white pt-0 border-0">
                                     <div class="row">
                                         <div class="col-4">
-                                            <small class="mb-0">Serves: {{ recipe.serves }}</small>
+                                            <small class="mb-0"><i class="fas fa-cocktail"></i> {{ recipe.serves }}</small>
                                         </div>
                                         <div class="col-4">
                                             {% if recipe.tag %}

@@ -1,4 +1,6 @@
-from django.shortcuts import render, redirect, reverse, HttpResponse, get_object_or_404
+from django.shortcuts import (
+    render, redirect, reverse, HttpResponse, get_object_or_404
+)
 from django.contrib import messages
 
 from products.models import Product
@@ -25,9 +27,13 @@ def add_to_basket(request, item_id):
         basket[item_id] += quantity
         if basket[item_id] > num_in_stock:
             basket[item_id] = int(num_in_stock)
-            messages.error(request, f'Sorry, there are only {product.num_in_stock} of {product.name} left in stock! Your basket has been adjusted.')
+            messages.error(
+                request, f'Sorry, there are only {product.num_in_stock} of '
+                '{product.name} left in stock! Your basket has been adjusted.')
         else:
-            messages.success(request, f'Updated {product.name} quantity to {basket[item_id]}')
+            messages.success(
+                request,
+                f'Updated {product.name} quantity to {basket[item_id]}')
     else:
         basket[item_id] = quantity
         messages.success(request, f'Added {product.name} to your basket')
@@ -48,9 +54,13 @@ def adjust_basket(request, item_id):
         basket[item_id] = quantity
         if basket[item_id] > num_in_stock:
             basket[item_id] = int(num_in_stock)
-            messages.error(request, f'Sorry, there are only {product.num_in_stock} of {product.name} left in stock!')
+            messages.error(
+                request, f'Sorry, there are only {product.num_in_stock} of'
+                ' {product.name} left in stock!')
         else:
-            messages.success(request, f'Updated {product.name} quantity to {basket[item_id]}')
+            messages.success(
+                request,
+                f'Updated {product.name} quantity to {basket[item_id]}')
     else:
         basket.pop(item_id)
         messages.success(request, f'Removed {product.name} from your basket')

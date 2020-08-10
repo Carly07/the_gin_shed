@@ -14,7 +14,7 @@ def get_posts(request):
     """
 
     posts = Post.objects.filter(published_date__lte=timezone.now()
-            ).order_by('-published_date')
+                                ).order_by('-published_date')
     return render(request, "blog/blogposts.html", {'posts': posts})
 
 
@@ -60,7 +60,8 @@ def create_or_edit_post(request, pk=None):
     is null or not
     """
     if not request.user.is_superuser:
-        messages.error(request, 'Sorry you do are not authorised to perform this action')
+        messages.error(
+            request, 'Sorry you do are not authorised to perform this action')
         return redirect(reverse('home'))
 
     post = get_object_or_404(Post, pk=pk) if pk else None
@@ -71,7 +72,9 @@ def create_or_edit_post(request, pk=None):
             messages.success(request, 'Success! Your Blog has been posted!')
             return redirect(post_detail, post.pk)
         else:
-            messages.error(request, 'Oops! Failed to post blog. Please ensure the form is valid.')
+            messages.error(
+                request,
+                'Oops! Failed to post blog. Please ensure the form is valid.')
     else:
         form = BlogPostForm(instance=post)
     return render(request, 'blog/blogpostform.html', {'form': form})
@@ -81,14 +84,14 @@ def create_or_edit_post(request, pk=None):
 def delete_post(request, pk):
     """ Delete a blog post """
     if not request.user.is_superuser:
-        messages.error(request, 'Sorry you do are not authorised to perform this action')
+        messages.error(
+            request, 'Sorry you do are not authorised to perform this action')
         return redirect(reverse('home'))
 
     post = get_object_or_404(Post, pk=pk)
     post.delete()
     messages.success(request, 'Post deleted!')
     return redirect(reverse('get_posts'))
-
 
 
 @login_required

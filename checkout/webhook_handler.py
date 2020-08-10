@@ -66,8 +66,10 @@ class StripeWH_Handler:
         if username != 'AnonymousUser':
             profile = UserProfile.objects.get(user__username=username)
             if save_info:
-                profile.default_street_address1 = shipping_details.address.line1
-                profile.default_street_address2 = shipping_details.address.line2
+                profile.default_street_address1 = (
+                    shipping_details.address.line1)
+                profile.default_street_address2 = (
+                    shipping_details.address.line2)
                 profile.default_town_or_city = shipping_details.address.city
                 profile.default_county = shipping_details.address.state
                 profile.default_postcode = shipping_details.address.postal_code
@@ -101,7 +103,8 @@ class StripeWH_Handler:
         if order_exists:
             self._send_confirmation_email(order)
             return HttpResponse(
-                content=f'Webhook received: {event["type"]} | SUCCESS: Verified order already in database',
+                content=f'Webhook received: {event["type"]} |'
+                'SUCCESS: Verified order already in database',
                 status=200)
         else:
             order = None
@@ -144,5 +147,6 @@ class StripeWH_Handler:
         Handle the payment_intent.payment_failed webhook from Stripe
         """
         return HttpResponse(
-            content=f'Payment failed Webhook received: {event["type"]} | SUCCESS: Creayed order in webhook',
+            content=f'Payment failed Webhook received: {event["type"]} |'
+            'SUCCESS: Creayed order in webhook',
             status=200)

@@ -19,7 +19,7 @@
                         </h1>
                         <div class="my-5 text-right">
                             <h4 class="d-none d-lg-block">
-                                <a href="{% url 'products' %}?category=gin,mixers,accessories" class="shop-now-btn btn btn-large rounded-10 text-uppercase mx-auto py-3">Shop Now</a>
+                                <a href="{% url 'products' %}?category=gin,mixers,accessories" class="shop-now-btn btn btn-large rounded-0 text-uppercase mx-auto py-3">Shop Now</a>
                             </h4>
                         </div>
                     </div>
@@ -30,11 +30,12 @@
     <div class="container-fluid delivery-container pl-0 pr-0">
         <div class="row h-100">
             <div class="col-12 my-2 my-md-3 my-lg-5 text-white">
-                <h1 class="logo-font text-center my-3">Free Delivery!</h1>
+                <h1 class="logo-font text-center my-3">Free Delivery! <i class="fas fa-truck"></i></h1>
                 <h3 class="text-center mx-3 my-3">Enjoy free delivery on all orders over £{{ free_delivery_threshold }}</h3>
                 <div class="my-3 text-center">
+                <h4 class="d-none d-lg-block"><i class="fas fa-truck"></i></h4>
                     <h4 class="d-block d-lg-none">
-                        <a href="{% url 'products' %}?category=gin,mixers,accessories" class="white-shop-btn btn rounded-10 text-uppercase mx-auto py-2">Shop Now</a>
+                        <a href="{% url 'products' %}?category=gin,mixers,accessories" class="white-shop-btn btn rounded-0 text-uppercase mx-auto py-2">Shop Now</a>
                     </h4>
                 </div>
             </div>
@@ -49,7 +50,7 @@
                             Gin-Credible Cocktails!
                         </h1>
                         <h4 class="my-5 text-left">
-                            <a href="{% url 'get_cocktails' %}" class="shop-now-btn btn btn-large rounded-10 text-uppercase mx-auto py-2">View Cocktails</a>
+                            <a href="{% url 'get_cocktails' %}" class="shop-now-btn btn btn-large rounded-0 text-uppercase mx-auto py-2">View Cocktails</a>
                         </h4>
                     </div>
                 </div>
@@ -77,7 +78,7 @@
                 </div>
                 <div class="my-3 text-center">
                     <h4 class="">
-                        <a href="{% url 'get_posts' %}" class="white-shop-btn btn rounded-10 text-uppercase mx-auto py-2">View Blog</a>
+                        <a href="{% url 'get_posts' %}" class="white-shop-btn btn rounded-0 text-uppercase mx-auto py-2">View Blog</a>
                     </h4>
                 </div>
             </div>

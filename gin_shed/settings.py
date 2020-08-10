@@ -29,8 +29,6 @@ if 'DEV' in os.environ:
     DEBUG = True
 else:
     DEBUG = False
-    
-   # DEBUG = 'DEVELOPMENT' in os.environ
 
 ALLOWED_HOSTS = ['the-gin-shed.herokuapp.com', 'localhost']
 
@@ -61,9 +59,9 @@ INSTALLED_APPS = [
     'storages',
 ]
 
-ACCOUNT_FORMS = { 
-'signup': 'gin_shed.forms.CustomSignupForm', 
-} 
+ACCOUNT_FORMS = {
+    'signup': 'gin_shed.forms.CustomSignupForm',
+}
 
 
 MIDDLEWARE = [
@@ -91,7 +89,7 @@ TEMPLATES = [
         'OPTIONS': {
             'context_processors': [
                 'django.template.context_processors.debug',
-                'django.template.context_processors.request',  # required by allauth
+                'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
                 'django.template.context_processors.media',
@@ -149,16 +147,20 @@ else:
 
 AUTH_PASSWORD_VALIDATORS = [
     {
-        'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
+        'NAME': 'django.contrib.auth.password_validation.'
+        'UserAttributeSimilarityValidator',
     },
     {
-        'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator',
+        'NAME': 'django.contrib.auth.password_validation.'
+        'MinimumLengthValidator',
     },
     {
-        'NAME': 'django.contrib.auth.password_validation.CommonPasswordValidator',
+        'NAME': 'django.contrib.auth.password_validation.'
+        'CommonPasswordValidator',
     },
     {
-        'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
+        'NAME': 'django.contrib.auth.password_validation.'
+        'NumericPasswordValidator',
     },
 ]
 

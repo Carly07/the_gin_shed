@@ -13,7 +13,8 @@ class CocktailRecipe(models.Model):
     method = models.TextField(blank=False)
     tag = models.CharField(max_length=30, blank=True, null=True)
     image = models.ImageField(blank=True, null=True)
-    published_date = models.DateTimeField(blank=True, null=True, default=timezone.now)
+    published_date = models.DateTimeField(blank=True, null=True,
+                                          default=timezone.now)
     user = models.ForeignKey(User, on_delete=models.CASCADE)
 
     def __str__(self):

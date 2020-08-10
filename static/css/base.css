@@ -491,6 +491,12 @@ input[name='q']::placeholder {
     }
 }
 
+/*------------Blog------------*/
+.img-blogpost {
+    height: 400px !important;
+    width: auto;
+}
+
 /*------------About Page------------*/
 .about-background {
     background-image: url('/media/GTs-istock.jpg');

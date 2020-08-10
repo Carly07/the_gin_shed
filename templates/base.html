@@ -93,7 +93,7 @@
                             <li class="list-inline-item">
                                 <a class="{% if grand_total %} text-highlight font-weight-bold{% else %}text-black{% endif %} nav-link navbar-link" href="{% url 'view_basket' %}">
                                     <div class="text-center">
-                                        <div><i class="fas fa-shopping-cart fa-lg"></i></div>
+                                        <div><i class="fas fa-shopping-basket fa-lg"></i></div>
                                         <p class="logo-font my-0">
                                             {% if grand_total %}
                                                 £{{ grand_total|floatformat:2 }}
@@ -151,7 +151,7 @@
         <!--******** /.PAGE CONTENT ********-->
 
         <!--******** FOOTER ********-->
-            <footer class="container-fluid my-1">
+            <footer class="container-fluid my-3">
                 <div class="row footer-row footer-row-cols mt-3 justify-content-center">
                     <div class="col-md-4 footer-col">
                         <h6 class="logo-font">The Gin Shed</h6>

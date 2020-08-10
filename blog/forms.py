@@ -9,7 +9,8 @@ class BlogPostForm(forms.ModelForm):
         model = Post
         fields = ('title', 'content', 'image', 'tag', 'published_date')
 
-    image = forms.ImageField(label='Image', required=False, widget=CustomClearableFileInput)
+    image = forms.ImageField(label='Image', required=False,
+                             widget=CustomClearableFileInput)
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
@@ -36,4 +37,3 @@ class AddComment(forms.ModelForm):
             'placeholder': 'Comments...',
         })
     )
-
