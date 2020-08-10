@@ -547,15 +547,15 @@ Having followed the steps above to run the project locally, you can then deploye
 
 | Key | Value |
 | ----- | ------- |
-| AWS_ACCESS_KEY_ID | <your secret key> |
-| AWS_SECRET_ACCESS_KEY | <your secret key> |
-| DATABASE_URL | <your postgres database url> |
-| EMAIL_HOST_PASS | <your secret key> |
-| EMAIL_HOST_USER | <email address> |
-| SECRET_KEY | <your secret key> |
-| STRIPE_PUBLIC_KEY | <your secret key> |
-| STRIPE_SECRET_KEY | <your secret key> |
-| STRIPE_WH_SECRET | <your secret key> |
+| AWS_ACCESS_KEY_ID | <"your secret key"> |
+| AWS_SECRET_ACCESS_KEY | <"your secret key"> |
+| DATABASE_URL | <"your postgres database url"> |
+| EMAIL_HOST_PASS | <"your secret key"> |
+| EMAIL_HOST_USER | <"email address"> |
+| SECRET_KEY | <"your secret key"> |
+| STRIPE_PUBLIC_KEY | <"your secret key"> |
+| STRIPE_SECRET_KEY | <"your secret key"> |
+| STRIPE_WH_SECRET | <"your secret key"> |
 | USE_AWS | True |
 
 4. Migrate the database models using the command `python3 manage.py migrate` in the terminal.

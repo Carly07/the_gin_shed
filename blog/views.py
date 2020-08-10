@@ -60,7 +60,8 @@ def create_or_edit_post(request, pk=None):
     is null or not
     """
     if not request.user.is_superuser:
-        messages.error(request, 'Sorry you do are not authorised to perform this action')
+        messages.error(
+            request, 'Sorry you do are not authorised to perform this action')
         return redirect(reverse('home'))
 
     post = get_object_or_404(Post, pk=pk) if pk else None
@@ -83,7 +84,8 @@ def create_or_edit_post(request, pk=None):
 def delete_post(request, pk):
     """ Delete a blog post """
     if not request.user.is_superuser:
-        messages.error(request, 'Sorry you do are not authorised to perform this action')
+        messages.error(
+            request, 'Sorry you do are not authorised to perform this action')
         return redirect(reverse('home'))
 
     post = get_object_or_404(Post, pk=pk)
