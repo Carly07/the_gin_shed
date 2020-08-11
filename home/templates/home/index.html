@@ -33,7 +33,6 @@
                 <h1 class="logo-font text-center my-3">Free Delivery! <i class="fas fa-truck"></i></h1>
                 <h3 class="text-center mx-3 my-3">Enjoy free delivery on all orders over £{{ free_delivery_threshold }}</h3>
                 <div class="my-3 text-center">
-                <h4 class="d-none d-lg-block"><i class="fas fa-truck"></i></h4>
                     <h4 class="d-block d-lg-none">
                         <a href="{% url 'products' %}?category=gin,mixers,accessories" class="white-shop-btn btn rounded-0 text-uppercase mx-auto py-2">Shop Now</a>
                     </h4>
@@ -60,14 +59,14 @@
     <div class="container-fluid blog-container pl-0 pr-0">
         <div class="row h-100">
             <div class="col-12 my-2 my-md-3 my-lg-5 text-white">
-                <h1 class="logo-font text-center my-3">Get the latest from our Blog!</h1>
+                <h1 class="logo-font text-center my-1 my-lg-3">Get the latest from our Blog!</h1>
                 <div class="container card-container my-4 d-none d-md-block">
                     <div class="card text-black mx-auto">
                         <div class="row">
-                            <div class="col-3">
+                            <div class="col-md-3 col-lg-2">
                                 <img class="card-img-top" src="{{ MEDIA_URL }}gin-lane.jpg" alt="Card image cap">
                             </div>
-                            <div class="col-7">
+                            <div class="col-md-9 col-lg-10">
                                 <div class="card-body">
                                     <h2 class="card-title">A brief history of Gin</h2>
                                     <h6 class="card-text">The gin we know today tells a story that spans many centuries. From its most humble beginnings as a drink of the poor and destitute to its association as the drink of privilege and royalty, gin has quite a colourful tale to tell.</h6>

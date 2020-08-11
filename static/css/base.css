@@ -337,6 +337,16 @@ input[name='q']::placeholder {
 }
 
 /*------------Add Product Form------------*/
+
+.product-background {
+    background-image: url('/media/botanicals.png');
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    background-position: top;
+}
+
 .btn-file {
     position: relative;
     overflow: hidden;
@@ -485,16 +495,33 @@ input[name='q']::placeholder {
         padding: .375rem .375rem;
         font-size: .75rem;
     }
-
-    .increment-qty .decrement-qty {
-        padding: .25rem .5rem !important;
-    }
 }
+
+/*------------Cocktails------------*/
+
+.cocktail-background {
+    background-image: url('/media/cocktails.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    background-position: center;
+}
+
 
 /*------------Blog------------*/
 .img-blogpost {
     height: 400px !important;
     width: auto;
+}
+
+.blog-background {
+    background-image: url('/media/gin-botanicals.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    background-position: center;
 }
 
 /*------------About Page------------*/
@@ -531,7 +558,7 @@ input[name='q']::placeholder {
 
 .contact-form-wrapper {
     background-color: white;
-    opacity: .9;
+    opacity: .95;
     padding: .75rem;
 }
 

@@ -81,7 +81,7 @@ The search, user account and shopping basket icons were used in the navigation b
 
 Star icons are utilised for users to rate products in the review section and add visual emphasis when displaying the average rating of a product as per convention.
 
-A small tag icon is used to highlight the product category as well as cocktail and blog tags. Similarly, a small cocktail glass icon is used to signify the number of servings and a small eye icon signifies the number of views on a blog post. 
+A small tag icon is used to highlight the product category as well as cocktail and blog tags. Similarly, a small eye icon is used to signify the number of views on a blog post. 
 
 Social media logo icons are included as links to the associated social media page. Though, as The Gin Shed is not a real company and does not therefore have a social medica presence, the icons simply link direct to the main log in page at this time.
 
@@ -167,7 +167,7 @@ The landing page features a jumbotron displaying a mouth watering glass of gin t
 Users can search for a particular product or for a product containing a specific word by clicking on the magnifying glass icon in the navbar and entering their search criteria in the dropdown box provided.
 
 #### Gin Shop
-#### Add Product
+##### Add Product
 Store Owners can add new products to the shop, by navigating to the 'my account' menu and selecting 'Add Product'. This directs the user to a simple form for them to enter all the product details rquired. 
 
 ##### Product Results
@@ -254,7 +254,7 @@ The login page requires just a username / email and their passsword.
 Once a user is logged in, they will find clicking on the 'My Account' provides options to access 'My Profile' or 'Logout'.  
 
 #### My Profile
-Registered users can view their profile by clicking on the link under My Account. The My Profile page includes the users login details, delivery information and order history. Here they can update their email address, change their password and add or edit their default delivery information as well as see a list of all their previous orders. 
+Registered users can view their profile by clicking on the link under My Account. The My Profile page includes the users login details, delivery information and order history. Here they can uchange their password and add or edit their default delivery information as well as see a list of all their previous orders. 
 
 #### Messages
 Messages have been implemented to provide feedback to the user when adding, editing or deleting products from the basket as well as when they add, edit or delete cocktail receipes or blog posts. Users will recive confirmation of a successful action or else be notified that an error has occured. 
