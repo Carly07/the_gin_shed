@@ -111,10 +111,9 @@ A live demo can be found [here](https://the-gin-shed.herokuapp.com/).
 ## UX
 
 ### User Stories
-
+#### Registration and User Accounts 
 | ID  | As a …                | I want to be able to…                                                              | So that I can…                                                                                        |
 | ----| --------------------- | ---------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- |
-| Registration and User Accounts                                                                                                                                                                                           |
 | 1   | public user           | easily register for an account                                                     | have a personal acount and view my profile                                                            |
 | 2   | registered user       | receive an email confirmation after registering                                    | verify my account registration was successful                                                         |
 | 3   | registered user       | easily log in and out                                                              | access my personal acount information                                                                 |
@@ -126,11 +125,14 @@ A live demo can be found [here](https://the-gin-shed.herokuapp.com/).
 | 9   | registered user       | edit or delete any recipes that I have added                                       | amend / update the recipe or remove it if I no longer wish to share it                                |
 | 10  | registered user       | leave a comment on a blog post                                                     | share my thoughts on the blog post with other users                                                   |
 | 11  | registered user       | delete any comments I leave on a blog post                                         | remove them if I change my mind or its no longer relevant                                             |
-| Viewing and Navigation                                                                                                                                                                                                                              |
+
+#### Viewing and navigation
+| ID  | As a …                | I want to be able to…                                                              | So that I can…                                                                                        |
+| ----| --------------------- | ---------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- |
 | 12  | site user (all users) | view a list of all products                                                        | select some to purchase                                                                               |
 | 13  | site user (all users) | view specific category of products                                                 | quickly browse the type of products that I am interested in                                           |
 | 14  | site user (all users) | view individual product details                                                    | identify the product description, price, image, rating and corresponding product reviews              |
-| 15  | site user (all users) | easily view total of shopping basket                                                 | avoid spending too much                                                                               |
+| 15  | site user (all users) | easily view total of shopping basket                                               | avoid spending too much                                                                               |
 | 16  | site user (all users) | view a list of cocktail recipes                                                    | find a new and exciting recipe to make with the gin I purchase                                        |
 | 17  | site user (all users) | view an individual cocktail recipe                                                 | read the list of ingredients, method and all other recipe information                                 |
 | 18  | site user (all users) | view a list of blog posts                                                          | select interesting articles to read about all things gin                                              |
@@ -138,12 +140,18 @@ A live demo can be found [here](https://the-gin-shed.herokuapp.com/).
 | 20  | site user (all users) | view the Contact Us page                                                           | contact the store owner to ask a question or provide feedback                                         |
 | 22  | site user (all users) | view the privacy policy                                                            | see how my personal date is managed and understand my rights                                          |
 | 23  | site user (all users) | view the websites terms of use                                                     | understand what I am agreeing to comply with by using the site.                                       |
-| Sorting and Searching                                                                                                                                                                                                                               |
+
+#### Sorting and Searching
+| ID  | As a …                | I want to be able to…                                                              | So that I can…                                                                                        |
+| ----| --------------------- | ---------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- |
 | 24  | site user (all users) | search for a product by name or description                                        | find a particular product that I would like to purchase                                               |
 | 25  | site user (all users) | easily see the products matching my search criteria and number of results returned | quickly see whether the product I want is available                                                   |
 | 26  | site user (all users) | sort the list of available products                                                | view products by category, price or rating                                                            |
 | 27  | site user (all users) | sort a specific category of products                                               | view the best priced or best rated products in a specific category or view them in alphabetical order |
-| Purchasing and Checkout                                                                                                                                                                                                                             |
+
+#### Purchasing and Checkout
+| ID  | As a …                | I want to be able to…                                                              | So that I can…                                                                                        |
+| ----| --------------------- | ---------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- |
 | 28  | site user (all users) | easily select the quantity of a product to add to my shopping cart                 | purchase the amount of products I want                                                                |
 | 29  | site user (all users) | view items in my cart                                                              | review the items I intend to purchase and identify the total cost                                     |
 | 30  | site user (all users) | remove items or change the quantity of individual items in my cart                 | amend my order before checkout                                                                        |
@@ -151,7 +159,10 @@ A live demo can be found [here](https://the-gin-shed.herokuapp.com/).
 | 32  | site user (all users) | feel confident that my personal data is safe and secure                            | provide the information required to complete my purchase                                              |
 | 33  | site user (all users) | view order confirmation                                                            | verify that I haven't made any mistakes                                                               |
 | 34  | site user (all users) | receive an email confirmation after checkout                                       | Keep a record of what I have purchased                                                                |
-| Admin and Store Management                                                                                                                                                                                                                          |
+
+##### Admin and Store Management
+| ID  | As a …                | I want to be able to…                                                              | So that I can…                                                                                        |
+| ----| --------------------- | ---------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- |
 | 35  | Store Owner           | add products                                                                       | list items for sale                                                                                   |
 | 36  | Store Owner           | edit / update a product                                                            | adjust product details where necessary                                                                |
 | 37  | Store Owner           | delete a product                                                                   | remove items that are no longer available                                                             |
