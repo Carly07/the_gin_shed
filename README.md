@@ -463,12 +463,7 @@ Each blog post can have several comments whist comments correspond to a single p
 
 
 ## Testing
-### Manual Testing
 GitPod's preview, google chrome developer tools, Safari developer tools and [responsinator](https://www.responsinator.com/) were utilised throughout the development of the project to identify and successfully address any bugs, errors or style issues affecting UX on various screen resolutions. 
-
-After the site was deployed, I tested it across various browsers including Chrome, Safari, Internet Explorer, FireFox, and on multiple devices (Samsung Galaxy J3, iPhone 7, 8, 11 pro, iPad 3, iPad Air, MacBook Air and iMac) as well as on Responsinator to ensure compatibility and responsiveness. 
-
-At the end of the development process, an Excel spreadsheet was used to track the functionality of each feature and assign a pass/fail. This Spreadsheet was then passed into converter to render out the Markdown version of the table for me to display here:
 
 ### Automated Testing
 [W3c Markup](https://validator.w3.org/), [CSS Validation Services](https://jigsaw.w3.org/css-validator/) and [PEP8 online](http://pep8online.com) were used to check the validity of my HTML, CSS and python code.  However, the W3c validator throws errors in the HTML files where Jinja templating syntax is found. All other code returned fine. 
@@ -476,8 +471,235 @@ At the end of the development process, an Excel spreadsheet was used to track th
 ### Travis
 Travis was used throughout the development of this project to provide continuous integration with the deployed site. The Travis Documentation provides all the info needed to set it up.
 
+### Manual Testing
+After the site was deployed, I tested it across various browsers including Chrome, Safari, Internet Explorer, FireFox, and on multiple devices (Samsung Galaxy J3, iPhone 7, 8, 11 pro, iPad 3, iPad Air, MacBook Air and iMac) as well as on Responsinator to ensure compatibility and responsiveness. Below is a detailed account of all the manual testing that has been done to confirm all areas of the site work as expected.
+
+#### Elements on every page
+##### Navbar
+* Confirm that the navbar displays the Brand Name to top left, the 'Search', 'My Account' and 'Basket' icons to the top right and the dropdown menu links for "Gin Shop', 'Gin Cocktails' and 'Gin Blog' in a row below. 
+* Confirm that the navbar displays the toggler / burger icon to top left, icons links to 'Search', 'My Account' and 'Basket' to the top right. 
+* Click on the 'Search' icon and confirm that the search bar appears below.
+* Confirm that the 'My Account' dropdown options "Register" and "Login" are visible to public users and that "My Profile" and "Logout" are not.
+* Log into the site, confirm that options "Account" and "Log out" are visible and that "Register" and "Log in" are not.
+* Add an item to the shopping basket, confirm that the icon changes colour and the basket grand total is displayed below. 
+* Click on the basket icon and confirm that it leads you to the Shopping Basket page
+* Click the "Gin Shop" link in the navbar, confirm that 'Gin', 'Mixers', Accessories' and 'All Products' are listed in the dropdown menu.
+* Login as a superuser, click the "Gin Shop" link in the navbar and confirm that 'Add Product' is also listed in the dropdown menu.
+* Logout, click on the "Gin Cocktails" link in the navbar and confirm that only 'View Cocktails' is listed in the dropdown menu.
+* Login, click on the "Gin Cocktails" link in the navbar and confirm that both 'View Cocktails' and 'Add Recipe' are listed in the dropdown menu.
+* Logout, click on the "Gin Blog" link in the navbar and confirm that only 'View Blog' is listed in the dropdown menu.
+* Login as superuser, click on the "Gin Blog" link in the navbar and confirm that 'Blog Posts' and 'Add Blog Post' are listed in the dropdown menu.
+* Click each link in the navbar to confirm that it leads to the correct page.
+
+##### Footer
+* Confirm Footer displays three headings; 'Gin Shed', 'Our Policies' and 'Follow Us' along with their relavent links. 
+* Hover over links in the footer, confirm the color change animation works as expected.
+* Click all links in the footer, confirm that they take the user to the relevant pages within the site.
+* Click the social media icons, confirm that it opens a new tab and takes the user to relevant social media login page.
+* Check date of copyright information, confirm year displayed matches the current year.
+
+#### Home Page
+* Confirm Home Page loads as expected
+* Hover over call to action buttons and confirm the color changes as expected.
+* Click on the 'Shop Now' button and confirm that it leads to the product results page
+* Click on the 'View Cocktails' button and confirm that it leads to the cocktails results page
+* Click on the 'View Blog' button and confirm that it leads to the blog results page
+
+#### About Us Page
+* Go to About Us page, confirm that the Page title, subheading and text are display in container to the centre as expected.
+* Check that the background image is displayed as expected.
+
+#### Contact Us Page
+* Navigate to the contact page and confirm that the contact form is laid out as expected.
+* Hover over the form and confirm that opacity changes as expected. 
+* Try to send the form with no fields filled in, confirm that the user is alerted to fill in the required fields.
+* Try to enter a non-email address into the email field, confirm that the user is alerted to fill in an email address.
+* Send a complete valid form, confirm that the message is sent to my email address with all the information included.
+
+#### Terms and Conditions Page
+* Check that the page loads and displays as expected. Confirm that the links in the text work as needed.
+
+#### Privacy Policy Page
+* Check that the page loads and displays as expected. Confirm that the links in the text work as needed.
+
+#### Register Page
+* Try to go to the register url when already logged in, confirm that the user is redirected to the home page.
+* Logout then go to the register page again. Confirm that the register form is displayed as expected.
+* Fill in the form with a username already in the database, confirm that the user is informed that they must use a unique username.
+* Fill in the email input with a non-email address, confirm the user is shown an error asking the to use an email address.
+* Fill in the form with two different emails, confirm the error is caught and the user is informed of their mistake.
+* Fill in the form with two different passwords, confirm the error is caught and the user is informed of their mistake.
+* Fill in the registration for correctly, confirm that the user is automatically directed to the verify email page.
+
+##### Login Page
+* Attempt to login with a username not in the database, confirm the relevant error message is shown.
+* Attempt to login with a correct username but wrong password, confirm the relevant error message is shown.
+* Login with a correct username and password, confirm that the user is logged in and that they are redirected to the home page.
+* Try to return to the login page url when already logged in, confirm that the user is redirected to the home page.
+
+##### Logout Page
+* Click the 'Logout' link and confirm that it leads to the signout page.
+* Click 'Signout' button and confirm that the user is logged out of their account
+* Login again and add a new product to the shopping basket. Logout and confirm that the user is logged out and their basket has been cleared.
+
+##### Add Product Page
+* Logout then attempt to navigate to the add product url and confirm that user is redirected to login page. 
+* Login in to an account without superuser status, attempt to navigate to the add product url and confirm that error message is displayed alerting user that they are not authorised. 
+* Login as a superuser and navigate to the add product page. Confirm that the product form and background image display as expected. 
+* Hover over the form and confirm that the opacity changes as expected. 
+* Click on the category field and check all product categories are listed. 
+* Click on the select image button and confirm it works as expected. 
+* Attempt to submit form without completing required fields and confirm validation errors. 
+* Complete form correctly. Confirm success message displayed and user redirected to the new product detail page. Check details are listed correctly. 
+
+##### Product Results Page
+* Navigate to the 'All Products' page and confirm that category buttons are listed under the Product Heading and that Gin, Mixers and Accessories products are displaying in the results.
+* Confirm that products image and details are displaying as expected, with the details underneath the image. 
+* Confirm that where there is an average rating it is displayed or else the text 'no rating' is displayed. 
+* On desktop view, confirm that there are four products listed in a row and that rows are separated with a horizontal rule
+* Confirm that the number of products listed in each row reduces as the screen size gets smaller, first down to three products per row, then two and finally one product per row on mobile views. 
+* Check that there are no duplicates or missing products.  
+* Login as a superuser and confirm that the 'Edit' and 'Delete' links are displaying. Click the edit link and confirm that the edit product page is displayed. 
+* Select the different sorting options from the menu one by one, confirm that the products are sorted in the order selected.
+* Click the product category buttons at the top of the 'All Products' page and confirm that product results are filtered to the desired category. 
+* Select a category from the Gin Shop dropdown menu in the navbar and confirm that product results are filtered to the desired category.
+* Hover over a product image and confirm that the curser changes to a pointer. 
+* Click on product images and confirm that it redirects to that specific product detail page. 
+
+##### Product Detail Page
+* Navigate to a product detail page and confirm that the page is displayed as expected. On desktop image should be displayed on left and product info on the right, whilst on mobile view the image is stacked on top of the product info. 
+* Confirm that the Image, name, price, category, rating and description match those in the database for the product.
+* Adjust the quantity using the button and confirm that the highest number available to select matches the number in stock of this product.
+* Confirm that the 'Keep Shopping' and 'Add to Basket' buttons work as expected. 
+* Attempt to type in a quantity above the number in stock, press enter or 'Add to Basket' and confirm that validation message is received.
+* Under the product details confirm that the reviews section is displaying any previous reviews or else the text 'No reviews'. 
+* Confirm that the 'write review' form is displayed for logged in users and a message "Please Register or login to leave a review." is displayed if user is not logged in. 
+* Confirm that the 'register' and 'login' links work as expected. 
+* Once logged in, hover over the stars in the review form and confirm that they change colour as expected.
+* Click the desired number of stars and confirm that the that number of stars have changed colour. 
+* Try to submit the form with the title and review fields empty and confirm validation errors
+* Complete the form correctly, click post and confirm that success message is displayed and review is now listed. Also confirm product rating has updated. 
+* Click the "add to basket" button. Confirm that the success message is launched, stating the name and quantity of the product added.
+* Confirm that the success message provides a button to 'go to view basket'. Click to confirm it operates as expected.
+* Add more of the same product to the basket, making the total quantity go over the max number in stock. Confirm that an error message alerts the user that there is not enough in stock and resets the value to 1. 
+
+##### Edit Product Page
+* Logout, then attempt to navigate to the edit product url and confirm that user is redirected to login page. 
+* Login to an account without superuser status, then attempt to navigate to the edit product url and confirm that error message is displayed alerting user that they are not authorised. 
+* Login as a superuser and navigate to the edit product page. Confirm that the edit product form and background image display as expected, with the fields pre-populated with the specified product.
+* Hover over the form and confirm that the opacity changes as expected. 
+* Select new image, save and confirm image has been updated.
+* Click to remove the image, save and confirm the image has been removed and the 'no image' pic is displayed instead. 
+* Remove data from a required field, attempt to save it and confirm validation errors.
+* Edit and complete form correctly. Confirm success message displayed and user redirected to the updated product detail page. Check product details are listed correctly. 
+
+##### Shopping Basket Page
+* Go to the shopping basket page with nothing added, confirm "Your basket is empty" message and 'keep shopping' button redirects to product results.
+* Add items to the basket and return to the shopping basket page, confirm that all items in the basket are displayed correctly, with the correct amounts requested by the user.
+* Confirm that the basket total, delivery and grand total are displaying the correct amount. 
+* Adjust the quantity field, confirm that the shopping basket subtotal is updated to reflect the change.
+* Adjust the quantity field up higher than the number of that item in stock. Confirm that a modal alerts the user to the maximum number available and adjust the basket to reflect that amount.
+* Click the remove link on a item, confirm that the basket is reloaded with that item removed.
+* Remove all items from the basket, confirm that the shopping basket page is reloaded to reflect the empty basket.
+
+##### Secure Checkout Page
+* Navigate to the checkout page url without anything in the basket. Confirm that the user is redirected to the product results page and error message appears notifying user that basket is empty.
+* Navigate to the checkout page url with items in the basket. On desktop view, confirm that the Details, Delivery and Payment form are displayed on the left and order summary on the right. On mobile view confirm that the order summary is diaplayed first and that the form is stacked underneath. 
+* Confirm Order Summary is diaplaying correctly
+* Click the 'Adjust Basket' button and confirm taht it redirects to the shopping basket page.
+* Try to send the form without all the required fields filled in. Confirm that the appropriate error message is given to the user.
+* Use the stripe checkout test card numbers to check the various responses to different errors.
+* Complete order and confirm that user is directed to the Checkout Success page, detailing their order information. Click the "keep shopping" button, confirm that the user is taken back to the product results page.
+
+##### Profile Page
+* Go to the profile page of a newly created user. On desktop, confirm that the page loads with the forms on the left and Order History on the right. On mobile confirm that forms are stacked on top of the order history. 
+* Confirm logon details form is populated with the users username and email address. 
+* Confirm that password field contains asterisks and 'Edit' button. Click button and confirm that user is taken to change password page. 
+* Attempt to change password using wrong password and confirm validation messgae.
+* Create new password using less than 8 characters and confirm validation message. 
+* Create new password similar to username and confirm validation message.
+* Complete change password form as required and confirm success message received. 
+* Fill in the My Delivery Information form and click update. Confirm that "Profile updated successfully" success message is shown to the user and that the reloaded form is now populated with the new data.
+* Confirm that a user with no previous orders has no orders displayed in the Orders section.
+* Make an order on the website, return to the profile page and confirm that the orders are displayed in date order the Order History section. Click on the order number to show the full details.
+* Confirm that all data in the orders on the profile page are accurate.
+
+##### Add Cocktail Recipe Page
+* Logout then attempt to navigate to the add cocktail recipe url and confirm that user is redirected to login page. 
+* Login and navigate to the add recipe page. Confirm that the recipe form and background image display as expected.
+* Hover over the form and confirm that the opacity changes as expected. 
+* Attempt to submit form without completing required fields and confirm validation errors.
+* Click on the select image button and confirm it works as expected. 
+* Complete form correctly. Confirm success message displayed and user redirected to the new recipe page. Check recipe details are listed correctly. 
+
+##### Cocktail Results Page
+* Navigate to the 'View Recipes' page and confirm that recipe results are displaying as expected, with the recipe details underneath the image. 
+* On desktop view, confirm that there are four recipes listed in a row and that rows are separated with a horizontal rule.
+* Confirm that the number of recipes listed in each row reduces as the screen size gets smaller, first down to three recipes per row, then two and finally one recipe per row on mobile views. 
+* Check that there are no duplicates or missing recipes.  
+* Login in and add a recipe. View recipe results page and confirm that the 'Edit' and 'Delete' links are displaying for the recipe you added. Click the edit link and confirm that the edit recipe page is displayed. 
+* Login as a superuser and confirm that the 'Edit' and 'Delete' links are displaying for all recipes. Click the edit link and confirm that the edit recipe page is displayed. 
+* Hover over a recipe image and confirm that the curser changes to a pointer. 
+* Click on multiple recipe images and confirm that it redirects to that specific recipe page. 
+
+##### Cocktail Recipe Detail Page
+* Navigate to a recipe detail page and confirm that the page is displayed as expected. On desktop image should be displayed on left and recipe info on the right, whilst on mobile view the image is stacked on top of the recipe info. 
+* Confirm that the details match those in the database for the cocktail recipe.
+* Login in and add a recipe. View that particular cocktail recipe page and confirm that the 'Edit' and 'Delete' links are displaying. Click the edit link and confirm that the edit recipe page is displayed. 
+* Click the delete link and confirm that a success message is displayed and the recipe is now gone from the recipe results. 
+* Confirm that the 'Back to receipes' button work as expected.
+
+##### Edit Cocktail Recipe Page
+* Logout then attempt to navigate to the edit cocktail recipe url and confirm that user is redirected to login page. 
+* Login and navigate to the edit recipe page. Confirm that the recipe form and background image display as expected, with the fields pre-populated with the specified recipe.
+* Hover over the form and confirm that the opacity changes as expected. 
+* Select a new image, save and confirm image has been updated.
+* Click to remove the image, save and confirm the image has been removed and the 'no image' pic is displayed instead. 
+* Remove data from a required field, attempt to save it and confirm validation errors.
+* Complete form correctly. Confirm success message displayed and user redirected to the updated recipe page. Check recipe details are listed correctly. 
+
+##### Add Blog Post Page
+* Logout then attempt to navigate to the add blog post url and confirm that user is redirected to login page. 
+* Login to an account without superuser status, attempt to navigate to the add blog post url and confirm that error message is displayed alerting user that they are not authorised. 
+* Login as a superuser and navigate to the add blog post page. Confirm that the blog post form and background image display as expected.
+* Hover over the form and confirm that the opacity changes as expected. 
+* Confirm published date is pre-populated with the current date and time. 
+* Attempt to submit form without completing required fields and confirm validation errors. 
+* Click on the select image button and confirm it works as expected. 
+* Complete form correctly. Confirm success message displayed and user redirected to the new blog post page. Check post details are listed correctly. 
+
+##### Blog Results Page
+* Navigate to the 'Blog Posts' page and confirm that all blog posts are displaying as expected, with the blog image to the left and details to the right on larger screens and the details underneath the image on mobiles.   
+* Check that there are no duplicates or missing blog posts.  
+* Click on the 'read more' buttons and confirm that it redirects to that specific blog post page. 
+
+##### Blog Post Detail Page
+* Navigate to a blog post detail page and confirm that the page is displayed as expected. Image should be displayed at the top, the publish date, views and tags listed underneath and then the post below that.
+* Confirm that the details match those in the database for the blog post.
+* Login as a superuser and confirm that the 'Edit' and 'Delete' links are displaying for all blog posts. Click the edit link and confirm that the edit blog page is displayed. 
+* Click the delete link and confirm that a success message is displayed and the blog post is now gone from the results page. 
+* Confirm that the 'Back to blog' button work as expected. 
+###### Blog Post Comments
+* Under the blog Post, confirm that the comments section is displaying any previous comments or else the text 'No comments'. 
+* Confirm that the 'add a comment' form is displayed for logged in users or else a message saying "Please Register or login to leave a comment" is displayed if user is not logged in. 
+* Confirm that the 'register' and 'login' links work as expected. 
+* Try to submit an empty form and confirm validation errors
+* Complete the form, click post and confirm that success message is displayed and comment is now listed.
+
+##### Edit Blog Post Page
+* Logout, then attempt to navigate to the edit blog post url and confirm that user is redirected to login page. 
+* Login to an account without superuser status, then attempt to navigate to the edit blog post url and confirm that error message is displayed alerting user that they are not authorised. 
+* Login as a superuser and navigate to the edit blog post page. Confirm that the blog post form and background image display as expected, with the fields pre-populated with the specified blog post.
+* Hover over the form and confirm that the opacity changes as expected. 
+* Select new image, save and confirm image has been updated.
+* Click to remove the image, save and confirm the image has been removed and the 'no image' pic is displayed instead. 
+* Remove data from a required field, attempt to save it and confirm validation errors.
+* Edit and complete form correctly. Confirm success message displayed and user redirected to the updated blog post page. Check post details are listed correctly. 
+
 ### User scenarios
 
+
+### Bugs
 
 
 ## Deployment
