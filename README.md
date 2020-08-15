@@ -87,11 +87,11 @@ Social media logo icons are included as links to the associated social media pag
 
 #### Colours
 
-* White #fff
-* Black #000
-* Light Green #788E5C
-* Dark Green #414e2f
-* Light Grey #6c757d
+* White `#fff`
+* Black `#000`
+* Light Green `#788E5C`
+* Dark Green `#414e2f`
+* Light Grey `#6c757d`
 
 The white, black and green color scheme was chosen to create a clean, crisp, botanical theme. 
 
@@ -107,38 +107,79 @@ Colour effects and or a curser pointer were added to content when hovered over t
 ### Wireframes
 The basic wireframes for this site can be found below
 
-Home Page
-![Home Page](https://github.com/Carly07/deeelish/blob/master/static/wireframes/homepage.jpg)
+<details>
+    <summary>Home Page</summary>
+    ![Home Page](https://github.com/Carly07/the_gin_shed/tree/master/static/wireframes/home.jpg)
+</details>
 
-About Us
-![About Us Page](https://github.com/Carly07/deeelish/blob/master/static/wireframes/tipspage.jpg)
+<details>
+    <summary>About Us</summary>
+    ![About Us Page](https://github.com/Carly07/the_gin_shed/tree/master/static/wireframes/about-us.jpg)
+</details>
 
-Contact Us Page
-![Contact Us Page](https://github.com/Carly07/deeelish/blob/master/static/wireframes/discoverrecipes.jpg)
+<details>
+    <summary>Contact Us</summary>
+    ![Contact Us Page](https://github.com/Carly07/the_gin_shed/tree/master/static/wireframes/contact-us.jpg)
+</details>
 
-Product Results Page
-![Product Results Page](https://github.com/Carly07/deeelish/blob/master/static/wireframes/browsecat.jpg)
+<details>
+    <summary>Add/Edit Product Page</summary>
+    ![Add/Edit Product Page](https://github.com/Carly07/the_gin_shed/tree/master/static/wireframes/add-edit-product.jpg)
+</details>
 
-Product Detail Page
-![Product Detail Page](https://github.com/Carly07/deeelish/blob/master/static/wireframes/addoreditrecipe.jpg)
+<details>
+    <summary>Product Results Page</summary>
+    ![Product Results Page](https://github.com/Carly07/the_gin_shed/tree/master/static/wireframes/product-results.jpg)
 
-Add/Edit Product Page
-![Add/Edit Product Page](https://github.com/Carly07/deeelish/blob/master/static/wireframes/addoreditcat.jpg)
+<details>
+    <summary>Product Detail Page</summary>
+    ![Product Detail Page](https://github.com/Carly07/the_gin_shed/tree/master/static/wireframes/product-detail.jpg)
+</details>
 
-Cocktail Recipe Results Page
-![Recipe Results Page](https://github.com/Carly07/deeelish/blob/master/static/wireframes/viewrecipe.jpg)
+<details>
+    <summary>Shopping Basket Page</summary>
+    ![Shopping Basket Page](https://github.com/Carly07/the_gin_shed/tree/master/static/wireframes/shopping-basket.jpg)
+</details>
 
-Add /Edit Recipe Page
-![Add / Edit Recipe Page](https://github.com/Carly07/deeelish/blob/master/static/wireframes/viewrecipe.jpg)
+<details>
+    <summary>Secure Checkout Page</summary>
+    ![Secure Checkout Page](https://github.com/Carly07/the_gin_shed/tree/master/static/wireframes/secure-checkout.jpg)
+</details>
 
-Blog Results Page
-![Blog Results Page](https://github.com/Carly07/deeelish/blob/master/static/wireframes/viewrecipe.jpg)
+<details>
+    <summary>Profile Page</summary>
+    ![Profile Page](https://github.com/Carly07/the_gin_shed/tree/master/static/wireframes/user-profile.jpg)
+</details>
 
-Add /Edit Recipe Page
-![Add / Edit Blog Post Page](https://github.com/Carly07/deeelish/blob/master/static/wireframes/viewrecipe.jpg)
+<details>
+    <summary>Add / Edit Cocktail Recipe Page</summary>
+    ![Add / Edit Cocktail Recipe Page](https://github.com/Carly07/the_gin_shed/tree/master/static/wireframes/add-edit-cocktail.jpg)
+</details>
 
-Profile Page
-![Profile Page](https://github.com/Carly07/deeelish/blob/master/static/wireframes/viewrecipe.jpg)
+<details>
+    <summary>Cocktail Recipe Results Page</summary>
+    ![Recipe Results Page](https://github.com/Carly07/the_gin_shed/tree/master/static/wireframes/cocktail-results.jpg)
+</details>
+
+<details>
+    <summary>Cocktail Recipe Detail Page</summary>
+    ![Cocktail Recipe Detail Page](https://github.com/Carly07/the_gin_shed/tree/master/static/wireframes/cocktail-detail.jpg)
+</details>
+
+<details>
+    <summary>Add /Edit Blog Post Page</summary>
+    ![Add / Edit Blog Post Page](https://github.com/Carly07/the_gin_shed/tree/master/static/wireframes/add-edit-blog.jpg)
+</details>
+
+<details>
+    <summary>Blog Results Page</summary>
+    ![Blog Results Page](https://github.com/Carly07/the_gin_shed/tree/master/static/wireframes/blog-results.jpg)
+</details>
+
+<details>
+    <summary>Blog Post Detail Page</summary>
+    ![Blog Post Detail Page](https://github.com/Carly07/the_gin_shed/tree/master/static/wireframes/blog-detail.jpg)
+</details>
 
 
 ## Features

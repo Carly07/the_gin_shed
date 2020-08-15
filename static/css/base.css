@@ -31,6 +31,7 @@ body {
     width: fit-content;
     color: #788e5c;
     font-family: 'Amatic SC';
+    font-size: 25px;
 }
 
 .main-logo-link:hover,
@@ -334,6 +335,10 @@ input[name='q']::placeholder {
 /*------------Product Results Page ------------*/
 .product-img {
     height: 290px;
+}
+
+.avg-rating i {
+    color: #788e5c;
 }
 
 /*------------Add Product Form------------*/

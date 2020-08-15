@@ -44,11 +44,13 @@
                         <small class="mr-2">{{ product.avg_rating }}</small>
                         <small class="ml-2">{{ product.no_of_ratings }} Reviews</small>
                         <br>
-                        <small><i class="fas fa-star"></i></small>
-                        <small><i class="fas fa-star"></i></small>
-                        <small><i class="fas fa-star"></i></small>
-                        <small><i class="fas fa-star"></i></small>
-                        <small><i class="fas fa-star"></i></small>
+                        <div class="avg-rating">
+                            <small><i class="fas fa-star"></i></small>
+                            <small><i class="fas fa-star"></i></small>
+                            <small><i class="fas fa-star"></i></small>
+                            <small><i class="fas fa-star"></i></small>
+                            <small><i class="fas fa-star"></i></small>
+                        </div>
                     {% else %}
                         <small class="text-muted mr-5">No Rating</small>
                     {% endif %}
@@ -137,11 +139,13 @@
                         <h5 class="text-left mb-3">Reviews...</h5>
                         <div class="col-12 pl-0">
                             <small class="mr-2">{{ review.stars }} / 5</small> 
-                            <small class=""><i class="fas fa-star"></i></small>
-                            <small class=""><i class="fas fa-star"></i></small>
-                            <small class=""><i class="fas fa-star"></i></small>
-                            <small class=""><i class="fas fa-star"></i></small>
-                            <small class=""><i class="fas fa-star"></i></small>
+                            <div class="avg-rating d-inline">
+                                <small class=""><i class="fas fa-star"></i></small>
+                                <small class=""><i class="fas fa-star"></i></small>
+                                <small class=""><i class="fas fa-star"></i></small>
+                                <small class=""><i class="fas fa-star"></i></small>
+                                <small class=""><i class="fas fa-star"></i></small>
+                            </div>
                             <br>
                             <strong class="mb-1">{{ review.title }}</strong>
                             <p class="mb-1">{{ review.review_text }}</p> 
