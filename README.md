@@ -87,7 +87,7 @@ Social media logo icons are included as links to the associated social media pag
 
 #### Colours
 
-![colours](colours.png)
+![colours](https://github.com/Carly07/the_gin_shed/tree/master/static/wireframes/colours.png?raw=true)
 
 * White `#fff`
 * Black `#000`
@@ -575,7 +575,7 @@ After the site was deployed, I tested it across various browsers including Chrom
 * Click the "add to basket" button. Confirm that the success message is launched, stating the name and quantity of the product added.
 * Confirm that the success message provides a button to 'go to view basket'. Click to confirm it operates as expected.
 * Add more of the same product to the basket, making the total quantity go over the max number in stock. Confirm that an error message alerts the user that there is not enough in stock and resets the value to 1. 
-##### Reviews section
+##### Reviews
 * Under the product details confirm that the reviews section is displaying any previous reviews or else the text 'No reviews'. 
 * Confirm that the 'write review' form is displayed for logged in users and a message "Please Register or login to leave a review." is displayed if user is not logged in. 
 * Confirm that the 'register' and 'login' links work as expected. 
