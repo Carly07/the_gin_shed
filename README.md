@@ -87,7 +87,7 @@ Social media logo icons are included as links to the associated social media pag
 
 #### Colours
 
-![colours](Carly07/the_gin_shed/tree/master/static/wireframes/colours.png)
+![colours]([Carly07]/[the_gin_shed]/tree/master/static/wireframes/colours.png)
 
 * White `#fff`
 * Black `#000`
