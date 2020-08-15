@@ -109,75 +109,91 @@ The basic wireframes for this site can be found below
 
 <details>
     <summary>Home Page</summary>
+    
     ![Home Page](https://github.com/Carly07/the_gin_shed/tree/master/static/wireframes/home.jpg)
 </details>
 
 <details>
     <summary>About Us</summary>
+    
     ![About Us Page](https://github.com/Carly07/the_gin_shed/tree/master/static/wireframes/about-us.jpg)
 </details>
 
 <details>
     <summary>Contact Us</summary>
+    
     ![Contact Us Page](https://github.com/Carly07/the_gin_shed/tree/master/static/wireframes/contact-us.jpg)
 </details>
 
 <details>
     <summary>Add/Edit Product Page</summary>
+    
     ![Add/Edit Product Page](https://github.com/Carly07/the_gin_shed/tree/master/static/wireframes/add-edit-product.jpg)
 </details>
 
 <details>
     <summary>Product Results Page</summary>
+    
     ![Product Results Page](https://github.com/Carly07/the_gin_shed/tree/master/static/wireframes/product-results.jpg)
+</details>
 
 <details>
     <summary>Product Detail Page</summary>
+    
     ![Product Detail Page](https://github.com/Carly07/the_gin_shed/tree/master/static/wireframes/product-detail.jpg)
 </details>
 
 <details>
     <summary>Shopping Basket Page</summary>
+    
     ![Shopping Basket Page](https://github.com/Carly07/the_gin_shed/tree/master/static/wireframes/shopping-basket.jpg)
 </details>
 
 <details>
     <summary>Secure Checkout Page</summary>
+    
     ![Secure Checkout Page](https://github.com/Carly07/the_gin_shed/tree/master/static/wireframes/secure-checkout.jpg)
 </details>
 
 <details>
     <summary>Profile Page</summary>
+    
     ![Profile Page](https://github.com/Carly07/the_gin_shed/tree/master/static/wireframes/user-profile.jpg)
 </details>
 
 <details>
     <summary>Add / Edit Cocktail Recipe Page</summary>
+    
     ![Add / Edit Cocktail Recipe Page](https://github.com/Carly07/the_gin_shed/tree/master/static/wireframes/add-edit-cocktail.jpg)
 </details>
 
 <details>
     <summary>Cocktail Recipe Results Page</summary>
+    
     ![Recipe Results Page](https://github.com/Carly07/the_gin_shed/tree/master/static/wireframes/cocktail-results.jpg)
 </details>
 
 <details>
     <summary>Cocktail Recipe Detail Page</summary>
+    
     ![Cocktail Recipe Detail Page](https://github.com/Carly07/the_gin_shed/tree/master/static/wireframes/cocktail-detail.jpg)
 </details>
 
 <details>
     <summary>Add /Edit Blog Post Page</summary>
+    
     ![Add / Edit Blog Post Page](https://github.com/Carly07/the_gin_shed/tree/master/static/wireframes/add-edit-blog.jpg)
 </details>
 
 <details>
     <summary>Blog Results Page</summary>
+    
     ![Blog Results Page](https://github.com/Carly07/the_gin_shed/tree/master/static/wireframes/blog-results.jpg)
 </details>
 
 <details>
     <summary>Blog Post Detail Page</summary>
+    
     ![Blog Post Detail Page](https://github.com/Carly07/the_gin_shed/tree/master/static/wireframes/blog-detail.jpg)
 </details>
 
