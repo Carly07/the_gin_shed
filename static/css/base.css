@@ -106,6 +106,7 @@ body {
     color: white;
     min-width: 210px;
     font-size: 22px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.16),0 2px 4px rgba(0,0,0,0.23);
 }
 
 .white-shop-btn {
@@ -113,6 +114,7 @@ body {
     color: #788e5c;
     min-width: 150px;
     font-size: 18px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.16),0 2px 4px rgba(0,0,0,0.23);
 }
 
 .white-shop-btn:hover,
@@ -132,6 +134,7 @@ body {
 .btn-black:focus {
     background:#fff;
     color: #000;
+    border: 1px solid black;
 }
 
 .btn-outline-black {
