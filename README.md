@@ -28,7 +28,7 @@ A live demo can be found [here](https://the-gin-shed.herokuapp.com/).
   * [Automated Testing](#automated-testing)
   * [Travis](#travis)
   * [Manual Testing](#manual-testing)
-  * [User scenarios](#user-scenarios)
+  * [User Stories Testing](#user-stories-testing)
   * [Bugs](#bugs)
 - [Deployment](#deployment)
   * [To run the project locally](#to-run-the-project-locally)
