@@ -504,6 +504,25 @@ input[name='q']::placeholder {
 
 /*------------Cocktails------------*/
 
+@media (min-width: 576px) {
+    .cocktail-img {
+        height: 240px;
+    }
+}
+
+@media (min-width: 768px) {
+    .cocktail-img {
+        height: 300px;
+    }
+}
+
+
+@media (min-width: 1200px) {
+    .cocktail-img {
+        height: 270px;
+    }
+}
+
 .cocktail-background {
     background-image: url('/media/cocktails.jpg');
     background-attachment: fixed;
