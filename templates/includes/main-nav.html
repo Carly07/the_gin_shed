@@ -14,6 +14,9 @@
                 <a href="{% url 'products' %}?category=mixers" class="dropdown-item px-1">Mixers</a>
                 <a href="{% url 'products' %}?category=accessories" class="dropdown-item px-1">Accessories</a>
                 <a href="{% url 'products' %}?category=gin,mixers,accessories" class="dropdown-item px-1">All Products</a>
+                {% if request.user.is_superuser %}
+                    <a href="{% url 'add_product' %}" class="dropdown-item px-1">Add Product</a>
+                {% endif %}
             </div>
         </li>
         <li class="nav-item dropdown">
