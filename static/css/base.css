@@ -504,6 +504,21 @@ input[name='q']::placeholder {
 
 /*------------Cocktails------------*/
 
+.cocktail-img {
+    height: 215px;
+}
+
+@media (min-width: 375px) {
+    .cocktail-img {
+        height: 256px;
+    }
+}
+
+@media (min-width: 768px) {
+    .cocktail-img {
+        height: 300px;
+    }
+}
 @media (min-width: 576px) {
     .cocktail-img {
         height: 240px;
@@ -515,7 +530,6 @@ input[name='q']::placeholder {
         height: 300px;
     }
 }
-
 
 @media (min-width: 1200px) {
     .cocktail-img {
