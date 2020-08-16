@@ -127,6 +127,13 @@ body {
     color: white;
 }
 
+.btn-black:hover,
+.btn-black:active,
+.btn-black:focus {
+    background:#fff;
+    color: #000;
+}
+
 .btn-outline-black {
     background: white;
     color: black !important;
@@ -142,10 +149,7 @@ body {
 
 .shop-now-btn:hover,
 .shop-now-btn:active,
-.shop-now-btn:focus,
-.btn-black:hover,
-.btn-black:active,
-.btn-black:focus {
+.shop-now-btn:focus {
     background:#414e2f;
     color: white;
 }
