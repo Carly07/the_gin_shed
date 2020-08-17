@@ -11,5 +11,5 @@ $(document).ready(function () {
 // so user can return to their previous search results
 
 function goBack() {
-  window.history.go(-);
+  window.history.go(-1);
 }
