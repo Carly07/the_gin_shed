@@ -575,7 +575,7 @@ input[name='q']::placeholder {
     background-attachment: fixed;
     background-size: cover;
     background-repeat: no-repeat;
-    min-height: 100vh;
+    min-height: 80vh;
     background-position: center;
 }
 
@@ -591,6 +591,10 @@ input[name='q']::placeholder {
     }
 } 
 
+#map {
+    height: 300px;
+    width: auto;  
+}
 /*------------Contact Us------------*/
 .gin-background {
     background-image: url('/media/gin-pages-img.jpg');
