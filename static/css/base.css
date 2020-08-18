@@ -591,7 +591,7 @@ input[name='q']::placeholder {
     .blog-background,
     .cocktail-background,
     .product-background {
-        background-attachment: scroll;
+        background-attachment: scroll !important;
     }
 } 
 

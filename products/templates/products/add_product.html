@@ -10,7 +10,7 @@
                 <div class="contact-form-wrapper mx-auto my-5">
                     <h2 class="logo-font text-center my-3">Product Management</h2>
                     <h5 class="text-muted text-center">Add a Product</h5>
-                    <form method="POST" action="{% url 'add_product' %}" class="form py-3 px-5" enctype="multipart/form-data">
+                    <form method="POST" action="{% url 'add_product' %}" class="form py-3 px-3 px-md-5" enctype="multipart/form-data">
                         {% csrf_token %}
                         {% for field in form %}
                             {% if field.name != 'image' %}

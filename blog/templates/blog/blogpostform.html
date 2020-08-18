@@ -9,7 +9,7 @@
                 <div class="contact-form-wrapper mx-auto my-5">
                     <h2 class="logo-font text-center my-3">Blog Management</h2>
                     <h5 class="text-muted text-center">Create or Edit a Blog Post</h5>
-                    <form method="POST" class="form py-3 px-5" enctype="multipart/form-data">
+                    <form method="POST" class="form py-3 px-3 px-md-5" enctype="multipart/form-data">
                         {% csrf_token %}
                         {% for field in form %}
                             {% if field.name != 'image' %}
