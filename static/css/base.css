@@ -586,7 +586,11 @@ input[name='q']::placeholder {
 }
 
 @media (max-width: 1199.98px) {
-    .about-background, .gin-background {
+    .about-background, 
+    .gin-background, 
+    .blog-background,
+    .cocktail-background,
+    .product-background {
         background-attachment: scroll;
     }
 } 
