@@ -67,6 +67,16 @@ body {
     background-image: url('/media/gin-home1.jpg');
 }
 
+.ml2 {
+  font-weight: 900;
+  font-size: 3.5em;
+}
+
+.ml2 .letter {
+  display: inline-block;
+  line-height: 1em;
+}
+
 #cocktail-jumbotron {
     background-image: url('/media/cocktails3.jpg');
 }
