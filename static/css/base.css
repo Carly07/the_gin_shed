@@ -20,6 +20,16 @@ body {
     justify-content: center;
 }
 
+/* color classes used throughout */
+.text-black {
+    color: #000 !important;
+}
+
+.border-black {
+    border: 1px solid #000 !important;
+}
+
+
 /*------------Header------------*/
 .logo-font {
     text-transform: uppercase;
@@ -51,48 +61,7 @@ body {
     color: #788e5c;
 }
 
-/*------------Index Page------------*/
-.jumbotron {
-    margin-bottom: 0px;
-    background-attachment: fixed;
-    background-position: bottom;
-    height: calc(100vh - 120px);
-    background-size: cover;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-}
-
-#home-jumbotron {
-    background-image: url('/media/gin-home1.jpg');
-}
-
-#cocktail-jumbotron {
-    background-image: url('/media/cocktails3.jpg');
-}
-
-@media (max-width: 1199.98px) {
-    .jumbotron {
-        background-attachment: scroll;
-    }
-} 
-
-.delivery-container {
-    background: #788e5c !important;
-    height: 250px;
-    width: 100%;
-}
-
-.cocktail-container {
-    padding-top: 0 !important;
-}
-
-.blog-container {
-    background: #788e5c !important;
-    width: 100%;
-}
-
-/* from Bulma */
+/* Font Awesome icon styling from Bulma */
 .icon {
     align-items: center;
     display: inline-flex;
@@ -101,7 +70,23 @@ body {
     width: 1.5rem;
 }
 
-.shop-now-btn {
+/* Search icon */
+input[name='q']::placeholder {
+    color: #6c757d;
+}
+
+/* Shopping basket icon */
+.text-highlight {
+    color: #788e5c;
+}
+
+.text-highlight:hover {
+    color: #414e2f;
+}
+
+
+/*------------Buttons------------*/
+.green-btn {
     background: #788e5c;
     color: white;
     min-width: 210px;
@@ -109,7 +94,14 @@ body {
     box-shadow: 0 2px 4px rgba(0,0,0,0.16),0 2px 4px rgba(0,0,0,0.23);
 }
 
-.white-shop-btn {
+.green-btn:hover,
+.green-btn:active,
+.green-btn:focus {
+    background:#414e2f;
+    color: white;
+}
+
+.white-btn {
     background: #fff;
     color: #788e5c;
     min-width: 150px;
@@ -117,9 +109,9 @@ body {
     box-shadow: 0 2px 4px rgba(0,0,0,0.16),0 2px 4px rgba(0,0,0,0.23);
 }
 
-.white-shop-btn:hover,
-.white-shop-btn:active,
-.white-shop-btn:focus {
+.white-btn:hover,
+.white-btn:active,
+.white-btn:focus {
     background: rgb(241, 240, 240);
     color: #414e2f;
 }
@@ -150,36 +142,13 @@ body {
     color: white !important;
 }
 
-.shop-now-btn:hover,
-.shop-now-btn:active,
-.shop-now-btn:focus {
-    background:#414e2f;
-    color: white;
-}
-
-.text-black {
-    color: #000 !important;
-}
-
-.border-black {
-    border: 1px solid #000 !important;
-}
-
-.overlay {
-    height: 100%;
-    width: 100%;
-    top: 0;
-    left: 0;
-    position: fixed;
-    background: white;
-    z-index: -1;
-}
-
+/* Product categories buttons */
 a.category-badge > span.badge:hover {
     background: #212529 !important; 
     color: white !important;
 }
 
+/* Back to top button */
 .btt-button{
     height: 42px;
     width: 42px;
@@ -194,21 +163,8 @@ a.category-badge > span.badge:hover {
     cursor: pointer;
 }
 
-input[name='q']::placeholder {
-    color: #6c757d;
-}
 
-.text-highlight {
-    color: #788e5c;
-}
-
-.text-highlight:hover {
-    color: #414e2f;
-}
-
-
-/* -------------------------------- bootstrap toasts */
-
+/*------------Bootstrap toasts------------*/
 .message-container {
     position: fixed;
     top: 72px;
@@ -224,6 +180,12 @@ input[name='q']::placeholder {
     height: 2px;
 }
 
+.basket-notification-wrapper {
+    height: 100px;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
 /* from CSS-tricks.com: https://css-tricks.com/snippets/css/css-triangle/ */
 .arrow-up {
     width: 0; 
@@ -237,14 +199,6 @@ input[name='q']::placeholder {
 }
 
 /* Convenience classes - colors copied from Bootstrap */
-.arrow-primary {
-    border-bottom-color: #007bff !important;
-}
-
-.arrow-secondary {
-    border-bottom-color: #6c757d !important;
-}
-
 .arrow-success {
     border-bottom-color: #28a745 !important;
 }
@@ -261,32 +215,8 @@ input[name='q']::placeholder {
     border-bottom-color: #17a2b8 !important;
 }
 
-.arrow-light {
-    border-bottom-color: #f8f9fa !important;
-}
 
-.arrow-dark {
-    border-bottom-color: #343a40 !important;
-}
-
-.basket-notification-wrapper {
-    height: 100px;
-    overflow-x: hidden;
-    overflow-y: auto;
-}
-
-
-/* -------------------------------- Media Queries */
-
-/* Slightly larger container on xl screens */
-@media (min-width: 1200px) {
-  .container {
-    max-width: 80%;
-  }
-}
-
-/* Allauth form formatting */
-
+/*------------Django Allauth form formatting------------*/
 .allauth-form-inner-content p {
     margin-top: 1.5rem;
     color: #6c757d;
@@ -339,14 +269,42 @@ input[name='q']::placeholder {
 	color: #000 !important; /* text-info */
 }
 
-/*------------Product Results Page ------------*/
-.product-img {
-    height: 290px;
+
+/*------------Index Page------------*/
+.jumbotron {
+    margin-bottom: 0px;
+    background-attachment: fixed;
+    background-position: bottom;
+    height: calc(100vh - 120px);
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
 }
 
-.avg-rating i {
-    color: #788e5c;
+#home-jumbotron {
+    background-image: url('/media/gin-home1.jpg');
 }
+
+#cocktail-jumbotron {
+    background-image: url('/media/cocktails3.jpg');
+}
+
+.delivery-container {
+    background: #788e5c !important;
+    height: 250px;
+    width: 100%;
+}
+
+.cocktail-container {
+    padding-top: 0 !important;
+}
+
+.blog-container {
+    background: #788e5c !important;
+    width: 100%;
+}
+
 
 /*------------Add Product Form------------*/
 
@@ -385,7 +343,20 @@ input[name='q']::placeholder {
     border-radius: 0;
 }
 
-/*------------Star ratings------------*/
+
+/*------------Product Results Page ------------*/
+.product-img {
+    height: 290px;
+}
+
+.avg-rating i {
+    color: #788e5c;
+}
+
+
+/*------------Product Detail Page------------*/
+/* Star ratings */
+
 /*
 * Prefixed by https://autoprefixer.github.io
 * PostCSS: v7.0.29,
@@ -449,101 +420,14 @@ input[name='q']::placeholder {
     opacity: 1;
 }
 
-/* fixed top navbar only on medium and up */
-@media (min-width: 992px) {
-    .fixed-top-desktop-only {
-        position: fixed;
-        top: 0;
-        right: 0;
-        left: 0;
-        z-index: 1030;
-    }
 
-    .content-container {
-        padding-top: 126px;
-        min-height: 100vh;
-    }
-}
-
-/* adjust padding to the top when navbar is collapsed on mobile */
-@media (max-width: 991px) {
-    .content-container {
-        min-height: 100vh;
-        padding-top: 60px;
-    }
-
-    body {
-        height: calc(100vh - 60px);
-    }
-
-    .jumbotron {
-        height: calc(100vh - 60px);
-    }
-
-    .display-4.main-logo-link.logo-font{
-        font-size: 1.5rem;
-    }
-
-    .nav-link {
-        padding: 0.15rem;
-    }
-
-    .nav-link i.fa-lg {
-        font-size: 1rem;
-    }
-
-    .navbar-toggler {
-        padding: .4rem .4rem;
-        font-size: .75rem;
-    }
-
-    .btn.btn-outline-black.rounded-0,
-    .btn.btn-black.rounded-0 {
-        padding: .375rem .375rem;
-    }
-
-    .btn.btn-outline-black.rounded-0.btn-lg,
-    .btn.btn-black.rounded-0.btn-lg {
-        padding: .375rem .375rem;
-        font-size: .75rem;
-    }
-}
-
-/*------------Cocktails------------*/
-
+/*------------Cocktail Results Page------------*/
 .cocktail-img {
     height: 215px;
 }
 
-@media (min-width: 375px) {
-    .cocktail-img {
-        height: 256px;
-    }
-}
 
-@media (min-width: 768px) {
-    .cocktail-img {
-        height: 300px;
-    }
-}
-@media (min-width: 576px) {
-    .cocktail-img {
-        height: 240px;
-    }
-}
-
-@media (min-width: 768px) {
-    .cocktail-img {
-        height: 300px;
-    }
-}
-
-@media (min-width: 1200px) {
-    .cocktail-img {
-        height: 270px;
-    }
-}
-
+/*------------Cocktail Recipe Form------------*/
 .cocktail-background {
     background-image: url('/media/cocktails.jpg');
     background-attachment: fixed;
@@ -560,6 +444,7 @@ input[name='q']::placeholder {
     width: auto;
 }
 
+/*------------Blog Post Form------------*/
 .blog-background {
     background-image: url('/media/gin-botanicals.jpg');
     background-attachment: fixed;
@@ -568,6 +453,7 @@ input[name='q']::placeholder {
     min-height: 100vh;
     background-position: center;
 }
+
 
 /*------------About Page------------*/
 .about-background {
@@ -583,22 +469,14 @@ input[name='q']::placeholder {
     background-color: white;
     opacity: .9;
     padding: .75rem;
-}
-
-@media (max-width: 1199.98px) {
-    .about-background, 
-    .gin-background, 
-    .blog-background,
-    .cocktail-background,
-    .product-background {
-        background-attachment: scroll !important;
-    }
 } 
 
 #map {
     height: 300px;
     width: auto;  
 }
+
+
 /*------------Contact Us------------*/
 .gin-background {
     background-image: url('/media/gin-pages-img.jpg');
@@ -618,6 +496,7 @@ input[name='q']::placeholder {
 .contact-form-wrapper:hover {
     opacity: 1;
 }
+
 
 /*------------Footer------------*/
 
@@ -699,4 +578,125 @@ footer ul li a:hover {
 
 .copyright-col p {
     font-size: smaller;
+}
+
+
+/*------------Media Queries------------*/
+
+/* Slightly larger container on xl screens */
+@media (min-width: 1200px) {
+  .container {
+    max-width: 80%;
+  }
+}
+
+/* fixed top navbar only on medium and up */
+@media (min-width: 992px) {
+    .fixed-top-desktop-only {
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 1030;
+    }
+
+    .content-container {
+        padding-top: 126px;
+        min-height: 100vh;
+    }
+}
+
+/* adjust padding to the top when navbar is collapsed on mobile */
+@media (max-width: 991px) {
+    .content-container {
+        min-height: 100vh;
+        padding-top: 60px;
+    }
+
+    body {
+        height: calc(100vh - 60px);
+    }
+
+    .jumbotron {
+        height: calc(100vh - 60px);
+    }
+
+    .display-4.main-logo-link.logo-font{
+        font-size: 1.5rem;
+    }
+
+    .nav-link {
+        padding: 0.15rem;
+    }
+
+    .nav-link i.fa-lg {
+        font-size: 1rem;
+    }
+
+    .navbar-toggler {
+        padding: .4rem .4rem;
+        font-size: .75rem;
+    }
+
+    .btn.btn-outline-black.rounded-0,
+    .btn.btn-black.rounded-0 {
+        padding: .375rem .375rem;
+    }
+
+    .btn.btn-outline-black.rounded-0.btn-lg,
+    .btn.btn-black.rounded-0.btn-lg {
+        padding: .375rem .375rem;
+        font-size: .75rem;
+    }
+}
+
+/* Replace background fixed on smaller screens */
+@media (max-width: 1199.98px) {
+    .jumbotron,
+    .about-background, 
+    .gin-background, 
+    .blog-background,
+    .cocktail-background,
+    .product-background {
+        background-attachment: scroll !important;
+    }
+}
+
+/* Make cocktail image responsive */
+@media (min-width: 375px) {
+    .cocktail-img {
+        height: 256px;
+    }
+}
+
+@media (min-width: 768px) {
+    .cocktail-img {
+        height: 300px;
+    }
+}
+@media (min-width: 576px) {
+    .cocktail-img {
+        height: 240px;
+    }
+}
+
+@media (min-width: 768px) {
+    .cocktail-img {
+        height: 300px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .cocktail-img {
+        height: 270px;
+    }
+}
+
+/* Footer */
+@media (min-width: 768px) {
+    .footer-row-cols {
+        width: auto;
+        margin-top: auto;
+        text-align: justify;
+    }
 }

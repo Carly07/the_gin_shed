@@ -31,7 +31,6 @@
             <script src="https://js.stripe.com/v3/"></script>
             <!-- Custom JS -->
             <script src="{% static 'js/main.js' %}"></script>
-            <script src="{% static 'js/map.js' %}"></script>
         {% endblock %}
 
         {% block extra_js %}
@@ -218,9 +217,6 @@
         {% block postloadjs %}
         <script type="text/javascript">
             $('.toast').toast('show');
-        </script>
-        <script
-            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDDO8cLR2O17n8ypQS4XE8T8XGMovsFPa4&callback=initMap">
         </script>
         {% endblock %}
         </div>
