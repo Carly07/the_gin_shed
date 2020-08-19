@@ -6,6 +6,7 @@
 
 
 {% block content %}
+<!--******** Product Detail Page ********-->
     <div class="container-fluid content-container">
         <div class="row">
             <div class="col-12 col-md-6 col-lg-4 offset-lg-2">
@@ -75,7 +76,7 @@
                             </div>
 
                             <div class="col-12">
-                                <a href="{% url 'products' %}" class="btn btn-outline-black rounded-0 mt-5">
+                                <a href="{% url 'products' %}?category=gin,mixers,accessories" class="btn btn-outline-black rounded-0 mt-5">
                                     <span class="icon">
                                         <i class="fas fa-chevron-left"></i>
                                     </span>
@@ -93,7 +94,7 @@
         </div>
 
         <hr>
-    
+    <!--******** Review Section ********-->
         <div class="row">
             <div class="col-12 col-sm-12 col-md-10 offset-md-1 col-lg-8 offset-lg-2">
                 <h4 class="mb-4 text-left">Reviews</h4>

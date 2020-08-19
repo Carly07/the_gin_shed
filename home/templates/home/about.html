@@ -4,13 +4,10 @@
 
 
 {% block content %}
-<div class="container-fluid content-container about-background">
-    <div class="row page-row">
-        <div class="col-10 col-md-6 col-lg-5 my-auto">
-            
-        </div>
-    </div>
-</div>
+<!--******** Image container ********-->
+<div class="container-fluid content-container about-background"></div>
+
+<!--******** Info container ********-->
 <div class="container-fluid about-container my-2">
     <h1 class="logo-font mx-5 py-1">About Us</h1>
 
@@ -25,11 +22,13 @@
     which we know to be authentic, high quality and that we would happily recommend to our closest 
     friends. So why not visit us at our Chester store...</p>
     
+<!--******** Map Container ********-->
     <div id="map" class="mx-5 py-2"></div>
 </div>
 {% endblock %}
 
 {% block postloadjs %}
+<!--******** Google Map API and JS ********-->
 <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDDO8cLR2O17n8ypQS4XE8T8XGMovsFPa4&callback=initMap"></script>
 <script src="{% static 'home/js/map.js' %}"></script>
 {% endblock %}

@@ -7,6 +7,7 @@
 
 
 {% block content %}
+<!--******** Page Header ********-->
     <div class="container content-container py-2 my-5">
         <div class="row">
             <div class="col text-center my-3">
@@ -15,6 +16,7 @@
                 <hr>
             </div>
         </div>
+        <!-- Render Login Details -->
         <div class="row">
             <div class="col-12 col-lg-6">
                 <p class="text-muted">Login Details</p>
@@ -42,6 +44,7 @@
                         </div>
                     </div>
                 </div>
+                <!-- Default Delivery Info Form -->
                 <p class="text-muted">My Delivery Information</p>
                 <form class="mt-3" action="{% url 'profile' %}" method="POST" id="profile-update-form">
                     {% csrf_token %}
@@ -49,6 +52,7 @@
                     <button class="btn btn-black rounded-0 text-uppercase float-right">Update</button>
                 </form>
             </div>
+            <!-- Render Order History -->
             <div class="col-12 col-lg-6">
                 <p class="text-muted">My Order History</p>
                 <div class="order-history table-responsive">
