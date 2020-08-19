@@ -76,15 +76,15 @@ A live demo can be found [here](https://the-gin-shed.herokuapp.com/).
 | ----| --------------------- | ---------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- |
 | 24  | site user (all users) | search for a product by name or description                                        | find a particular product that I would like to purchase                                               |
 | 25  | site user (all users) | easily see the products matching my search criteria and number of results returned | quickly see whether the product I want is available                                                   |
-| 26  | site user (all users) | sort the list of available products                                                | view products by category, price or rating                                                            |
-| 27  | site user (all users) | sort a specific category of products                                               | view the best priced or best rated products in a specific category or view them in alphabetical order |
+| 26  | site user (all users) | sort the list of available products                                                | view products by category or price                                                           |
+| 27  | site user (all users) | sort a specific category of products                                               | view the best priced in a specific category or view them in alphabetical order |
 
 #### Purchasing and Checkout
 | ID  | As a …                | I want to be able to…                                                              | So that I can…                                                                                        |
 | ----| --------------------- | ---------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- |
-| 28  | site user (all users) | easily select the quantity of a product to add to my shopping basket                 | purchase the amount of products I want                                                                |
-| 29  | site user (all users) | view items in my basket                                                              | review the items I intend to purchase and identify the total cost                                     |
-| 30  | site user (all users) | remove items or change the quantity of individual items in my basket                 | amend my order before checkout                                                                        |
+| 28  | site user (all users) | easily select the quantity of a product to add to my shopping basket               | purchase the amount of products I want                                                                |
+| 29  | site user (all users) | view items in my basket                                                            | review the items I intend to purchase and identify the total cost                                     |
+| 30  | site user (all users) | remove items or change the quantity of individual items in my basket               | amend my order before checkout                                                                        |
 | 31  | site user (all users) | easily enter my personal and payment information                                   | check out quickly with no problems                                                                    |
 | 32  | site user (all users) | feel confident that my personal data is safe and secure                            | provide the information required to complete my purchase                                              |
 | 33  | site user (all users) | view order confirmation                                                            | verify that I haven't made any mistakes                                                               |
@@ -208,8 +208,6 @@ The product results page includes a select menu for users to sort the results by
 
 "Price: high to low" 
 "Price: low to high"
-"Rating: high to low" 
-"Rating: low to high"
 "Name: A-Z" 
 "Name: Z-A"
 "Category: A-Z" 
@@ -298,7 +296,7 @@ Every trustworthy online shop provides the legal documentation expected by the u
 
 * Subscription Service - Users would be able to choose from a monthly, bi-monthly or quarterly subscription to a box of gin products delivered to their door. This would include a full sized bottle of the gin of the month, various mixers, garnish, snacks and recipes. This feature was originally intended for this project, but unfortunately had to be clipped from the current release due to time constraints.
 
-* Additional payment methods - Allowing users to make payments with Paypal, apple pay or google pay. 
+* Additional payment methods - Allowing users to make payments with Paypal, apple pay or google pay.
 
 * Product rating - The average rating of a product is currently displayed as X/5 followed by 5 star icons. In a future release I would like the rating to be displayed by full, half or empty stars, for example a rating of 4/5 would be displayed as 4 full stars and one empty star. This is convention and is what the user would expect to see. It would also be more visually effective, enhancing user experience. 
 
@@ -771,8 +769,8 @@ After the site was deployed, I tested it across various browsers including Chrom
 | ----| --------------------- | ---------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- | ------- |
 | 24  | site user (all users) | search for a product by name or description                                        | find a particular product that I would like to purchase                                               | Achieved; by clicking on the 'Search' icon in the navbar users can type a name or key word into the search box and quickly find related products. |
 | 25  | site user (all users) | easily see the products matching my search criteria and number of results returned | quickly see whether the product I want is available                                                   | Achieved; search bar results are listed and the number of result returned is displayed at the top left. |
-| 26  | site user (all users) | sort the list of available products                                                | view products by category, price or rating                                                            | Achieved; by using the 'sort by' select box in the top right, users can select the criteria they wish to sort the results by. |
-| 27  | site user (all users) | sort a specific category of products                                               | view the best priced or best rated products in a specific category or view them in alphabetical order | Achieved; after selecting the desired category from the 'Gin Shop' dropdown menu in the navbar, users can then use the 'sort by' select box to choose their sorting criteria. |
+| 26  | site user (all users) | sort the list of available products                                                | view products by category or price                                                         | Achieved; by using the 'sort by' select box in the top right, users can select the criteria they wish to sort the results by. |
+| 27  | site user (all users) | sort a specific category of products                                               | view the best priced products in a specific category or view them in alphabetical order | Achieved; after selecting the desired category from the 'Gin Shop' dropdown menu in the navbar, users can then use the 'sort by' select box to choose their sorting criteria. |
 
 #### Purchasing and Checkout
 | ID  | As a …                | I want to be able to…                                                | So that I can…                                                    | Testing |
