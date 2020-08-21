@@ -375,10 +375,10 @@ This app has three models; Category, Product and Review which hold the data for 
 ##### Category Model
 Each category can link to numerous products but each product corresponds to just one category. 
 
-| Name          | Key in DB     | Validation                            | Field Type |
-|---------------|---------------|---------------------------------------|------------|
-| Name          | name          | max_length=254                        | CharField  |
-| Friendly Name | friendly_name | max_length=254, null=True, blank=True | CharField  |
+| Name          | Key in DB     | Validation                 | Field Type |
+|---------------|---------------|----------------------------|------------|
+| Name          | name          | max_length=254             | CharField  |
+| Friendly Name | friendly_name | max_length=254, blank=True | CharField  |
 
 ##### Product Model
 | Name         | Key in DB    | Validation                                       | Field Type                |
@@ -387,8 +387,8 @@ Each category can link to numerous products but each product corresponds to just
 | Name         | name         | max_length=254                                   | CharField                 |
 | Description  | description  |                                                  | TextField                 |
 | Price        | price        | max_digits=6, decimal_places=2                   | DecimalField              |
-| Image url    | image_url    | max_length=1024, null=True, blank=True           | URLField                  |
-| Image        | image        | null=True, blank=True                            | ImageField                |
+| Image url    | image_url    | max_length=1024, blank=True                      | URLField                  |
+| Image        | image        | blank=True                                       | ImageField                |
 | Num in Stock | num_in_stock | validators=[MaxValueValidator(100)]              | PositiveSmallIntegerField |
 
 ##### Review Model
@@ -416,7 +416,7 @@ This app has two models; Order and OrderLineItem. An instance of the Order model
 | Email           | email           | max_length=254, null=False, blank=False                                 | EmailField                |
 | Phone number    | phone_number    | max_length=20, null=False, blank=False                                  | CharField                 |
 | Country         | country         | blank_label='Country *', null=False, blank=False                        | CountryField              |
-| Postcode        | postcode        | max_length=20, null=True, blank=True                                    | CharField                 |
+| Postcode        | postcode        | max_length=20, blank=True                                               | CharField                 |
 | Town or city    | town_or_city    | max_length=40, null=False, blank=False                                  | CharField                 |
 | Street address1 | street_address1 | max_length=80, null=False, blank=False                                  | CharField                 |
 | Street address2 | street_address2 | max_length=80, null=False, blank=False                                  | CharField                 |
@@ -446,13 +446,13 @@ This app has one model; UserProfile. Each user can have one profile and each pro
 | Name                    | Key in DB               | Validation                                   | Field Type    |
 |-------------------------|-------------------------|----------------------------------------------|---------------|
 | User                    | user                    | on_delete=models.CASCADE                     | OneToOneField |
-| Default street address1 | default_street_address1 | max_length=80, null=True, blank=True         | CharField     |
-| Default street address2 | default_street_address2 | max_length=80, null=True, blank=True         | CharField     |
-| Default town or city    | default_town_or_city    | max_length=40, null=True, blank=True         | CharField     |
-| Default county          | default_county          | max_length=80, null=True, blank=True         | CharField     |
-| Default postcode        | default_postcode        | max_length=20, null=True, blank=True         | CharField     |
+| Default street address1 | default_street_address1 | max_length=80, blank=True                    | CharField     |
+| Default street address2 | default_street_address2 | max_length=80, blank=True                    | CharField     |
+| Default town or city    | default_town_or_city    | max_length=40, blank=True                    | CharField     |
+| Default county          | default_county          | max_length=80, blank=True                    | CharField     |
+| Default postcode        | default_postcode        | max_length=20, blank=True                    | CharField     |
 | Default country         | default_country         | blank_label='Country', null=True, blank=True | CountryField  |
-| Default phone number    | default_phone_number    | max_length=20, null=True, blank=True         | CharField     |
+| Default phone number    | default_phone_number    | max_length=20, blank=True                    | CharField     |
 
 
 #### Cocktails App
@@ -465,8 +465,8 @@ This app has one model; CocktailRecipe, which stores all the recipe data.
 | Serves         | serves         | blank=False, default=1                      | PositiveSmallIntegerField |
 | Ingredients    | ingredients    | blank=False                                 | TextField                 |
 | Method         | method         | blank=False                                 | TextField                 |
-| Tag            | tag            | max_length=30, blank=True, null=True        | CharField                 |
-| Image          | image          | blank=True, null=True                       | ImageField                |
+| Tag            | tag            | max_length=30, blank=True                   | CharField                 |
+| Image          | image          | blank=True                                  | ImageField                |
 | Published date | published_date | blank=True, null=True, default=timezone.now | DateTimeField             |
 | User           | user           | on_delete=models.CASCADE                    | ForeignKey to User        |
 
@@ -484,8 +484,8 @@ Each blog post can have several comments whist comments correspond to a single p
 | Create date    | create_date    | auto_now_add=True                           | DateTimeField |
 | Published date | published_date | blank=True, null=True, default=timezone.now | DateTimeField |
 | Views          | views          | default=0                                   | IntegerField  |
-| Tag            | tag            | bmax_length=30, blank=True, null=True       | CharField     |
-| Image          | image          | blank=True, null=True                       | ImageField    |
+| Tag            | tag            | bmax_length=30, blank=True                  | CharField     |
+| Image          | image          | blank=True.                                 | ImageField    |
 
 ##### PostComment Model
 | Name           | Key in DB      | Validation               | Field Type         |
