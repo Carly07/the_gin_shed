@@ -408,9 +408,9 @@ a.category-badge > span.badge:hover {
     opacity: 0;
     display: block;
     color: #788e5c;
-    -webkit-transition: 0.5;
-    -o-transition: 0.5;
-    transition: 0.5;
+    -webkit-transition: 0.5s;
+    -o-transition: 0.5s;
+    transition: 0.5s;
     text-shadow: 0 2px 2px rgba(0, 0, 0, .5)
 }
 
