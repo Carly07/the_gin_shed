@@ -42,16 +42,8 @@
                         <br>
                         <br>
                     {% if product.avg_rating %}
-                        <small class="mr-2">{{ product.avg_rating }}</small>
+                        <small class="mr-2">Star Rating: {{ product.avg_rating }} / 5</small>
                         <small class="ml-2">{{ product.no_of_ratings }} Reviews</small>
-                        <br>
-                        <div class="avg-rating">
-                            <small><i class="fas fa-star"></i></small>
-                            <small><i class="fas fa-star"></i></small>
-                            <small><i class="fas fa-star"></i></small>
-                            <small><i class="fas fa-star"></i></small>
-                            <small><i class="fas fa-star"></i></small>
-                        </div>
                     {% else %}
                         <small class="text-muted mr-5">No Rating</small>
                     {% endif %}

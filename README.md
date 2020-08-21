@@ -298,7 +298,7 @@ Every trustworthy online shop provides the legal documentation expected by the u
 
 * Additional payment methods - Allowing users to make payments with Paypal, apple pay or google pay.
 
-* Product rating - The average rating of a product is currently displayed as X/5 followed by 5 star icons. In a future release I would like the rating to be displayed by full, half or empty stars, for example a rating of 4/5 would be displayed as 4 full stars and one empty star. This is convention and is what the user would expect to see. It would also be more visually effective, enhancing user experience. 
+* Product rating - The average rating of a product is currently displayed as 'Star Rating: X / 5'. In a future release I would like the rating to be displayed by full, half or empty stars, for example a rating of 4/5 would be displayed as 4 full stars and one empty star. This is convention and is what the user would expect to see. It would also be more visually effective, enhancing user experience. 
 
 * Staff Section - giving staff the ability to view all order information in one place, rather than having to visit the Stripe dashboard or admin panel. Functionality for this section might include an option to update an order as "shipped" in the database and an ability to handle cancellations and refunds.
 
