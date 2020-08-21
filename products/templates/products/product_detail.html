@@ -133,14 +133,7 @@
                     {% for review in reviews %}
                         <h5 class="text-left mb-3">Reviews...</h5>
                         <div class="col-12 pl-0">
-                            <small class="mr-2">{{ review.stars }} / 5</small> 
-                            <div class="avg-rating d-inline">
-                                <small class=""><i class="fas fa-star"></i></small>
-                                <small class=""><i class="fas fa-star"></i></small>
-                                <small class=""><i class="fas fa-star"></i></small>
-                                <small class=""><i class="fas fa-star"></i></small>
-                                <small class=""><i class="fas fa-star"></i></small>
-                            </div>
+                            <small class="mr-2">Star Rating: {{ review.stars }} / 5</small> 
                             <br>
                             <strong class="mb-1">{{ review.title }}</strong>
                             <p class="mb-1">{{ review.review_text }}</p> 
