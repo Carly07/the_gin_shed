@@ -4,7 +4,7 @@
 
 The Gin Shed is a web application, designed, built and deployed by me, Carly Clark, to satisfy the requirements of the final project for the Code Institute Full Stack Web Development diploma.
 
-The website's is intended to be a custom built base for The Gin Shed company, allowing the owners to list and manage products for sale whilst also creating an attractive, smooth and effortless online shopping experience for customers who enjoy fine quality gins. The site also offers interactive features such as product reviews, receipes and blogs to encourage user activity and maximise user experience. 
+The website is intended to be a custom built base for The Gin Shed company, allowing the owners to list and manage products for sale whilst also creating an attractive, smooth and effortless online shopping experience for customers who enjoy fine quality gins. The site also offers interactive features such as product reviews, receipes and blogs to encourage user activity and maximise user experience. 
 
 ## Demo
 A live demo can be found [here](https://the-gin-shed.herokuapp.com/).
@@ -68,7 +68,7 @@ A live demo can be found [here](https://the-gin-shed.herokuapp.com/).
 | 18  | site user (all users) | view a list of blog posts                                                          | select interesting articles to read about all things gin                                              |
 | 19  | site user (all users) | view an individual blog post                                                       | read the full post and any corresponding comments left by other users                                 |
 | 20  | site user (all users) | view the Contact Us page                                                           | contact the store owner to ask a question or provide feedback                                         |
-| 22  | site user (all users) | view the privacy policy                                                            | see how my personal date is managed and understand my rights                                          |
+| 22  | site user (all users) | view the privacy policy                                                            | see how my personal data is managed and understand my rights                                          |
 | 23  | site user (all users) | view the websites terms of use                                                     | understand what I am agreeing to comply with by using the site.                                       |
 
 #### Sorting and Searching
@@ -96,7 +96,7 @@ A live demo can be found [here](https://the-gin-shed.herokuapp.com/).
 | 35  | Store Owner           | add products                                                                       | list items for sale                                                                                   |
 | 36  | Store Owner           | edit / update a product                                                            | adjust product details where necessary                                                                |
 | 37  | Store Owner           | delete a product                                                                   | remove items that are no longer available                                                             |
-| 38  | Store Owner           | add new cocktail recipe                                                            | share gin cocktails with users and encourage them to purchase products on offer                       |
+| 38  | Store Owner           | add new cocktail recipe                                                            | share gin cocktails with users and encourage them to purchase products                       |
 | 39  | Store Owner           | edit / update any cocktail recipes shared on the website                           | manage content added by other users, i.e amend errors or typos                                        |
 | 40  | Store Owner           | delete any cocktail recipe shared on the website                                   | manage content added by other users i.e. remove recipes that are not appropriate                      |
 | 41  | Store Owner           | add blog posts                                                                     | share interesting articles about gin                                                                  |
@@ -121,7 +121,7 @@ Star icons are utilised for users to rate products in the review section and add
 
 A small tag icon is used to highlight the product category as well as cocktail and blog tags. Similarly, a small eye icon is used to signify the number of views on a blog post. 
 
-Social media logo icons are included as links to the associated social media page. Though, as The Gin Shed is not a real company and does not therefore have a social medica presence, the icons simply link direct to the main log in page at this time.
+Social media logo icons are included as links to the associated social media page. However, as The Gin Shed is not a real company and does not therefore have a social medica presence, the icons simply link direct to the main log in page at this time.
 
 #### Colours
 
@@ -175,7 +175,7 @@ On desktop view there is a fixed top nav featuring the brand name to the far lef
 
 Beneath the top nav lies the main navbar featuring three dropdown menus in the centre; gin shop, gin cocktails and gin blog. 
 
-The Gin Shop menu offers users the ability to view a list of 'all products' or to view products by one of the following three categories, 'gin', 'mixers' and 'accessories'. 
+The Gin Shop menu offers users the ability to view a list of 'all products' or to view products by one of the following three categories, 'gin', 'mixers' and 'accessories'. Additionally, store owners will find an 'Add Product' option. 
 
 The Gin Cocktail menu provides all users with the option to view a full list of cocktails whilst logged in users will note an additional option to 'add recipe'. 
 
@@ -191,14 +191,14 @@ Users can search for a particular product or for a product containing a specific
 
 #### Gin Shop
 ##### Add Product
-Store Owners can add new products to the shop, by navigating to the 'my account' menu and selecting 'Add Product'. This directs the user to a simple form for them to enter all the product details rquired. 
+Store Owners can add new products to the shop, by navigating to the 'Gin Shop' menu and selecting 'Add Product'. This directs the user to a simple form for them to enter all the product details rquired. 
 
 ##### Product Results
 Products are displayed using bootstrap cards, with a large product image at top and the product name, price, rating and category detailed in the card body beneath. The large image is intended to draw attention to the product. 
 
 Results are listed in rows of 4 on extra large screens, rows of 3 on large and rows of 2 on tablets whilst products are stacked on top of each other on mobile view. Rows are separated by a horizontal rule to improve user experience.
 
-Store owners will also have the ability to edit or delete products for the store by clicking on with the small 'Edit' or 'Delete links on each product.
+Store owners will also have the ability to edit or delete products from the store by clicking on the small 'Edit' or 'Delete links on each product.
 
 ##### Category Filtering 
 A small button indicating the category currently displayed in the results is situated at the top of the page under the 'Product' page heading. If the user has selected 'all products' from the navbar, they will see three buttons each referencing a category. Users will be able to click these buttons to filter the results to their chosen category.
@@ -223,7 +223,7 @@ Users can click on a product image to view full details for that particular prod
 From the product detail page, users can select a quantity of the product to add to their basket. Should a user try to select more than what is currently in stock by typing a value rather than using the buttons, they will be presented with a validation error notifying them that the value must be less than or equal to X number. Similarly if a user adds the maximum quantity to their basket and then returns to try and add more of that product, an error message will display in the top right corner advising them that there are only x number left in stock. 
 
 ##### Product Review Function
-At the bottom of the product detail page, users can view reviews that have been left for that particular product. Logged in users will also be presented with a simple form including a star rating system to enable them to write a review and rate the product from 1-5, whilst those not currently logged in will be prompted to register or log in in order to leave a review.  Logged in users will have the ability to delete any reviews that they have written. 
+At the bottom of the product detail page, users can view reviews that have been left for that particular product. Logged in users will also be presented with a simple form including a star rating system to enable them to write a review and rate the product from 1-5, whilst those not currently logged in will be prompted to register or login in order to leave a review.  Logged in users will have the ability to delete any reviews that they have written. 
 
 Individual star ratings are used to calculate the average product rating which are displayed on product results and on the product detail page. 
 
@@ -232,7 +232,7 @@ The shopping basket icon is located to the far right of the navigation bar. Once
 
 On the shopping basket page, desktop users will see 5 columns containing the product image, name, price, Quantity and subtotal. Different products are displayed in different rows. In the quantity column, users have the ability to adjust the number or remove the item from the basket. 
 
-At the bottom users can see a summary of the cost broken down into Basket Total, Delivery cost and Grand Total, as well as buttons to continue to the secure checkout or keep shopping.
+At the bottom users can see a summary of the cost broken down into Basket Total, Delivery Cost and Grand Total, as well as buttons to continue to the secure checkout or keep shopping.
 
 #### Secure Checkout
 On the secure checkout page, users can view an order summary and enter their shipping and payment details. There is also a checkbox users can select to save their delivery details to their profile. This will enable faster payments in the future as delivery details will be pre-populated with their information. 
@@ -249,9 +249,9 @@ Users can click on the recipe image to view full details of the recipe including
 Logged in users will have the ability to add, edit and delete recipes of their own, thus enabling them to share their favourite gin recipes with other users. Store owners will have additional functionality to edit and delete any recipes that are added to the site regardless of who originally added the recipe. 
 
 #### Gin Blog
-Users can view a list of blog posts by click on the 'Blog Posts' menu in the navbar or the 'View Blog' button in the blog section on the home page. Results are listed in rows, with the blog image in a column tot he left and details of the post in a larger columm to the right. Users can read the first 50 words of the post and if they wish to read more they can click on the 'Read More' button to view the full blog post. 
+Users can view a list of blog posts by clicking on the 'Blog Posts' menu in the navbar or the 'View Blog' button in the blog section on the home page. Results are listed in rows, with the blog image in a column tot he left and details of the post in a larger columm to the right. Users can read the first 50 words of the post and if they wish to read more they can click on the 'Read More' button to view the full blog post. 
 
-Once a user has navigated to an individual blog post, they will be presented with the full article and a coments section below. Here they can read any comments left by other users about the article as well as leave comments of their own. Users must be looged in in order to leave a comment and logged in users will also have the ability to delete any comments that they have previously left. 
+Once a user has navigated to an individual blog post, they will be presented with the full article and a coments section below. Here they can read any comments left by other users about the article as well as leave comments of their own. Users must be logged in in order to leave a comment and logged in users will also have the ability to delete any comments that they have previously left. 
 
 Additionally shop owners have the ability to add, edit and delete blog posts as well as delete any post comments regardless of who wrote them. This enables store owners to manage the blog and remove any inappropriate content from their site. 
 
@@ -275,13 +275,13 @@ The login page requires just a username / email and their passsword.
 Once a user is logged in, they will find clicking on the 'My Account' provides options to access 'My Profile' or 'Logout'.  
 
 #### My Profile
-Registered users can view their profile by clicking on the link under My Account. The My Profile page includes the users login details, delivery information and order history. Here they can uchange their password and add or edit their default delivery information as well as see a list of all their previous orders. 
+Registered users can view their profile by clicking on the link under My Account. The My Profile page includes the users login details, delivery information and order history. Here they can change their password and add or edit their default delivery information as well as see a list of all their previous orders. 
 
 #### Messages
 Messages have been implemented to provide feedback to the user when adding, editing or deleting products from the basket as well as when they add, edit or delete cocktail receipes or blog posts. Users will recive confirmation of a successful action or else be notified that an error has occured. 
 
 #### Contact Form
-The contact us page contains a short form for the user to fill in to send the shop owner an email. An Email address and message are the only fields required to contact the shop owner. Form validation has been applied to this so to ensure the form cannot be submitted if information is inclrrect or missing. 
+The contact us page contains a short form for the user to fill in to send the shop owner an email. An Email address and message are the only fields required to contact the shop owner. Form validation has been applied to this so to ensure the form cannot be submitted if information is incorrect or missing. 
 
 #### Footer
 Bootstrap Footer has been used to provide the user with links to the About Us, Contact Us, Privacy Policy and Terms and Conditions pages as well as the social medial links and copyright information. 
@@ -290,7 +290,7 @@ Every trustworthy online shop provides the legal documentation expected by the u
 
 ### Features Left to Implement
 
-* Social Account - Giving users the ability to register and login via their social media account, thus streamlining the process. Additionally this will enable store owners to track users activity which will assist with email marketing and advertising.  
+* Social Account Login - Giving users the ability to register and login via their social media account, thus streamlining the process. Additionally this will enable store owners to track users activity which will assist with email marketing and advertising.  
 
 * Favourites - This would give logged in users the ability to add their favourite products to a 'wish list' which they can view, edit and delete. 
 
@@ -385,7 +385,6 @@ Each category can link to numerous products but each product corresponds to just
 | Name         | Key in DB    | Validation                                       | Field Type                |
 |--------------|--------------|--------------------------------------------------|---------------------------|
 | Category     | category     | null=True, blank=True, on_delete=models.SET_NULL | ForeignKey to Category    |
-| SKU          | sku          | max_length=254, null=True, blank=True            | CharField                 |
 | Name         | name         | max_length=254                                   | CharField                 |
 | Description  | description  |                                                  | TextField                 |
 | Price        | price        | max_digits=6, decimal_places=2                   | DecimalField              |
@@ -512,11 +511,11 @@ After the site was deployed, I tested it across various browsers including Chrom
 
 #### Elements on every page
 ##### Navbar
-* Confirm that the navbar displays the Brand Name to top left, the 'Search', 'My Account' and 'Basket' icons to the top right and the dropdown menu links for "Gin Shop', 'Gin Cocktails' and 'Gin Blog' in a row below. 
-* Confirm that the navbar displays the toggler / burger icon to top left, icons links to 'Search', 'My Account' and 'Basket' to the top right. 
+* On desktop, confirm that the navbar displays the Brand Name to top left, the 'Search', 'My Account' and 'Basket' icons to the top right and the dropdown menu links for "Gin Shop', 'Gin Cocktails' and 'Gin Blog' in a row below. 
+* On mobile, confirm that the navbar displays the toggler / burger icon to top left, icons links to 'Search', 'My Account' and 'Basket' to the top right. 
 * Click on the 'Search' icon and confirm that the search bar appears below.
 * Confirm that the 'My Account' dropdown options "Register" and "Login" are visible to public users and that "My Profile" and "Logout" are not.
-* Log into the site, confirm that options "Account" and "Log out" are visible and that "Register" and "Log in" are not.
+* Login to the site, confirm that options "Account" and "Log out" are visible and that "Register" and "Log in" are not.
 * Add an item to the shopping basket, confirm that the icon changes colour and the basket grand total is displayed below. 
 * Click on the basket icon and confirm that it leads you to the Shopping Basket page
 * Click the "Gin Shop" link in the navbar, confirm that 'Gin', 'Mixers', Accessories' and 'All Products' are listed in the dropdown menu.
@@ -542,8 +541,8 @@ After the site was deployed, I tested it across various browsers including Chrom
 * Click on the 'View Blog' button and confirm that it leads to the blog results page
 
 #### About Us Page
-* Go to About Us page, confirm that the Page title, subheading and text are display in container to the centre as expected.
-* Check that the background image is displayed as expected.
+* Go to About Us page, confirm that the Page title, subheading, text and map are display as expected.
+* Check that the image is displayed as expected.
 
 #### Contact Us Page
 * Navigate to the contact page and confirm that the contact form is laid out as expected.
@@ -562,10 +561,10 @@ After the site was deployed, I tested it across various browsers including Chrom
 * Try to go to the register url when already logged in, confirm that the user is redirected to the home page.
 * Logout then go to the register page again. Confirm that the register form is displayed as expected.
 * Fill in the form with a username already in the database, confirm that the user is informed that they must use a unique username.
-* Fill in the email input with a non-email address, confirm the user is shown an error asking the to use an email address.
+* Fill in the email input with a non-email address, confirm the user is shown an error asking them to use an email address.
 * Fill in the form with two different emails, confirm the error is caught and the user is informed of their mistake.
 * Fill in the form with two different passwords, confirm the error is caught and the user is informed of their mistake.
-* Fill in the registration for correctly, confirm that the user is automatically directed to the verify email page.
+* Fill in the registration form correctly, confirm that the user is automatically directed to the verify email page.
 
 #### Login Page
 * Attempt to login with a username not in the database, confirm the relevant error message is shown.
@@ -590,7 +589,7 @@ After the site was deployed, I tested it across various browsers including Chrom
 
 #### Product Results Page
 * Navigate to the 'All Products' page and confirm that category buttons are listed under the Product Heading and that Gin, Mixers and Accessories products are displaying in the results.
-* Confirm that products image and details are displaying as expected, with the details underneath the image. 
+* Confirm that the product image and details are displaying as expected, with the details underneath the image. 
 * Confirm that where there is an average rating it is displayed or else the text 'no rating' is displayed. 
 * On desktop view, confirm that there are four products listed in a row and that rows are separated with a horizontal rule
 * Confirm that the number of products listed in each row reduces as the screen size gets smaller, first down to three products per row, then two and finally one product per row on mobile views. 
@@ -603,20 +602,20 @@ After the site was deployed, I tested it across various browsers including Chrom
 * Click on product images and confirm that it redirects to that specific product detail page. 
 
 #### Product Detail Page
-* Navigate to a product detail page and confirm that the page is displayed as expected. On desktop image should be displayed on left and product info on the right, whilst on mobile view the image is stacked on top of the product info. 
-* Confirm that the Image, name, price, category, rating and description match those in the database for the product.
+* Navigate to a product detail page and confirm that the page is displayed as expected. On desktop, the image should be displayed on left and product info on the right, whilst on mobile view the image is stacked on top of the product info. 
+* Confirm that the Image, name, price, category and description match those in the database for the product.
 * Adjust the quantity using the button and confirm that the highest number available to select matches the number in stock of this product.
 * Confirm that the 'Keep Shopping' and 'Add to Basket' buttons work as expected. 
 * Attempt to type in a quantity above the number in stock, press enter or 'Add to Basket' and confirm that validation message is received.
 * Click the "add to basket" button. Confirm that the success message is launched, stating the name and quantity of the product added.
-* Confirm that the success message provides a button to 'go to view basket'. Click to confirm it operates as expected.
+* Confirm that the success message provides a button to 'view basket'. Click to confirm it operates as expected.
 * Add more of the same product to the basket, making the total quantity go over the max number in stock. Confirm that an error message alerts the user that there is not enough in stock and resets the value to 1. 
 ##### Reviews
 * Under the product details confirm that the reviews section is displaying any previous reviews or else the text 'No reviews'. 
 * Confirm that the 'write review' form is displayed for logged in users and a message "Please Register or login to leave a review." is displayed if user is not logged in. 
 * Confirm that the 'register' and 'login' links work as expected. 
 * Once logged in, hover over the stars in the review form and confirm that they change colour as expected.
-* Click the desired number of stars and confirm that the that number of stars have changed colour. 
+* Click the desired number of stars and confirm that the number of stars have changed colour. 
 * Try to submit the form with the title and review fields empty and confirm validation errors
 * Complete the form correctly, click post and confirm that success message is displayed and review is now listed. Also confirm product rating has updated. 
 
@@ -662,7 +661,7 @@ After the site was deployed, I tested it across various browsers including Chrom
 * Confirm that all data in the orders on the profile page are accurate.
 
 #### Add Cocktail Recipe Page
-* Logout then attempt to navigate to the add cocktail recipe url and confirm that user is redirected to login page. 
+* Logout then attempt to navigate to the add recipe url and confirm that user is redirected to login page. 
 * Login and navigate to the add recipe page. Confirm that the recipe form and background image display as expected.
 * Hover over the form and confirm that the opacity changes as expected. 
 * Attempt to submit form without completing required fields and confirm validation errors.
@@ -670,7 +669,7 @@ After the site was deployed, I tested it across various browsers including Chrom
 * Complete form correctly. Confirm success message displayed and user redirected to the new recipe page. Check recipe details are listed correctly. 
 
 #### Cocktail Results Page
-* Navigate to the 'View Recipes' page and confirm that recipe results are displaying as expected, with the recipe details underneath the image. 
+* Navigate to the 'View Recipes' page and confirm that recipe results are displaying as expected, with the recipe information underneath the image. 
 * On desktop view, confirm that there are four recipes listed in a row and that rows are separated with a horizontal rule.
 * Confirm that the number of recipes listed in each row reduces as the screen size gets smaller, first down to three recipes per row, then two and finally one recipe per row on mobile views. 
 * Check that there are no duplicates or missing recipes.  
@@ -691,7 +690,7 @@ After the site was deployed, I tested it across various browsers including Chrom
 * Login and navigate to the edit recipe page. Confirm that the recipe form and background image display as expected, with the fields pre-populated with the specified recipe.
 * Hover over the form and confirm that the opacity changes as expected. 
 * Select a new image, save and confirm image has been updated.
-* Click to remove the image, save and confirm the image has been removed and the 'no image' pic is displayed instead. 
+* Click to remove the image, save and confirm the image has been removed and the 'no image' picture is displayed instead. 
 * Remove data from a required field, attempt to save it and confirm validation errors.
 * Complete form correctly. Confirm success message displayed and user redirected to the updated recipe page. Check recipe details are listed correctly. 
 
@@ -717,11 +716,11 @@ After the site was deployed, I tested it across various browsers including Chrom
 * Click the delete link and confirm that a success message is displayed and the blog post is now gone from the results page. 
 * Confirm that the 'Back to blog' button work as expected. 
 ###### Blog Post Comments
-* Under the blog Post, confirm that the comments section is displaying any previous comments or else the text 'No comments'. 
+* Under the Blog Post, confirm that the comments section is displaying any previous comments or else the text 'No comments'. 
 * Confirm that the 'add a comment' form is displayed for logged in users or else a message saying "Please Register or login to leave a comment" is displayed if user is not logged in. 
 * Confirm that the 'register' and 'login' links work as expected. 
-* Try to submit an empty form and confirm validation errors
-* Complete the form, click post and confirm that success message is displayed and comment is now listed.
+* Try to submit an empty comment form and confirm validation errors
+* Complete the 'add a comment' form, click post and confirm that success message is displayed and comment is now listed.
 
 #### Edit Blog Post Page
 * Logout, then attempt to navigate to the edit blog post url and confirm that user is redirected to login page. 
@@ -729,9 +728,9 @@ After the site was deployed, I tested it across various browsers including Chrom
 * Login as a superuser and navigate to the edit blog post page. Confirm that the blog post form and background image display as expected, with the fields pre-populated with the specified blog post.
 * Hover over the form and confirm that the opacity changes as expected. 
 * Select new image, save and confirm image has been updated.
-* Click to remove the image, save and confirm the image has been removed and the 'no image' pic is displayed instead. 
+* Click to remove the image, save and confirm the image has been removed and the 'no image' picture is displayed instead. 
 * Remove data from a required field, attempt to save it and confirm validation errors.
-* Edit and complete form correctly. Confirm success message displayed and user redirected to the updated blog post page. Check post details are listed correctly. 
+* Edit and complete the form correctly. Confirm success message displayed and user redirected to the updated blog post page. Check post details are listed correctly. 
 
 ### User Stories Testing
 #### Registration and User Accounts 
@@ -746,7 +745,7 @@ After the site was deployed, I tested it across various browsers including Chrom
 | 7   | registered user       | delete any product reviews that I have left        | remove a review if I have changed my mind                               | Achieved; logged in users will find a Delete link beside any review that they have written, which when clicked will delete the review and provide a success message |
 | 8   | registered user       | add a cocktail recipe                              | share my recipe with other users                                        | Achieved; logged in users will find a link to 'Add Recipe' in the Gin Cocktails dropdown menu. After successfully completing the form, their recipe will be displayed on the 'View Recipe' page. |
 | 9   | registered user       | edit or delete any recipes that I have added       | amend / update the recipe or remove it if I no longer wish to share it  | Achieved; logged in users will find 'Edit' and 'Delete' links beside any recipes they have added. |
-| 10  | registered user       | leave a comment on a blog post                     | share my thoughts on the blog post with other users                     | Achieved; logged in users will find a 'Leave a comment' form at the bottom of the blog post page. After successfully completing the form users will note their review listed in the comments section |
+| 10  | registered user       | leave a comment on a blog post                     | share my thoughts on the blog post with other users                     | Achieved; logged in users will find a 'Leave a comment' form at the bottom of the blog post page. After successfully completing the form users will note their comment listed in the comments section |
 | 11  | registered user       | delete any comments I leave on a blog post         | remove them if I change my mind or its no longer relevant               | Achieved; logged in users will find a Delete link beside any comments that they have written, which when clicked will delete the comment and provide a success message |
 
 #### Viewing and navigation
@@ -755,13 +754,13 @@ After the site was deployed, I tested it across various browsers including Chrom
 | 12  | site user (all users) | view a list of all products           | select some to purchase                                                                  | Achieved; users can select 'All Products' from the 'Gin Shop' dropdown menu in the navbar to view a list of all the products available. |
 | 13  | site user (all users) | view specific category of products    | quickly browse the type of products that I am interested in                              | Achieved; users can select a category from the 'Gin Shop' dropdown menu in the navbar to view a list of the products in that category. |
 | 14  | site user (all users) | view individual product details       | identify the product description, price, image, rating and corresponding product reviews | Achieved; users can click on a product to view all the product info and any related product reviews. |
-| 15  | site user (all users) | easily view total of shopping basket  | avoid spending too much                                                                  | Achieved; the grand total of the shopping basket is displayed under the basket icon in the navbar, so can be seen from any page on the site. |
+| 15  | site user (all users) | easily view total of shopping basket  | avoid spending too much                                                                  | Achieved; the grand total of the shopping basket is displayed under the basket icon in the navbar, so it can be seen from any page on the site. |
 | 16  | site user (all users) | view a list of cocktail recipes       | find a new and exciting recipe to make with the gin I purchase                           | Achieved; users can select 'View Recipes' from the 'Gin Cocktails' dropdown menu in the navbar to view a list of all the recipes available. |
 | 17  | site user (all users) | view an individual cocktail recipe    | read the list of ingredients, method and all other recipe information                    | Achieved; users can click on a recipe image to view all the full recipe. |
 | 18  | site user (all users) | view a list of blog posts             | select interesting articles to read about all things gin                                 | Achieved; users can select 'Blog Posts' from the 'Gin Blog' dropdown menu in the navbar to view a list of all the Blog Post available. |
-| 19  | site user (all users) | view an individual blog post          | read the full post and any corresponding comments left by other users                    | Achieved; users can click on the 'read more' buttons to view all the blog post and any related comments. |
+| 19  | site user (all users) | view an individual blog post          | read the full post and any corresponding comments left by other users                    | Achieved; users can click on the 'read more' buttons to view the.  full blog post and any related comments. |
 | 20  | site user (all users) | view the Contact Us page              | contact the store owner to ask a question or provide feedback                            | Achieved; by clicking on the 'contact us' link in the footer, users will find contact details and a contact form which they can complete to ask questions or provide feedback. |
-| 22  | site user (all users) | view the privacy policy               | see how my personal date is managed and understand my rights                             | Achieved; by clicking on the 'privacy policy' link in the footer users can view the full privacy policy. |
+| 22  | site user (all users) | view the privacy policy               | see how my personal data is managed and understand my rights                             | Achieved; by clicking on the 'privacy policy' link in the footer users can view the full privacy policy. |
 | 23  | site user (all users) | view the websites terms of use        | understand what I am agreeing to comply with by using the site.                          | Achieved; by clicking on the 'Terms of Use' link in the footer users can read the websites Terms of Use. |
 
 #### Sorting and Searching
@@ -775,13 +774,13 @@ After the site was deployed, I tested it across various browsers including Chrom
 #### Purchasing and Checkout
 | ID  | As a …                | I want to be able to…                                                | So that I can…                                                    | Testing |
 | ----| --------------------- | -------------------------------------------------------------------- | ----------------------------------------------------------------- | ------- |
-| 28  | site user (all users) | easily select the quantity of a product to add to my shopping basket | purchase the amount of products I want                            | Achieved; users can select the quantity by using the buttons on the right hanbd side or by typing in the amount they want. | 
+| 28  | site user (all users) | easily select the quantity of a product to add to my shopping basket | purchase the amount of products I want                            | Achieved; users can select the quantity by using the buttons on the right hand side or by typing in the amount they want. | 
 | 29  | site user (all users) | view items in my basket                                              | review the items I intend to purchase and identify the total cost | Achieved; by clicking on the basket icon in the navbar. |
 | 30  | site user (all users) | remove items or change the quantity of individual items in my basket | amend my order before checkout                                    | Achieved; users can use the buttons to adjust the quantity and the click the update link below. Alternatively they can click the remove link to delete items. |
 | 31  | site user (all users) | easily enter my personal and payment information                     | check out quickly with no problems                                | Achieved; the secure checkout page has a simple form to submit delivery and payment details. Delivery info can also be saved to pre-populate the form for future orders. |
 | 32  | site user (all users) | feel confident that my personal data is safe and secure              | provide the information required to complete my purchase          | Achieved; users can feel assured the the checkout system is secure. |
 | 33  | site user (all users) | view order confirmation                                              | verify that I haven't made any mistakes                           | Achieved; after completing a purchase, users will see a summary of their order on the checkout success page or by navigating to their profile. |
-| 34  | site user (all users) | receive an email confirmation after checkout                         | Keep a record of what I have purchased                            | Achieved; after completing the order, users should find they have an email confirmation or their order. |
+| 34  | site user (all users) | receive an email confirmation after checkout                         | Keep a record of what I have purchased                            | Achieved; after completing the order, users should find they have an email confirmation of their order. |
 
 ##### Admin and Store Management
 | ID  | As a …                | I want to be able to…                                      | So that I can…                                                                     | Testing |
@@ -789,7 +788,7 @@ After the site was deployed, I tested it across various browsers including Chrom
 | 35  | Store Owner           | add products                                               | list items for sale                                                                | Achieved; superusers can list items for sale by clicking on the 'Add Product' link in the 'Gin Shop' dropdown menu and then completing the form. | 
 | 36  | Store Owner           | edit / update a product                                    | adjust product details where necessary                                             | Achieved; superusers can edit products in the store by clicking the relevant 'edit' link either on the product results page or the product detail page. |
 | 37  | Store Owner           | delete a product                                           | remove items that are no longer available                                          | Achieved; superusers can remove products by clicking the relevant 'delete' link either on the product results page or the product detail page. |
-| 38  | Store Owner           | add new cocktail recipe                                    | share gin cocktails with users and encourage them to purchase products on offer    | Achieved; all registered users will find a link to 'Add Recipe' in the Gin Cocktails dropdown menu. After successfully completing the form, the recipe will be displayed on the 'View Recipe' page. |
+| 38  | Store Owner           | add new cocktail recipe                                    | share gin cocktails with users and encourage them to purchase products.            | Achieved; all registered users will find a link to 'Add Recipe' in the Gin Cocktails dropdown menu. After successfully completing the form, the recipe will be displayed on the 'View Recipe' page. |
 | 39  | Store Owner           | edit / update any cocktail recipes shared on the website   | manage content added by other users, i.e amend errors or typos                     | Achieved; superusers can edit recipes in the store by clicking the relevant 'edit' link either on the View Recipes page or the specified recipe detail page. |
 | 40  | Store Owner           | delete any cocktail recipe shared on the website           | manage content added by other users i.e. remove recipes that are not appropriate   | Achieved; superusers can remove recipes by clicking the relevant 'delete' link either on the View Recipes page or the specified recipe detail page. |
 | 41  | Store Owner           | add blog posts                                             | share interesting articles about gin                                               | Achieved; superusers can share blog posts by clicking on the 'Add Blog' link in the 'Gin Blog' dropdown menu and then completing the form. | 
@@ -805,7 +804,7 @@ After the site was deployed, I tested it across various browsers including Chrom
 }` 
 to my css resolved the issue. 
 
-* Whilst developing the blog comments section, I came across an issue where the comments were saving to the database but not getting rendering to the HTML template. With help and support form the tutors I was able to rectify this issue. The problem was that I was filtering the results by the comment id rather than the post id.  
+* Whilst developing the blog comments section, I came across an issue where the comments were saving to the database but not rendering to the HTML template. With help and support form the tutors I was able to rectify this issue. The problem was that I was filtering the results by the comment id rather than the post id.  
 
 #### Unsolved
 * Whilst testing the django allauth email management page, I found that the list of e-mail addresses associated with the users account was not displaying, yet I was able to add a new email address and view that in the admin panel. I spent considerable time researching this issue online to no avail. However, as users are required to add an email address when they register and therefore already have an email address associated with their account, I decided to remove the link on the profile page and leave tackling this bug for a future release.
@@ -821,7 +820,7 @@ Before starting you must have Git, PIP and Python3 installed on your machine. Yo
 
 `git clone https://github.com/Carly07/the_gin_shed`
 
-3. If needed, Upgrade pip locally with
+3. If needed, upgrade pip locally with
 `pip install --upgrade pip`
 
 4. Install all required modules with the command
@@ -830,8 +829,11 @@ Before starting you must have Git, PIP and Python3 installed on your machine. Yo
 5. Set up the environment variables within your IDE by creating an env.py file and entering the environment variables listed below:
 
 SECRET_KEY= "<enter_your_secret_key>"
+
 STRIPE_PUBLIC_KEY= "<enter_your_secret_key>"
+
 STRIPE_SECRET_KEY= "<enter_your_secret_key>"
+
 STRIPE_WH_SECRET= "<enter_your_secret_key>"
 
 Ensure the env.py is living in the root of your project directory and then add it to .gitignore to ensure your secret details aren't exposed. Then restart your machine to activate your environment variables or your code will not be able to see them.
@@ -847,12 +849,12 @@ and then follow the steps to add your admin username and password
 `python3 manage.py runserver`
 Click the URL link that appears and the project should load. If it doesn't load when you click the link, copy and paste it into a new browser tab instead.
 
-9. Once the application is running in a browser, add /admin to the end of the url and log in to the admin panel with your superuser account.  
+9. Once the application is running in a browser, add `/admin` to the end of the url and log in to the admin panel with your superuser account.  
 
 10. Create instances of Products, Cocktails and Blog Posts within the new database so the local site runs as expected. 
 
 ### Deploying to Heroku
-Having followed the steps above to run the project locally, you can then deployed the project to Heroku for hosting. In order to achieve this, follow the step below: 
+Having followed the steps above to run the project locally, you can then deploy the project to Heroku for hosting. In order to achieve this, follow the step below: 
 
 1. Create a new app on the [Heroku website](https://id.heroku.com/login) by clicking the 'New' button on dashboard. Give the app a name and set the region to that nearest to you. 
 
@@ -887,13 +889,13 @@ Having followed the steps above to run the project locally, you can then deploye
 
 10. Once the app has finished building, click the 'Open App' button provided.
 
-11. Add /admin to the end of the website url, log in to the admin panel with your superuser account and then create instances of Products, Cocktails and Blog Posts within the new database to the site runs as expected. 
+11. Add `/admin` to the end of the website url, log in to the admin panel with your superuser account and then create instances of Products, Cocktails and Blog Posts within the new database to the site runs as expected. 
 
 
 ## Credits
 
 ### Content
-* The product images and detail were taken from craft [Craft Gins](https://craftgins.co.uk/).
+* The product images and detail were taken from [Craft Gins](https://craftgins.co.uk/).
 * All the cocktail recipes including the images used within this site were sourced from [BBC Good Food](https://www.bbcgoodfood.com/). 
 * The blog posts were taken from a book called, The Bartender's Guide to Gin.
 * Terms and conditions template was provided by <a target="_blank" href="https://www.nibusinessinfo.co.uk/content/sample-website-terms-and-conditions-use">NIBusinessInfo.co.uk</a>
