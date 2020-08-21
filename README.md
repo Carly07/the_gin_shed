@@ -322,7 +322,6 @@ All the languages, frameworks, libraries, and tools used to construct this proje
 * <a target="_blank" href="https://fonts.google.com/">Google Fonts</a> – The font used was obtained from Google Fonts.
 * <a target="_blank" href="https://fontawesome.com/">Font Awesome</a> - All icons used within the web application were sourced from Font Awesome.
 * <a target="_blank" href="https://jinja.palletsprojects.com/en/2.11.x/">Jinja</a> - A templating language used to simplify the displaying of back-end data in a HTML markup format that is returned to the user via an HTTP response.
-* <a target="_blank" href="https://api.mongodb.com/python/current/api/pymongo/index.html#module-pymongo">PyMongo</a> - A driver used to access the MongoDB database from Python and make communication between the two possible.
 
 
 ### Databases

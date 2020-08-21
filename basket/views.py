@@ -55,8 +55,8 @@ def adjust_basket(request, item_id):
         if basket[item_id] > num_in_stock:
             basket[item_id] = int(num_in_stock)
             messages.error(
-                request, f'Sorry, there are only {product.num_in_stock} of'
-                ' {product.name} left in stock!')
+                request, f"Sorry, only {product.num_in_stock} {product.name}"
+                " left in stock!")
         else:
             messages.success(
                 request,
