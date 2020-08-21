@@ -11,8 +11,8 @@ class CocktailRecipe(models.Model):
     serves = models.PositiveSmallIntegerField(blank=False, default=1)
     ingredients = models.TextField(blank=False)
     method = models.TextField(blank=False)
-    tag = models.CharField(max_length=30, blank=True, null=True)
-    image = models.ImageField(blank=True, null=True)
+    tag = models.CharField(max_length=30, blank=True)
+    image = models.ImageField(blank=True)
     published_date = models.DateTimeField(blank=True, null=True,
                                           default=timezone.now)
     user = models.ForeignKey(User, on_delete=models.CASCADE)
